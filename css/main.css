@@ -1,0 +1,22 @@
+/* ------------------------ GENERAL ------------------------ */
+
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+/* ------------------------ HEADERS ------------------------ */
+h1{
+	text-align: center;
+}
+
+div{
+	padding: 2% 2%;
+}
+
+.title{
+	min-height: 45vw; /*must be <= ratio of width/height of background image*/
+	background-image: url("../pictures/background.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
