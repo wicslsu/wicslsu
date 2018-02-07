@@ -19,24 +19,38 @@ h2{
 	text-shadow: 1.5px 1.5px rgba(0,0,0, 0.5);
 }
 
+h4{
+	color: #000;
+	font-size: .9em;
+}
+
+/* ------------------------ DIVS   ------------------------ */
 div{
 	padding: 2% 2%;
+	text-align: center;
 }
 
 nav{
 	vertical-align: middle;
 }
 
-a.button{
-	background-color: #373C64;
-	color: #FFFFFF;
-	text-align: center;
-	border: none;
-	font-size: 2em;
-	cursor: pointer;
+/* ------------------ MENU CLASSES ---------------------- */
+
+.menu{
 	padding: 1%;
-	margin-left: 5%;
-	text-decoration: none;
+    background-color: #FFFFFF;
+    color: #161E4F; 
+    text-align: right;
+    height: 100%;
+    overflow: auto;
+    vertical-align: center;
+}
+
+.menu_image{
+	height: auto;
+	width: auto;
+	max-width: 7%;
+    float: left;
 }
 
 .menu_button{
@@ -55,6 +69,8 @@ a.button{
 }
 
 /*TODO the active/current page is highlighted in menu bar */
+
+/* ------------------ HEADER CLASSES ---------------------- */
 
 .header_image{
 	min-height: 45vw; /*must be <= ratio of width/height of background image*/
@@ -76,19 +92,42 @@ a.button{
 	padding-bottom: 3%;
 }
 
-.menu{
-	padding: 1%;
-    background-color: #FFFFFF;
-    color: #161E4F; 
-    text-align: right;
-    height: 100%;
-    overflow: auto;
-    vertical-align: center;
+.black{
+	color: #000;
+	text-decoration: none;
+	text-shadow: none;
+	padding: 0% 20%;
 }
 
-.menu_image{
-	height: auto;
-	width: auto;
-	max-width: 7%;
-    float: left;
+/* ------------------ BUTTONS ---------------------- */
+
+a.button{
+	background-color: #373C64;
+	color: #FFFFFF;
+	text-align: center;
+	border: none;
+	font-size: 2em;
+	cursor: pointer;
+	padding: 1%;
+	margin-left: 5%;
+	text-decoration: none;
 }
+
+.connectButton{
+	height: 3em;
+	width: 3em;
+  	color: #FFFFFF;
+  	margin: .5%;
+}
+
+/* ------------------ FOOTER ---------------------- */
+
+.footer{
+	padding: 1%;
+    background-color: #EBC0C7;
+    color: #161E4F; 
+    text-align: center;
+    vertical-align: center;
+    font-weight: 200;
+}
+
