@@ -71,12 +71,11 @@ nav{
 /*TODO the active/current page is highlighted in menu bar */
 
 /* ------------------ HEADER CLASSES ---------------------- */
-
 .header_image{
 	min-height: 45vw; /*must be <= ratio of width/height of background image*/
 	background-image: url("../pictures/background.png");
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 }
 
 .title{
@@ -99,6 +98,23 @@ nav{
 	padding: 0% 20%;
 }
 
+div.navy{
+	color: #FFFFFF;
+	background-color: #373C64
+	border-style: solid;
+	border-color: #D3D3D3;
+	padding: 1%;
+	width:45%;
+}
+
+div.white{
+	color: #373C64;
+	background-color: #FFFFFF;
+	border-style: solid;
+	border-color: #373C64;
+	padding: 1%;
+	width: 45%
+}
 /* ------------------ BUTTONS ---------------------- */
 
 a.button{
