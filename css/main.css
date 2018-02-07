@@ -7,16 +7,88 @@ body{
 
 /* ------------------------ HEADERS ------------------------ */
 h1{
-	text-align: center;
+	text-align: left;
+	color: #FFFFFF;
+	text-shadow: 3px 3px rgba(0,0,0, 0.5);
+  	font-size: 3em;
+}
+
+h2{
+	color: #FFFFFF;
+	font-size: 1.5em;	
+	text-shadow: 1.5px 1.5px rgba(0,0,0, 0.5);
 }
 
 div{
 	padding: 2% 2%;
 }
 
-.title{
+nav{
+	vertical-align: middle;
+}
+
+a.button{
+	background-color: #373C64;
+	color: #FFFFFF;
+	text-align: center;
+	border: none;
+	font-size: 2em;
+	cursor: pointer;
+	padding: 1%;
+	margin-left: 5%;
+	text-decoration: none;
+}
+
+.menu_button{
+	font-weight: bold;
+	text-decoration: none;
+	height: 10em;
+ 	color: #000;
+ 	font-size: 1.1em;
+ 	padding-left: 2%;
+	text-transform: uppercase;
+}
+
+.menu_button:hover{
+	text-decoration: underline;
+	color: #7FD3BB;
+}
+
+/*TODO the active/current page is highlighted in menu bar */
+
+.header_image{
 	min-height: 45vw; /*must be <= ratio of width/height of background image*/
 	background-image: url("../pictures/background.png");
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+.title{
+	width: 70%;
+}
+
+.title h1{
+	font-size: 8em;
+}
+
+.title h2{
+	font-size: 3em;
+	padding-bottom: 3%;
+}
+
+.menu{
+	padding: 1%;
+    background-color: #FFFFFF;
+    color: #161E4F; 
+    text-align: right;
+    height: 100%;
+    overflow: auto;
+    vertical-align: center;
+}
+
+.menu_image{
+	height: auto;
+	width: auto;
+	max-width: 7%;
+    float: left;
 }
