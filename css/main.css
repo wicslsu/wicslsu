@@ -1,20 +1,21 @@
 /* ------------------------ GENERAL ------------------------ */
 
 body{
+  font-family: 'Open Sans', sans-serif;
   margin: 0px;
   padding: 0px;
+  background-color: #525a66;
+  color: #FFFFFF;
 }
 
 /* ------------------------ HEADERS ------------------------ */
 h1{
 	text-align: left;
-	color: #FFFFFF;
 	text-shadow: 3px 3px rgba(0,0,0, 0.5);
   	font-size: 3em;
 }
 
 h2{
-	color: #FFFFFF;
 	font-size: 1.5em;	
 	text-shadow: 1.5px 1.5px rgba(0,0,0, 0.5);
 }
@@ -75,7 +76,20 @@ nav{
 	min-height: 45vw; /*must be <= ratio of width/height of background image*/
 	background-image: url("../pictures/background.png");
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
+}
+
+.header_image1{
+	min-height: 45vw; /*must be <= ratio of width/height of background image*/
+	background-image: url("../pictures/background1.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.profile_image{
+	width: 20vw;
+	float: left;
+	margin: 3%;	
 }
 
 .title{
@@ -91,29 +105,32 @@ nav{
 	padding-bottom: 3%;
 }
 
-.black{
-	color: #000;
+.centered{
 	text-decoration: none;
 	text-shadow: none;
-	padding: 0% 20%;
+	padding: 2% 20%;
 }
 
 div.navy{
 	color: #FFFFFF;
-	background-color: #373C64
+	background-color: #373C64;
 	border-style: solid;
 	border-color: #D3D3D3;
-	padding: 1%;
+	padding: 3em;
 	width:45%;
+	margin: 2%;
+	overflow: hidden;
 }
 
 div.white{
 	color: #373C64;
 	background-color: #FFFFFF;
 	border-style: solid;
-	border-color: #373C64;
+	border-color: #D3D3D3;
 	padding: 1%;
-	width: 45%
+	width: 45%;
+	font-size: 1.5em;
+	margin: auto;
 }
 /* ------------------ BUTTONS ---------------------- */
 
@@ -132,7 +149,7 @@ a.button{
 .connectButton{
 	height: 3em;
 	width: 3em;
-  	color: #FFFFFF;
+  	color: #525a66;
   	margin: .5%;
 }
 
