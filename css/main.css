@@ -167,6 +167,10 @@ a.button{
 	text-decoration: none;
 }
 
+a.button:hover{
+	background-color: #7ED4BB;
+}
+
 .connectButton{
 	height: 3em;
 	width: 3em;
