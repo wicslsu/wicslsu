@@ -8,6 +8,14 @@ body{
   color: #FFFFFF;
 }
 
+a{
+	color: #373C64;
+}
+
+a:hover{
+	color: #EBC0C7;
+}
+
 /* ------------------------ HEADERS ------------------------ */
 h1{
 	text-align: left;
@@ -83,7 +91,7 @@ nav{
 	min-height: 45vw; /*must be <= ratio of width/height of background image*/
 	background-image: url("../pictures/bckgrnd.jpg");
 	background-repeat: repeat-y;
-	background-size: contain;
+	background-size: 100%;
 }
 
 .profile_image{
@@ -121,6 +129,17 @@ div.navy{
 	margin: 2%;
 	overflow: hidden;
 	max-width: 40%;
+	display: inline-block;
+}
+
+div.dkblue{
+	color: #FFFFFF;
+	background-color: #7ED4BB;
+	border-style: solid;
+	border-color: #373C64;
+	padding: 1em;
+	margin: 2%;
+	overflow: hidden;
 	display: inline-block;
 }
 
