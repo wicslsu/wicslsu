@@ -1,7 +1,7 @@
 /* ------------------------ GENERAL ------------------------ */
 
 body{
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin: 0px;
   padding: 0px;
   background-color: #525a66;
@@ -79,11 +79,11 @@ nav{
 	background-size: cover;
 }
 
-.header_image1{
+.background {
 	min-height: 45vw; /*must be <= ratio of width/height of background image*/
-	background-image: url("../pictures/background1.png");
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-image: url("../pictures/bckgrnd.jpg");
+	background-repeat: repeat-y;
+	background-size: contain;
 }
 
 .profile_image{
@@ -121,6 +121,7 @@ div.navy{
 	margin: 2%;
 	overflow: hidden;
 	max-width: 40%;
+	display: inline-block;
 }
 
 div.white{
@@ -128,7 +129,7 @@ div.white{
 	background-color: #FFFFFF;
 	border-style: solid;
 	border-color: #D3D3D3;
-	padding: 1%;
+	padding: 1% 25%;
 	width: 45%;
 	font-size: 1.5em;
 	margin: auto;
@@ -161,7 +162,7 @@ a.button{
     background-color: #EBC0C7;
     color: #161E4F; 
     text-align: center;
-    vertical-align: center;
+    vertical-align: middle;
     font-weight: 200;
 }
 
