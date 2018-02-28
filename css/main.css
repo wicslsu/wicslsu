@@ -94,6 +94,16 @@ nav{
 	background-size: 100%;
 }
 
+
+.background-event {
+	min-height: 45vw; /*must be <= ratio of width/height of background image*/
+	background-image: url("../pictures/bckgrnd.jpg");
+	background-repeat: repeat-y;
+	background-size: cover;
+	min-height: 45vw; /*must be <= ratio of width/height of background image*/
+}
+
+
 .profile_image{
 	width: 20vw;
 	float: left;
