@@ -45,40 +45,6 @@
               <img src="pictures/SocialMediaIcons/twit.png" alt="wics twitter" title="WICS Twitter" class="connectButton" onmouseover="this.src='pictures/SocialMediaIcons/twit2.png';" onmouseout="this.src='pictures/SocialMediaIcons/twit.png';"/>
             </a>
 <form name="submit-to-google-sheet">
-	<!DOCTYPE html>
-<html>
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-
-form {
-  border: 3px solid #f1f1f1;
-  font-family: Arial;
-}
-
-.container {
-  padding: 20px;
-  background-color: #f1f1f1;
-}
-
-input[type=text], input[type=submit] {
-  width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  border: none;
-}
-
-input[type=submit]:hover {
-  opacity: 0.8;
-}
-</style>
 <body>
 
 <form action="/action_page.php">
@@ -98,6 +64,38 @@ input[type=submit]:hover {
 <script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycbwM89QCpSm0NjYBsAPUytd2pF-c9yOG8e0Qz3pCnI2c509kbC7gHjlf9u_pKRvvPDJIBQ/exec'
   const form = document.forms['submit-to-google-sheet']
+ const loading = document.querySelector('.js-loading')
+    const successMessage = document.querySelector('.js-success-message')
+    const errorMessage = document.querySelector('.js-error-message')
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      showLoadingIndicator()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => showSuccessMessage(response))
+        .catch(error => showErrorMessage(error))
+    })
+
+    function showLoadingIndicator () {
+      form.classList.add('is-hidden')
+      loading.classList.remove('is-hidden')
+    }
+
+    function showSuccessMessage (response) {
+      console.log('Success!', response)
+      setTimeout(() => {
+        successMessage.classList.remove('is-hidden')
+        loading.classList.add('is-hidden')
+      }, 500)
+    }
+
+    function showErrorMessage (error) {
+      console.error('Error!', error.message)
+      setTimeout(() => {
+        errorMessage.classList.remove('is-hidden')
+        loading.classList.add('is-hidden')
+      }, 500)
+    }
 
   form.addEventListener('submit', e => {
     e.preventDefault()
