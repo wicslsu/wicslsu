@@ -45,8 +45,54 @@
               <img src="pictures/SocialMediaIcons/twit.png" alt="wics twitter" title="WICS Twitter" class="connectButton" onmouseover="this.src='pictures/SocialMediaIcons/twit2.png';" onmouseout="this.src='pictures/SocialMediaIcons/twit.png';"/>
             </a>
 <form name="submit-to-google-sheet">
+	<!DOCTYPE html>
+<html>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+form {
+  border: 3px solid #f1f1f1;
+  font-family: Arial;
+}
+
+.container {
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  border: none;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+</style>
+<body>
+
+<form action="/action_page.php">
+  <div class="container">
+    <h2>Get More WiCS Info</h2>
+  </div>
+
+  <div class="container" style="background-color:white">
   <input name="email" type="email" placeholder="Email" required>
+  </div>
+
+  <div class="container">
   <button type="submit">Send</button>
+  </div>
 </form>
 
 <script>
