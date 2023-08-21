@@ -44,11 +44,22 @@
             <a href="https://twitter.com/wicslsu/" class="connectButton">
               <img src="pictures/SocialMediaIcons/twit.png" alt="wics twitter" title="WICS Twitter" class="connectButton" onmouseover="this.src='pictures/SocialMediaIcons/twit2.png';" onmouseout="this.src='pictures/SocialMediaIcons/twit.png';"/>
             </a>
-<!--
-            <a href="https://www.tigerlink.lsu.edu/WICS/club_signup/" class="connectButton">
-              <img src="pictures/SocialMediaIcons/tigerlink.png" alt="wics tigerlink" title="WiCS TigerLink" class="connectButton" onmouseover="this.src='pictures/SocialMediaIcons/tigerlink2.png';" onmouseout="this.src='pictures/SocialMediaIcons/tigerlink.png';"/>
-            </a>
--->			
+<form name="submit-to-google-sheet">
+  <input name="email" type="email" placeholder="Email" required>
+  <button type="submit">Send</button>
+</form>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwM89QCpSm0NjYBsAPUytd2pF-c9yOG8e0Qz3pCnI2c509kbC7gHjlf9u_pKRvvPDJIBQ/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>		
 		</div>
 		<div class="footer">
       		<p>&#169; 2023 Women in Computer Science LSU</p>
