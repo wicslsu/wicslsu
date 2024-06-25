@@ -1,15 +1,15 @@
 /* ------------------------ GENERAL ------------------------ */
 
 body{
-  font-family: "Open Sans", sans-serif;
-  margin: 0px;
-  padding: 0px;
-  background-color: #525a66;
-  color: #FFFFFF;
+	font-family: 'Courier New', monospace;
+	margin: 0px;
+	padding: 0px;
+	color: #FFFFFF;
 }
 
 a{
-	color: #373C64;
+	color: #3d3f40;
+	margin: 10px;
 }
 
 a:hover{
@@ -18,14 +18,16 @@ a:hover{
 
 /* ------------------------ HEADERS ------------------------ */
 h1{
+	font-family: 'Courier New', monospace;
+	font-size: 3em;
 	text-align: left;
-	text-shadow: 3px 3px rgba(0,0,0, 0.5);
-  	font-size: 3em;
+	color: #F4F7F8;  	
 }
 
 h2{
 	font-size: 1.5em;	
-	text-shadow: 1.5px 1.5px rgba(0,0,0, 0.5);
+	text-align: center;
+	color: #3d3f40;
 }
 
 h4{
@@ -77,30 +79,12 @@ nav{
 	color: #7FD3BB;
 }
 
-/*TODO the active/current page is highlighted in menu bar */
 
-/* ------------------ HEADER CLASSES ---------------------- */
+/* For the main part of the home page*/
 .header_image{
-	min-height: 45vw; /*must be <= ratio of width/height of background image*/
-	background-image: url("../pictures/background.png");
-	background-repeat: no-repeat;
+	min-height: 45vw; /* must be <= ratio of width/height of background image */
+	background-color: #ecc3db;
 	background-size: cover;
-}
-
-.background {
-	min-height: 45vw; /*must be <= ratio of width/height of background image*/
-	background-image: url("../pictures/bckgrnd.jpg");
-	background-repeat: repeat-y;
-	background-size: 100%;
-}
-
-
-.background-event {
-	min-height: 45vw; /*must be <= ratio of width/height of background image*/
-	background-image: url("../pictures/bckgrnd.jpg");
-	background-repeat: repeat-y;
-	background-size: cover;
-	min-height: 45vw; /*must be <= ratio of width/height of background image*/
 }
 
 
@@ -143,8 +127,8 @@ div.navy{
 }
 
 div.dkblue{
-	color: #FFFFFF;
-	background-color: #7ED4BB;
+	color: #3d3f40;
+	background-color: #b8ddd3;
 	border-style: solid;
 	border-color: #373C64;
 	padding: 1em;
@@ -177,9 +161,9 @@ a.button{
 	text-decoration: none;
 }
 
-a.button:hover{
+/* a.button:hover{
 	background-color: #7ED4BB;
-}
+} */
 
 .connectButton{
 	height: 3em;
@@ -188,11 +172,13 @@ a.button:hover{
   	margin: .5%;
 }
 
-/* ------------------ FOOTER ---------------------- */
 
+
+
+/* ------------------ FOOTER ---------------------- */
 .footer{
 	padding: 1%;
-    background-color: #EBC0C7;
+    background-color: #ecc3db;
     color: #161E4F; 
     text-align: center;
     vertical-align: middle;
