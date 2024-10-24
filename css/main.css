@@ -1,187 +1,150 @@
-/* ------------------------ GENERAL ------------------------ */
-
-body{
-	font-family: 'Courier New', monospace;
-	margin: 0px;
-	padding: 0px;
-	color: #FFFFFF;
-}
-
-a{
-	color: #3d3f40;
-	margin: 10px;
-}
-
-a:hover{
-	color: #EBC0C7;
-}
-
-/* ------------------------ HEADERS ------------------------ */
+/* tabs font*/
 h1{
-	font-family: 'Courier New', monospace;
-	font-size: 3em;
-	text-align: left;
-	color: #F4F7F8;  	
+	font-family: 'Handjet', sans-serif;
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 4.142px;
+    margin-top: 80px;
+
+    /* Gradient Text Effect */
+    background: linear-gradient(90deg, #DFAAC3 24.34%, #F1C9DB 41.54%, #D3B9E8 64.8%, #997DC3 75.56%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+	opacity: 0;
+    transform: translateY(50px); 
+    animation: slideUp 2s ease forwards; 
 }
 
 h2{
-	font-size: 1.5em;	
-	text-align: center;
-	color: #3d3f40;
-}
-
-h4{
-	color: #000;
-	font-size: .9em;
-}
-
-/* ------------------------ DIVS   ------------------------ */
-div{
-	padding: 2% 2%;
-	text-align: center;
-}
-
-nav{
-	vertical-align: middle;
-}
-
-/* ------------------ MENU CLASSES ---------------------- */
-
-.menu{
-	padding: 1%;
-    background-color: #FFFFFF;
-    color: #161E4F; 
-    text-align: right;
+    display: flex;
+    width: 100%;
     height: 100%;
-    overflow: auto;
-    vertical-align: center;
-}
-
-.menu_image{
-	height: auto;
-	width: auto;
-	max-width: 7%;
-    float: left;
-}
-
-.menu_button{
-	font-weight: bold;
-	text-decoration: none;
-	height: 10em;
- 	color: #000;
- 	font-size: 1.1em;
- 	padding-left: 2%;
-	text-transform: uppercase;
-}
-
-.menu_button:hover{
-	text-decoration: underline;
-	color: #7FD3BB;
-}
-
-
-/* For the main part of the home page*/
-.header_image{
-	min-height: 45vw; /* must be <= ratio of width/height of background image */
-	background-color: #ecc3db;
-	background-size: cover;
-}
-
-
-.profile_image{
-	width: 20vw;
-	float: left;
-	margin: 3%;	
-}
-
-.title{
-	width: 70%;
-}
-
-.title h1{
-	font-size: 8em;
-}
-
-.title h2{
-	font-size: 3em;
-	padding-bottom: 3%;
-}
-
-.centered{
-	text-decoration: none;
-	text-shadow: none;
-	padding: 2% 20%;
-}
-
-div.navy{
-	color: #FFFFFF;
-	background-color: #373C64;
-	border-style: solid;
-	border-color: #D3D3D3;
-	padding: 1em;
-	width:40%;
-	margin: 2%;
-	overflow: hidden;
-	max-width: 40%;
-	display: inline-block;
-}
-
-div.dkblue{
-	color: #3d3f40;
-	background-color: #b8ddd3;
-	border-style: solid;
-	border-color: #373C64;
-	padding: 1em;
-	margin: 2%;
-	overflow: hidden;
-	display: inline-block;
-}
-
-div.white{
-	color: #373C64;
-	background-color: #FFFFFF;
-	border-style: solid;
-	border-color: #D3D3D3;
-	padding: 1% 25%;
-	width: 45%;
-	font-size: 1.5em;
-	margin: auto;
-}
-/* ------------------ BUTTONS ---------------------- */
-
-a.button{
-	background-color: #373C64;
-	color: #FFFFFF;
-	text-align: center;
-	border: none;
-	font-size: 2em;
-	cursor: pointer;
-	padding: 1%;
-	margin-left: 5%;
-	text-decoration: none;
-}
-
-/* a.button:hover{
-	background-color: #7ED4BB;
-} */
-
-.connectButton{
-	height: 3em;
-	width: 3em;
-  	color: #525a66;
-  	margin: .5%;
-}
-
-
-
-
-/* ------------------ FOOTER ---------------------- */
-.footer{
-	padding: 1%;
-    background-color: #ecc3db;
-    color: #161E4F; 
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
     text-align: center;
-    vertical-align: middle;
-    font-weight: 200;
+    font-family: var(--Inside-Text, "Averia Serif Libre");
+    font-size: 85px;
+    font-style: normal;
+    font-weight: 2000;
+    line-height: 100%;
+    letter-spacing: 5px;
+    
+    background-color: #8b4361;
+    color: transparent;
+    text-shadow: -1px 1px 3.5px rgba(253, 244, 255, 0.8);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
 }
 
+h3 {
+    color: #494949;
+    text-align: center;
+    font-family: 'NanumGothicCoding', monospace;
+    font-size: 23.5px;
+    font-weight: 1000;
+    line-height: 30px; /* Ensures line height matches the font size */
+    letter-spacing: 1.0px;
+    margin: 0;
+    white-space: nowrap;  /* Keeps the text on a single line */
+    max-width: 100%;
+}
+
+p {
+    color: #2A2A2A;
+    text-align: center;
+    font-family: 'NanumGothicCoding', monospace;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 20px; /* 120% of the font size */
+    margin: 0;
+    white-space: nowrap;  /* Keeps the text on a single line */
+    max-width: 100%;
+}
+
+.body-text{
+	color: #8F7C49;
+    text-align: center;
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 100%;
+    letter-spacing: 1px;
+
+	opacity: 0;
+    transform: translateY(50px); 
+    animation: slideUp 2s ease forwards; 
+}
+
+
+
+/* Officer Page */
+.member-format-container{
+    text-align: center;
+    padding-top: 150px; 
+}
+
+.member-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adjusts the vertical spacing between rows */
+}
+
+.row1, .row2, .row3 {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjusts the horizontal spacing between cards */
+}
+
+.row1 {
+    justify-content: center; /* Center the single member card */
+    margin-top: 40px;
+}
+
+.row2, .row3 {
+    justify-content: space-around; /* Space out three cards evenly */
+}
+
+.row3 {
+    margin-bottom: 40px;
+}
+
+.member-card {
+    display: flex;
+    flex-direction: column;  /* Stacks photo and text vertically */
+    align-items: center;     /* Center the photo and text horizontally */
+    justify-content: flex-start; /* Ensures content stays at the top of the card */
+    width: 200px;  /* Defines the card width */
+    text-align: center;  /* Ensures text inside is centered */
+    margin: 0 auto;  /* Centers the card on the page */
+    padding-bottom: 20px;  /* Adds some space at the bottom of the card */
+    position: relative;
+    margin: 15px;
+}
+
+.member-photo {
+    width: 100%; /* Set width of the circle */
+    height: 200px; /* Set height of the circle */
+    background-size: cover;
+    background-position: center;
+    border: 2px;
+    margin: 0; /* Remove margin */
+    padding: 10px; /* Add padding if needed */
+    border-radius: 50%
+}
+
+.member-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the text under the photo */
+    gap: 2px;
+    padding-top: 10px;
+    text-align: center;
+}
