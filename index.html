@@ -42,6 +42,80 @@
 			<p class="body-text">we are here to build a community for women in computer science</p>
 		</div>
 
+		<div class="slideshow-container">
+			<div class = "slides fade">
+				<img src="pictures/slides/001.jpg" style = "width: 65%;">
+			</div>
+			<div class = "slides fade">
+				<img src="pictures/slides/002.jpg" style = "width: 65%;">
+			</div>
+			<div class = "slides fade">
+				<img src="pictures/slides/003.jpg" style = "width: 65%;">
+			</div>
+
+			<button class="navigation-button left-button" onclick="plusDivs(-1)">&#10094;</button>
+			<button class="navigation-button right-button" onclick="plusDivs(+1)">&#10095;</button>
+		</div>
+		<div class = "navigation-dots" style="text-align: center;">
+			<span class="dots"></span>
+			<span class="dots"></span>
+			<span class="dots"></span>
+		</div>
+
+		<script>
+			let slideIndex = 0;
+			var manualslideIndex = 1;
+			showSlides();
+
+			function showSlides() {
+			let i;
+			let slides = document.getElementsByClassName("slides");
+			let dots = document.getElementsByClassName("dots");
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";  
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {slideIndex = 1}    
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+			setTimeout(showSlides, 4000); // Change image every 2 seconds
+			}
+
+			showDivs(manualslideIndex);
+
+			function plusDivs(n) {
+			showDivs(manualslideIndex += n);
+			}
+
+			function showDivs(n) {
+				var i;
+				var x = document.getElementsByClassName("slides");
+				if (n > x.length) {manualslideIndex = 1}
+				if (n < 1) {manualslideIndex = x.length}
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";  
+				}
+				x[manualslideIndex-1].style.display = "block";  
+			}
+		</script>
+
+		<div class="content-container">
+			<h2>Who We Are</h2>
+			<p style="display: inline-block; white-space: normal; max-width:100%; word-break:break-word; word-wrap:break-word;"> 
+				We are a vibrant and inclusive community dedicated to empowering our ladies in the field of computer science. 
+				We help our ladies to thrive and excel by providing academic and professional opportunities, resources, and support.</p>
+			<p style="display: inline-block; white-space: normal; max-width:100%; word-break:break-word; word-wrap:break-word;">
+				We warmly welcome everyone who share our passion for creating a diverse and supportive environment.
+			</p> 
+				<a href="scripts/0_about.html" style = "text-decoration: none;">
+					<button class="learn-more-button">Learn More</button>
+				</a>
+		</div>
+
+
 		<footer>
 			<nav class="footer-content">
 				<h3 class="follow-text">FOLLOW US</h3>

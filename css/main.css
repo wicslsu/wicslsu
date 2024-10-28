@@ -1,12 +1,13 @@
 /* tabs font*/
 h1{
-	font-family: 'Handjet', sans-serif;
+    font-family: 'Handjet', sans-serif;
     font-size: 120px;
     font-style: normal;
     font-weight: 600;
     line-height: 120%;
     letter-spacing: 4.142px;
     margin-top: 80px;
+    text-align: center;
 
     /* Gradient Text Effect */
     background: linear-gradient(90deg, #DFAAC3 24.34%, #F1C9DB 41.54%, #D3B9E8 64.8%, #997DC3 75.56%);
@@ -25,7 +26,7 @@ h2{
     width: 100%;
     height: 100%;
     flex-direction: column;
-    justify-content: center;
+    justify-content: justify;
     flex-shrink: 0;
     text-align: center;
     font-family: var(--Inside-Text, "Averia Serif Libre");
@@ -56,16 +57,35 @@ h3 {
     max-width: 100%;
 }
 
-p {
-    color: #2A2A2A;
-    text-align: center;
+p{
+    color: #4a4545;
+    text-align: justify;
     font-family: 'NanumGothicCoding', monospace;
-    font-size: 17px;
-    font-weight: 300;
-    line-height: 20px; /* 120% of the font size */
-    margin: 0;
-    white-space: nowrap;  /* Keeps the text on a single line */
-    max-width: 100%;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 150%;
+    margin: 20px;
+}
+
+.member-bullet {
+    color: #4a4545;
+    font-family: 'NanumGothicCoding', monospace;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 150%;
+    margin-left: 10%;
+    padding: 10px;
+}
+
+.event-font{
+    display: flex;
+    text-align: center;
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px;
 }
 
 .body-text{
@@ -83,9 +103,210 @@ p {
     animation: slideUp 2s ease forwards; 
 }
 
+/* index.html */
+.learn-more-button{
+    color: white;
+    border-radius: 10px;
+    background: var(--Button, linear-gradient(90deg, rgba(222, 206, 247, 0.90) 3.7%, rgba(247, 196, 220, 0.90) 99.93%));
+    box-shadow: 2px 4px 8px 0px rgba(65, 52, 52, 0.3);
+    display: flex;
+    width: 160px;
+    height: 50px;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+/* Create Button Hover */
+
+/* Slide Shows */
+.slideshow-container{
+    /* 
+    justify-content: center;
+    overflow: hidden; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
 
 
-/* Officer Page */
+.slides {
+    display: none; /* hides slides by default */
+    width: 100%; /* ensures each slide fills the container */
+    height: 100%;
+    text-align: center;
+}
+
+/* Display active slide */
+.slides.active {
+    display: block;
+}
+
+/* Center the images within each slide */
+.slides img {
+    width: 100%; /* scales image to container width */
+    height: 100%; /* scales image to container height */
+    object-fit: cover; /* crops image to fit container without distortion */
+    clip-path: inset(80px 10px 80px 0); /* keeps the clipping effect */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Style for the navigation buttons */
+.navigation-button {
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    font-size: 20px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.left-button{
+    left: 15%;
+    position:absolute;
+}
+
+.right-button {
+    right: 15%;
+    position:absolute;
+}
+
+/* Center the navigation dots */
+.navigation-dots {
+    text-align: center;
+    margin-top: -60px;
+}
+
+/* Style each dot */
+.dots {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dots.active {
+    background-color: #717171;
+}
+
+/* 4_contact */
+.contact-form {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px; /* Limits form width */
+}
+
+.contact-input{
+    color: #4a4545;
+    font-family: 'NanumGothicCoding', monospace;
+    font-size: 16px;
+    width: 100%;
+    max-width: 400px; /* Ensures all inputs have consistent width */
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color:#F1C9DB;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #d79cb6 ;
+}
+
+
+
+
+/* 5_Mission_Page */
+.pillars {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Arrange circles in a row */
+.pillar-circles-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* space between the circles */
+    margin-bottom: 20px;
+}
+
+.pillar-circles {
+    background-color: #ffedf5;
+    width: 150px; /* fixed width */
+    height: 150px; /* fixed height */
+    border-radius: 50%; /* circle shape */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 10px;
+    overflow: hidden; /* ensure the text remains within the circle */
+    margin: 25px;
+}
+
+.pillar-circles h3 {
+    margin: 0;
+    font-size: 16px; /* initial font size */
+    text-align: center;
+}
+
+/* Style the container */
+.pillar-content {
+    display: inline-block;
+    max-width: 100%;
+    white-space: normal;
+
+    margin: 0 auto;
+    text-align: justify;
+    padding: 10px;
+
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Style for the paragraph text */
+.pillar-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* 6_Officer_Page */
 .member-format-container{
     text-align: center;
     padding-top: 150px; 
@@ -100,7 +321,7 @@ p {
 .row1, .row2, .row3 {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Adjusts the horizontal spacing between cards */
+    gap: 60px; /* Adjusts the horizontal spacing between cards */
 }
 
 .row1 {
@@ -114,6 +335,15 @@ p {
 
 .row3 {
     margin-bottom: 40px;
+}
+
+.member-name{
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 20px; /* 120% of the font size */
+    margin: 0;
+    white-space: nowrap;  /* Keeps the text on a single line */
+    max-width: 100%;
 }
 
 .member-card {
