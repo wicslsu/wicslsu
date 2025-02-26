@@ -27,6 +27,7 @@ h1{
     font-size: clamp(24px, 40%, 120px);
     color: #ca6895;
     text-align: center;
+    text-decoration: underline;
 }
 
 .countdown-number{
