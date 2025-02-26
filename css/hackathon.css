@@ -1,0 +1,345 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Rasa", serif;
+    font-style: normal;
+}
+
+h1{
+    font-family: 'Handjet', sans-serif;
+    font-size: clamp(4rem, 8vw, 10rem);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 4.142px;
+    margin-top: 5rem;
+    text-align: center;
+
+    background: linear-gradient(90deg, #DFAAC3 24.34%, #F1C9DB 41.54%, #D3B9E8 64.8%, #997DC3 75.56%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.countdown-number{
+    font-size: clamp(2rem, 4vw, 8rem);
+    color: #DFAAC3;
+}
+
+.countdown-label{
+    font-size: clamp(0.8rem, 1vw, 3rem);
+    color: #997DC3;
+}
+
+.countdown-container{
+    display: flex;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 1rem;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown-content{
+    display: block;
+    text-align: center;
+}
+
+/* Positioning */
+#register-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    text-decoration: none;
+    
+}
+
+#register-button button{
+    font-size: clamp(1.5rem, 2.5vh, 4rem);
+    color:white;
+    background-color: #e8c2d3;
+    border: none;
+    padding: 1rem 1.8rem;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+#register-button button:hover{
+    background-color: #ee9dc2;
+    transform: scale(1.05);
+}
+
+.introduction-container{
+    padding-top: clamp(200px, 10vw, 250px);
+    padding-bottom: clamp(200px, 10vw, 250px);
+}
+
+.hackathon-about{
+    align-items: center;
+    display: flex; 
+    background-color: #e8c2d3;
+    height: 200px;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.hackathon-about p{
+    font-size: clamp(1rem, 1.5vw, 6rem);
+    color: rgb(86, 87, 92);
+}
+
+
+#schedule-nav, #faq-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content */
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+    max-width: 900px;
+    margin: 3rem auto; /* Adds spacing and centers on page */
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.8); /* Slight transparent background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+/* Section Headings */
+#schedule-nav p{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #553c9a; /* A soft purple */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 1rem;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+/* FAQ Section */
+.faq-item {
+    width: 100%;
+    margin-bottom: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* FAQ Summary (Clickable Title) */
+.faq-item summary {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem;
+    background: #e0d4fc;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    color: #393939;
+}
+
+/* Hover Effect */
+.faq-item summary:hover {
+    background: #c9b5e5;
+}
+
+/* FAQ Content */
+.faq-item p {
+    padding: 1rem;
+    font-size: 18px;
+    color: #393939;
+}
+
+
+body{
+    margin: 0;
+}
+
+header{
+    background: linear-gradient(to left, #c9b5e5 20%, #fdcfe9 100%);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 1.5rem;
+    height: 6.5rem;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.logo{
+    display: flex;
+    gap: 15px;
+}
+
+#header-logo img{
+    cursor: pointer;
+    /* align-items: center; */
+    
+    /* width: 50%; */
+    width: 16rem;
+    height: auto;
+}
+
+.navigation-bar{
+    display: flex;
+    gap: 1.0rem;
+}
+
+.navigation-bar a{
+    display: flex;
+    align-items: center;
+    padding: 0rem 2.0rem;
+
+    /* Font Details */
+    font-size: 1.7rem;
+	color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    line-height: 20px;
+    transition: 0.3s;
+}
+
+.navigation-bar a:hover{
+    color: #fdddee; 
+
+    transition: background 0.3s ease, color 0.3s ease;  
+}
+
+#register a{
+    color: #e097be;
+    background-color: white;
+
+    /* critical for the round border */
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+}
+
+.navigation-contents{
+    display: block;
+    align-items: center;
+}
+
+.menu-toggle{
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle div {
+    width: 30px;
+    height: 3px;
+    margin: 6px 0;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s ease-in-out;
+}
+
+#hamburger-menu{
+    display: none;
+    cursor: pointer;
+}
+
+/* 
+@media screen and (max-width: 768px) {
+    .navigation-bar{
+        position: absolute;
+        top: 6.5rem;
+        background: linear-gradient(to left, #c9b5e5 20%, #fdcfe9 100%);
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        height: 0; 
+        transition: height 0.5s ease-in-out;
+        overflow: hidden;
+    }
+
+    .navigation-bar a:nth-child(1){
+        margin-top: 20px;
+    }
+
+    .menu-toggle{
+        display: block;
+    }
+
+    label {
+        width: 45px;
+        height: 30px;
+        position: relative;
+    }
+
+    .navigation-bar a {
+        display: block;
+        padding: 1rem;
+        font-size: 1.5rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    #hamburger-toggle div{
+        width: 100%;
+        height: 5px;
+        background: white;
+        position: absolute;
+        transform: translateY(-50%);
+        border-radius: 99px;
+        transition: 0.3s;
+        transform: scale(1);
+    }
+
+    #hamburger-toggle div:nth-child(1){
+        top: 0%;
+    }
+    #hamburger-toggle div:nth-child(2){
+        top: 50%;
+    }
+    #hamburger-toggle div:nth-child(3){
+        top: 100%;
+    }
+
+    #hamburger-menu:checked + header nav{
+        height: 100vh;
+    }
+
+    
+    #hamburger-menu:checked ~ .navigation-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        min-height: 300px; 
+        padding: 1rem 0;
+        background: linear-gradient(to left, #c9b5e5 20%, #fdcfe9 100%);
+    }
+    
+
+
+    #hamburger-menu:checked + label div:nth-child(1){
+        transform: rotate(45deg);
+        top: 50%;
+    }
+    #hamburger-menu:checked + label div:nth-child(3){
+        transform: rotate(-45deg);
+        top: 50%;
+    }
+    #hamburger-menu:checked + label div:nth-child(2){
+        transform: scale(0);
+        opacity: 0;
+    }
+} */

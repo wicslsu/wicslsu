@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WiCS Hackathon</title>
+    <link rel = "stylesheet" href="../css/hackathon.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Rasa:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Handjet:wght@600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/pictures/icons/Logo.png" sizes="500x500" type="image/png">
+    <script src = "hackathon.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+    
+        <div class="logo" id = "header-logo">
+            <a href="/index.html"><img src="../pictures/icons/Logo.png" alt="WiCS Logo"></a>
+        </div>
+
+        <!-- Mobile Screen -->
+        <div class="hamburger-container">
+            <input type="checkbox" id="hamburger-menu">
+            <label for="hamburger-menu" class="menu-toggle" id="hamburger-toggle">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+        </div>
+        <!-- End of mobile screen -->
+
+        <nav class = "navigation-bar">
+            <a class = "navigation-contents" href = "#default">Home</a>
+            <a class = "navigation-contents" href="#hackathon-nav">About</a>
+            <a class = "navigation-contents" href="#schedule-nav">Schedule</a>
+            <a class = "navigation-contents" href="#faq-nav">FAQ</a>
+            <a class = "navigation-contents" id="register" href = "https://docs.google.com/forms/d/e/1FAIpQLSeTSqZAv4RrQ0mUa44uZZPjFjhoJTPKjVwZ1Rhl-YDuaMD47g/viewform?usp=sharing" target="_blank">Register Here</a>
+        </nav>
+    </header>
+
+    <div class="introduction-container" id="default">
+        <!-- Welcoming Message -->
+        <div class="welcome-msg">
+            <h1>&lt;WiCS Hackathon&gt;</h1>
+        </div>
+        <!-- Countdown -->
+        <div class = "countdown-container">
+            <div class="countdown-content">
+                <div id="days" class="countdown-number">0</div>
+                <div class="countdown-label">Days</div>
+            </div>
+            <div class="countdown-content">
+                <div id="hours" class="countdown-number">0</div>
+                <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-content">
+                <div id="minutes" class="countdown-number">0</div>
+                <div class="countdown-label">Minutes</div>
+            </div>
+            <div class="countdown-content">
+                <div id="seconds" class="countdown-number">0</div>
+                <div class="countdown-label">Seconds</div>
+            </div>
+        </div>
+        <h2 id="end-message"></h2>
+        <a id="register-button" href="https://docs.google.com/forms/d/e/1FAIpQLSeTSqZAv4RrQ0mUa44uZZPjFjhoJTPKjVwZ1Rhl-YDuaMD47g/viewform?usp=sharing" target="_blank">
+            <button>Register Here</button>
+        </a>
+    </div>
+
+    <div class = "hackathon-about" id="hackathon-nav">
+        <p>Join us for WiCS' 2025 Hackathon on March 21, 2025 – March 23, 2025, where creativity meets 
+        code! Whether you're a beginner or an experienced coder, this event is your chance to 
+        innovate, collaborate, and bring ideas to life.</p> 
+    </div> 
+
+    <div id="schedule-nav">
+        <p>Schedule</p>
+        <table>
+            <!-- Dates -->
+            <tr>
+                <th rowspan="2">Date/Time</th>
+                <th>3/21</th>
+                <th>3/22</th>
+                <th>3/23</th>
+            </tr>
+            <!-- Day of the Week -->
+            <tr>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+            </tr>
+            <!-- Row one -->
+            <tr>
+                <td rowspan="3"></td>
+                <td rowspan="3">TBD</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id = "faq-nav">
+        <details class="faq-item">
+            <summary class = "collapse">What is Hackathon?</summary>
+            <p>A hackathon is a time-limited coding event where participants collaborate to develop 
+            a project based on a theme. It encourages innovation, teamwork, and problem-solving 
+            as participants develop solutions.</p> 
+        </details>
+        <details class="faq-item">
+            <summary class = "collapse">When and where?</summary>
+            <p>It takes place on March 21st, 2025 6:00 PM CST ~ March 23, 2025 6:00 PM CST at
+            <a href="https://maps.app.goo.gl/tgWGakovSdPv7qdd9" target="_blank">LSU PFT</a>.</p> 
+        </details>
+        <details class="faq-item">
+            <summary class = "collapse">What is the theme?</summary>
+            <p>IT'S A SECRET. Try guessing it.</p> 
+        </details>
+        <details class="faq-item">
+            <summary class = "collapse">What do I bring?</summary>
+            <p>To survive, you only need your laptop and charger (and your keys!). However, if you want to be COMPETITIVE, 
+            bring a sleeping bag and a pillow. 
+            Warning: We have seen plenty walking zombies at PFT on Sunday morning.</p> 
+        </details>
+        <details class="faq-item">
+            <summary class = "collapse">I have no coding experience. Can I still come?</summary>
+            <p>Of course! In fact, if you have absolutely no experience, this is the perfect time for you to learn how to code!</p>
+        </details>
+        <details class="faq-item">
+            <summary class = "collapse">Is it free?</summary>
+            <p>Yes! It's free for all. In addition, we provide food, and there will be prizes at the closing ceremony!</p>
+        </details>
+        <details class="faq-item">
+            <summary class = "collapse">I have a specific question...</summary>
+            <p>You can contact WiCS via wicslsu@gmail.com or contact any officers!</p>
+        </details>
+    </div>
+</body>
+</html>

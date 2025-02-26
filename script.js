@@ -1,5 +1,3 @@
-
-
 function showSlides() {
   let i;
   let slides = document.getElementsByClassName("slides");
