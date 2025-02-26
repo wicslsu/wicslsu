@@ -23,6 +23,13 @@ h1{
     color: transparent;
 }
 
+h2{
+    font-size: clamp(24px, 40%, 120px);
+    color: #ca6895;
+    text-align: center;
+    text-decoration: underline;
+}
+
 #deadline-msg{
     font-size: clamp(24px, 40%, 120px);
     color: #ca6895;
@@ -55,8 +62,7 @@ h1{
     text-align: center;
 }
 
-/* Positioning */
-#register-button{
+ #register-button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,12 +92,6 @@ h1{
 }
 
 .hackathon-about{
-    /* align-items: center;
-    display: flex; 
-    background-color: #e8c2d3;
-    height: 200px;
-    padding-left: 10rem;
-    padding-right: 10rem; */
     display: flex; 
     align-items: center;
     justify-content: center; /* Centers text */
