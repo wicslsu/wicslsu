@@ -91,13 +91,13 @@ h2{
     padding-bottom: clamp(200px, 10vw, 250px);
 }
 
-.hackathon-about{
+.hackathon-about {
     display: flex; 
     align-items: center;
     justify-content: center; /* Centers text */
     background-color: #e8c2d3;
     height: auto; /* Allow height to adjust */
-    padding: 3rem 10rem; /* Desktop padding */
+    padding: clamp(2rem, 4vw, 6rem) clamp(1.5rem, 10vw, 10rem); /* Dynamic padding */
 
     /* Ensure responsiveness */
     text-align: center;
@@ -275,20 +275,12 @@ header{
 @media (max-width: 768px) {
     .hackathon-about {
         flex-direction: column;  
-        padding: 2rem 2rem;  
-    }
-
-    .hackathon-about p {
-        font-size: clamp(1.2rem, 3vw, 2.5rem);  
+        padding: clamp(1.5rem, 3vw, 4rem) clamp(1rem, 6vw, 5rem); /* Adjust padding */
     }
 }
 
 @media (max-width: 480px) {
     .hackathon-about {
         padding: 2rem 1.5rem; 
-    }
-
-    .hackathon-about p {
-        font-size: 1.5rem; 
     }
 }
