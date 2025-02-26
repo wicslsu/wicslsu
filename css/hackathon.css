@@ -23,7 +23,7 @@ h1{
     color: transparent;
 }
 
-h2{
+#deadline-msg{
     font-size: clamp(24px, 40%, 120px);
     color: #ca6895;
     text-align: center;
@@ -284,10 +284,10 @@ header{
 
 @media (max-width: 480px) {
     .hackathon-about {
-        padding: 2rem 1.5rem; /* Reduce padding for small screens */
+        padding: 2rem 1.5rem; 
     }
 
     .hackathon-about p {
-        font-size: 1.5rem; /* Ensure text is readable */
+        font-size: 1.5rem; 
     }
 }
