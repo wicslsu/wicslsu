@@ -116,16 +116,16 @@ h1{
 .level-table th{
     color: rgb(86, 87, 92);
     background-color: white;
-    font-size: 25px;
+    font-size: clamp(25px, 50%, 60px); 
     letter-spacing: 3px;
     padding: 2%;
 }
 
 .level-table td{
     color: rgb(86, 87, 92);
-    font-size: 20px;
-    padding: 10%;
+    font-size: clamp(20px, 50%, 60px); 
     letter-spacing: 2px;
+    line-height: 15;
 }
 
 #register-button{
@@ -163,6 +163,10 @@ h1{
 
 
 /* Schedule Section */
+.table-container{
+    width: 100%;
+}
+
 #schedule-nav, #faq-nav {
     display: flex;
     flex-direction: column;
@@ -191,6 +195,8 @@ h1{
 
 .schedule-table{
     width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
     border-collapse: collapse;
     text-align: center;
 }
@@ -198,6 +204,7 @@ h1{
 .schedule-table th, td {
     border: 1px solid #ddd;
     padding: 1rem;
+    word-break: break-word;
 }
 
 .schedule-table th {
@@ -296,4 +303,75 @@ h1{
 
 #LSU-logo img{
     max-width: 300px;
+}
+
+
+
+
+
+@media (max-width: 600px) {
+    .level-table {
+        display: block; 
+        width: 100%;
+    }
+
+
+    .level-table tbody tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+
+        border: 1px solid rgb(86, 87, 92);
+        background-color: white;
+        /* padding: 10px; */
+    }
+
+    .level-table td {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        /* padding: 10px; */
+    }
+
+    .level-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: rgb(86, 87, 92);
+        margin-right: 10px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .schedule-table {
+        display: block; /* Allows flexible stacking */
+        width: 100%;
+    }
+
+    .schedule-table thead {
+        display: none; /* Hides table headers on mobile */
+    }
+
+    .schedule-table tbody tr {
+        display: flex;
+        flex-direction: column; /* Stacks rows in a single column */
+        margin-bottom: 10px;
+        border: 1px solid rgb(86, 87, 92);
+        background-color: white;
+        padding: 10px;
+    }
+
+    .schedule-table td {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .schedule-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: rgb(86, 87, 92);
+        margin-right: 10px;
+    }
 }
