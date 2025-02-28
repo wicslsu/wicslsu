@@ -13,7 +13,7 @@ body{
 
 h1{
     font-family: 'Handjet', sans-serif;
-    font-size: clamp(4rem, 8vw, 10rem);
+    /* font-size: clamp(4rem, 8vw, 10rem); */
     font-style: normal;
     font-weight: 600;
     line-height: 120%;
@@ -34,8 +34,9 @@ h1{
 
 /* Welcome Home Tab */
 .introduction-container{
-    padding-top: clamp(200px, 10vw, 250px);
-    padding-bottom: clamp(200px, 10vw, 250px);
+
+    /* padding-top: clamp(200px, 10vw, 250px);
+    padding-bottom: clamp(200px, 10vw, 250px); */
     margin-bottom: 40px;
 }
 
@@ -55,7 +56,7 @@ h1{
 }
 
 #countdown-msg{
-    font-size: clamp(24px, 40%, 120px);
+    /* font-size: clamp(24px, 40%, 120px); */
     color: #e7c4d5;
     text-align: center;
     padding-top: 3rem;
@@ -63,12 +64,12 @@ h1{
 }
 
 .countdown-number{
-    font-size: clamp(2rem, 4vw, 8rem);
+    /* font-size: clamp(2rem, 4vw, 8rem); */
     color: #DFAAC3;
 }
 
 .countdown-label{
-    font-size: clamp(12px, 100%, 30px);
+    /* font-size: clamp(12px, 100%, 30px); */
     color: #ecd2ff;
 }
 
@@ -86,13 +87,13 @@ h1{
 
     background-color: #e8c2d3;
     /* padding: clamp(4rem, 4vw, 6rem) clamp(1.5rem, 10vw, 10rem); */
-    padding: clamp(35px, 6%, 100px) clamp(25px, 10%, 160px);
+    /* padding: clamp(35px, 6%, 100px) clamp(25px, 10%, 160px); */
     line-height: 40px;
 
 }
 
 .about-container p{
-    font-size: clamp(20px, 50%, 60px); 
+    /* font-size: clamp(20px, 50%, 60px);  */
     color: rgb(86, 87, 92);
     max-width: 800px;
     text-align: center;
@@ -137,7 +138,7 @@ h1{
 }
 
 #register-button button{
-    font-size: clamp(1.5rem, 2.5vh, 4rem);
+    /* font-size: clamp(1.5rem, 2.5vh, 4rem); */
     color:#d280a5;
     background-color: white;
     border: none;
@@ -151,7 +152,7 @@ h1{
 }
 
 #deadline-msg{
-    font-size: clamp(24px, 40%, 120px);
+    /* font-size: clamp(24px, 40%, 120px); */
     color: #ca6895;
     text-align: center;
     text-decoration: underline;
