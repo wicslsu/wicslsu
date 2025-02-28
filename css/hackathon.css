@@ -220,6 +220,10 @@ h1{
     letter-spacing: 1px;
 }
 
+.schedule-day{
+    font-size: 16px;
+}
+
 
 
 
@@ -306,72 +310,71 @@ h1{
 }
 
 
-
-
-
-@media (max-width: 600px) {
-    .level-table {
-        display: block; 
+@media (max-width: 768px){
+    .schedule-table, .level-table {
         width: 100%;
     }
 
-
-    .level-table tbody tr {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
-
-        border: 1px solid rgb(86, 87, 92);
-        background-color: white;
-        /* padding: 10px; */
+    .level-table td{
+        font-size: 18px;
     }
 
-    .level-table td {
-        display: flex;
-        justify-content: space-between;
+    #schedule-nav{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .schedule-table th{
+        font-size: min(2.5vw, 10px);
+        text-overflow: ellipsis;
+        word-break: keep-all;
+    }
+
+    .schedule-table td{
+        font-size: min(2.5vw, 10px);
+        text-overflow: ellipsis;
+        word-break: keep-all;
+    }
+
+    .schedule-day{
+        text-overflow: ellipsis;
+    }
+
+
+    .schedule-time{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: min(2.5vw, 12px);
+    }
+
+
+
+/* 
+    .schedule-table th, .level-table th{
         text-align: center;
-        /* padding: 10px; */
+        justify-content: center;
+        align-items: center;
+    } 
+
+    .schedule-table tr, .level-table tr {
+        text-align: center;
+
+    }  
+    
+    .schedule-table td, .level-table td {
+        white-space: normal; 
+        text-align: center; 
+        padding: 12px;
     }
 
-    .level-table td::before {
-        content: attr(data-label);
-        font-weight: bold;
-        color: rgb(86, 87, 92);
-        margin-right: 10px;
-    }
-}
-
-
-@media (max-width: 600px) {
-    .schedule-table {
-        display: block; /* Allows flexible stacking */
-        width: 100%;
-    }
-
-    .schedule-table thead {
-        display: none; /* Hides table headers on mobile */
-    }
-
-    .schedule-table tbody tr {
-        display: flex;
-        flex-direction: column; /* Stacks rows in a single column */
+    .schedule-table tbody tr, .level-table tbody tr {
+        display: block;  
         margin-bottom: 10px;
         border: 1px solid rgb(86, 87, 92);
         background-color: white;
         padding: 10px;
-    }
-
-    .schedule-table td {
-        display: flex;
-        justify-content: space-between;
-        text-align: left;
-        padding: 10px;
-    }
-
-    .schedule-table td::before {
-        content: attr(data-label);
-        font-weight: bold;
-        color: rgb(86, 87, 92);
-        margin-right: 10px;
-    }
+    } */
 }
