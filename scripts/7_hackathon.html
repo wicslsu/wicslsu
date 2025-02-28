@@ -6,6 +6,7 @@
 
     <title>WiCS Hackathon</title>
     <link rel = "stylesheet" href="../css/hackathon.css">
+    <link rel = "stylesheet" href="/css/header.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Rasa:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
@@ -36,7 +37,7 @@
         <!-- End of mobile screen -->
     
         <nav class="navigation-bar">
-            <a class="navigation-contents" href="#default">Home</a>
+            <a class="navigation-contents" href="/index.html">Home</a>
             <a class="navigation-contents" href="#hackathon-nav">About</a>
             <a class="navigation-contents" href="#schedule-nav">Schedule</a>
             <a class="navigation-contents" href="#faq-nav">FAQ</a>
@@ -52,6 +53,7 @@
             <h1>&lt;WiCS Hackathon&gt;</h1>
         </div>
         <!-- Countdown -->
+        <h2 id="countdown-msg">Countdown to Hackathon:</h2> 
         <div class = "countdown-container">
             <div class="countdown-content">
                 <div id="days" class="countdown-number">0</div>
@@ -71,77 +73,159 @@
             </div>
         </div>
         <h2 id="end-message"></h2>
+    </div>
+
+    <div class = "about-container" id="hackathon-nav">
+        <p class="gen-msg" id="about-msg"> 
+            WiCS is proud to bring back our <strong>annual Spring Hackathon</strong> this semester!<br> 
+            Our hackathon is open to everyone. It is time to join the competition with your friends, construct a team of <strong>2 ~ 5</strong>, and develop an application centered around our mysterious 
+            theme (to be announced)!!! This is a geat opportunity for you to gain real experience centered around coding, teamwork, and 
+            build your resume!<br> 
+            If you're a beginner, you might be wary of competing against an experienced team — we feel the same way! 
+            To prevent these concerns, this year we will be introducing <strong>3 difficulty levels</strong> for our entries to ensure that participatns will go against others
+             with similar skill sets!
+        </p> 
+        <table class="level-table" id="level-table">
+            <tr class="level-table">
+                <th colspan="3">3 Categories</th>
+            </tr>
+            <tr class="level-table">
+                <td>Beginner</td>
+                <td>Intermediate</td>
+                <td>Advanced</td>
+            </tr>
+
+        </table>
+        
         <a id="register-button" href="https://docs.google.com/forms/d/e/1FAIpQLSeTSqZAv4RrQ0mUa44uZZPjFjhoJTPKjVwZ1Rhl-YDuaMD47g/viewform?usp=sharing" target="_blank">
             <button>Register Here</button>
         </a>
+        
         <h2 id="deadline-msg" style="color: #ca6895; text-align: center;"><u>DEADLINE TO REGISTER: FEB. 28!</u></h2>
-
-    </div>
-
-    <div class = "hackathon-about" id="hackathon-nav">
-        <p>Join us for WiCS' 2025 Hackathon on March 21, 2025 – March 23, 2025, where creativity meets 
-        code! Whether you're a beginner or an experienced coder, this event is your chance to 
-        innovate, collaborate, and bring ideas to life.</p> 
     </div> 
 
-    <div id="schedule-nav">
-        <p>Schedule</p>
-        <table>
-            <!-- Dates -->
-            <tr>
-                <th rowspan="2">Date/Time</th>
-                <th>3/21</th>
-                <th>3/22</th>
-                <th>3/23</th>
-            </tr>
-            <!-- Day of the Week -->
-            <tr>
-                <th>Friday</th>
-                <th>Saturday</th>
-                <th>Sunday</th>
-            </tr>
-            <!-- Row one -->
-            <tr>
-                <td rowspan="3"></td>
-                <td colspan="3">TBD</td>
-            </tr>
-        </table>
+    <div class="schedule-container">
+        <div id="schedule-nav">
+            <h2>Schedule</h2>
+            <table class="schedule-table">
+                <thead>
+                    <!-- Dates -->
+                    <tr class="schedule-table">
+                        <th rowspan="2">Date/Time</th>
+                        <th>3/21</th>
+                        <th>3/22</th>
+                        <th colspan="2">3/23</th>
+                    </tr>
+                    <!-- Day of week -->
+                    <tr class="schedule-table">
+                        <th style="font-size: 16px;">Friday</th>
+                        <th style="font-size: 16px;">Saturday</th>
+                        <th style="font-size: 16px;" colspan="2">Sunday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Morning -->
+                    <tr>
+                        <td class = "schedule-time">Morning</td>
+                        <!-- Fri -->
+                        <td rowspan="8"></td>
+                        <!-- Sat -->
+                        <td rowspan="10">Coding</td>
+                        <!-- Sun -->
+                        <td colspan="2">Grind</td>
+                    </tr>
+
+                    <!-- Noon -->
+                    <tr>
+                        <td class = "schedule-time" rowspan="2">12:00 PM</td>
+                        <td><strong>Submission Due</strong></td>
+                        <td>Lunch</td>
+                    </tr>
+                        <td colspan="2" rowspan="5">Judging</td>
+                    </tr>
+
+                    <!-- Afternoon -->
+                    </tr>  
+                        <td class = "schedule-time">1:00 PM</td>
+                    </tr>
+                    </tr>  
+                        <td class = "schedule-time">2:00 PM</td>
+                    </tr>
+                    </tr>  
+                        <td class = "schedule-time">3:00 PM</td>
+                    </tr>
+                    </tr>  
+                        <td class = "schedule-time">4:00 PM</td>
+                    </tr>
+                    </tr>  
+                        <td class = "schedule-time">5:00 PM</td>
+                        <td colspan="2"><strong>Closing Ceremony</strong></td>
+                    </tr>
+
+                    <!-- Night -->
+                    <tr>
+                        <td class = "schedule-time">6:00 PM</td>
+                        <td><strong>Opening Ceremony</strong></td>
+                    </tr>
+                        <td class = "schedule-time">7:00 PM</td>
+                        <td>Git Setup</td>
+                    </tr>  
+                </tbody>
+            </table>
+        </div>
     </div>
 
-    <div id = "faq-nav">
-        <details class="faq-item">
-            <summary class = "collapse">What is Hackathon?</summary>
-            <p>A hackathon is a time-limited coding event where participants collaborate to develop 
-            a project based on a theme. It encourages innovation, teamwork, and problem-solving 
-            as participants develop solutions.</p> 
-        </details>
-        <details class="faq-item">
-            <summary class = "collapse">When and where?</summary>
-            <p>It takes place on March 21st, 2025 6:00 PM CST ~ March 23, 2025 6:00 PM CST at
-            <a href="https://maps.app.goo.gl/tgWGakovSdPv7qdd9" target="_blank">LSU PFT</a>.</p> 
-        </details>
-        <details class="faq-item">
-            <summary class = "collapse">What is the theme?</summary>
-            <p>IT'S A SECRET. Try guessing it.</p> 
-        </details>
-        <details class="faq-item">
-            <summary class = "collapse">What do I bring?</summary>
-            <p>To survive, you only need your laptop and charger (and your keys!). However, if you want to be COMPETITIVE, 
-            bring a sleeping bag and a pillow. 
-            Warning: We have seen plenty walking zombies at PFT on Sunday morning.</p> 
-        </details>
-        <details class="faq-item">
-            <summary class = "collapse">I have no coding experience. Can I still come?</summary>
-            <p>Of course! In fact, if you have absolutely no experience, this is the perfect time for you to learn how to code!</p>
-        </details>
-        <details class="faq-item">
-            <summary class = "collapse">Is it free?</summary>
-            <p>Yes! It's free for all. In addition, we provide food, and there will be prizes at the closing ceremony!</p>
-        </details>
-        <details class="faq-item">
-            <summary class = "collapse">I have a specific question...</summary>
-            <p>You can contact WiCS via wicslsu@gmail.com or contact any officers!</p>
-        </details>
+    <div class = "faw-container">
+        <div id = "faq-nav">
+            <h2>FAQ</h2>
+            <details class="faq-item">
+                <summary class = "collapse">What is Hackathon?</summary>
+                <p>A hackathon is a time-limited coding event where participants collaborate to develop 
+                a project based on a theme. It encourages innovation, teamwork, and problem-solving 
+                as participants develop solutions.</p> 
+            </details>
+            <details class="faq-item">
+                <summary class = "collapse">When and where?</summary>
+                <p>It takes place on March 21st, 2025 6:00 PM CST ~ March 23, 2025 6:00 PM CST at
+                <a href="https://maps.app.goo.gl/tgWGakovSdPv7qdd9" target="_blank">LSU PFT</a>.</p> 
+            </details>
+            <details class="faq-item">
+                <summary class = "collapse">What is the theme?</summary>
+                <p>IT'S A SECRET. Try guessing it.</p> 
+            </details>
+            <details class="faq-item">
+                <summary class = "collapse">What do I bring?</summary>
+                <p>To survive, you only need your laptop and charger (and your keys!). However, if you want to be COMPETITIVE, 
+                bring a sleeping bag and a pillow. 
+                Warning: We have seen plenty walking zombies at PFT on Sunday morning.</p> 
+            </details>
+            <details class="faq-item">
+                <summary class = "collapse">I have no coding experience. Can I still come?</summary>
+                <p>Of course! In fact, if you have absolutely no experience, this is the perfect time for you to learn how to code!</p>
+            </details>
+            <details class="faq-item">
+                <summary class = "collapse">Is it free?</summary>
+                <p>Yes! It's free for all. In addition, we provide food, and there will be prizes at the closing ceremony!</p>
+            </details>
+            <details class="faq-item">
+                <summary class = "collapse">I have a specific question...</summary>
+                <p>You can contact WiCS via wicslsu@gmail.com or contact any officers!</p>
+            </details>
+        </div>
+    </div>
+
+    <div id="thank-you-nav">
+        <div id="thank-you-title">
+            <h2>Thank you to Our Sponsors</h2>
+        </div>
+        <div class="sponsor-logo-container">
+            <div class="sponsor-logo">
+                <img src="../pictures/icons/Entergy Logo.png">
+            </div>
+            <div class = "sponsor-logo" id = "LSU-logo">
+                <img src="../pictures/icons/LSU_logo.png">
+            </div>
+        </div>
     </div>
 </body>
 </html>

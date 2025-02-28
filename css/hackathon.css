@@ -1,9 +1,14 @@
+/* All default fonts */
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: "Rasa", serif;
     font-style: normal;
+}
+
+body{
+    background-color: #191919;
 }
 
 h1{
@@ -23,28 +28,15 @@ h1{
     color: transparent;
 }
 
-h2{
-    font-size: clamp(24px, 40%, 120px);
-    color: #ca6895;
-    text-align: center;
-    text-decoration: underline;
-}
 
-#deadline-msg{
-    font-size: clamp(24px, 40%, 120px);
-    color: #ca6895;
-    text-align: center;
-    text-decoration: underline;
-}
 
-.countdown-number{
-    font-size: clamp(2rem, 4vw, 8rem);
-    color: #DFAAC3;
-}
 
-.countdown-label{
-    font-size: clamp(0.8rem, 1vw, 3rem);
-    color: #997DC3;
+
+/* Welcome Home Tab */
+.introduction-container{
+    padding-top: clamp(200px, 10vw, 250px);
+    padding-bottom: clamp(200px, 10vw, 250px);
+    margin-bottom: 40px;
 }
 
 .countdown-container{
@@ -62,93 +54,167 @@ h2{
     text-align: center;
 }
 
- #register-button{
+#countdown-msg{
+    font-size: clamp(24px, 40%, 120px);
+    color: #e7c4d5;
+    text-align: center;
+    padding-top: 3rem;
+    letter-spacing: 5px;
+}
+
+.countdown-number{
+    font-size: clamp(2rem, 4vw, 8rem);
+    color: #DFAAC3;
+}
+
+.countdown-label{
+    font-size: clamp(12px, 100%, 30px);
+    color: #ecd2ff;
+}
+
+
+
+
+
+/* About Section*/
+.about-container {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    background-color: #e8c2d3;
+    /* padding: clamp(4rem, 4vw, 6rem) clamp(1.5rem, 10vw, 10rem); */
+    padding: clamp(35px, 6%, 100px) clamp(25px, 10%, 160px);
+    line-height: 40px;
+
+}
+
+.about-container p{
+    font-size: clamp(20px, 50%, 60px); 
+    color: rgb(86, 87, 92);
+    max-width: 800px;
+    text-align: center;
+}
+
+.level-table{
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+.level-table th, .level-table td{
+    text-align: center;
+    border: 1px solid white;
+}
+
+
+.level-table th{
+    color: rgb(86, 87, 92);
+    background-color: white;
+    font-size: 25px;
+    letter-spacing: 3px;
+    padding: 2%;
+}
+
+.level-table td{
+    color: rgb(86, 87, 92);
+    font-size: 20px;
+    padding: 10%;
+    letter-spacing: 2px;
+}
+
+#register-button{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1.5rem;
+    padding: 30px;
     text-decoration: none;
     
 }
 
 #register-button button{
     font-size: clamp(1.5rem, 2.5vh, 4rem);
-    color:white;
-    background-color: #e8c2d3;
+    color:#d280a5;
+    background-color: white;
     border: none;
     padding: 1rem 7rem;
     cursor: pointer;
-    border-radius: 25px;
+    border-radius: 10px;
 }
 
 #register-button button:hover{
-    background-color: #ee9dc2;
-    transform: scale(1.05);
+    transform: scale(1.10);
 }
 
-.introduction-container{
-    padding-top: clamp(200px, 10vw, 250px);
-    padding-bottom: clamp(200px, 10vw, 250px);
-}
-
-.hackathon-about {
-    display: flex; 
-    align-items: center;
-    justify-content: center; /* Centers text */
-    background-color: #e8c2d3;
-    height: auto; /* Allow height to adjust */
-    padding: clamp(2rem, 4vw, 6rem) clamp(1.5rem, 10vw, 10rem); /* Dynamic padding */
-
-    /* Ensure responsiveness */
+#deadline-msg{
+    font-size: clamp(24px, 40%, 120px);
+    color: #ca6895;
     text-align: center;
-    width: 100%;
-}
-
-.hackathon-about p{
-    font-size: clamp(25px, 30%, 60px); /* Scales smoothly */
-    color: rgb(86, 87, 92);
+    text-decoration: underline;
 }
 
 
+
+
+
+/* Schedule Section */
 #schedule-nav, #faq-nav {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers content */
+
+    align-items: center;
     justify-content: center;
     text-align: center;
     width: 80%;
     max-width: 900px;
-    margin: 3rem auto; /* Adds spacing and centers on page */
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.8); /* Slight transparent background */
+
+    margin: 8rem auto;
+    padding: 3rem;
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
 }
 
-/* Section Headings */
-#schedule-nav p{
-    font-size: 2rem;
+#schedule-nav h2, #faq-nav h2{
+    color: #e8c2d3; 
+
+    letter-spacing: 5px;
+    font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1.5rem;
-    color: #553c9a; /* A soft purple */
 }
 
-/* Table Styling */
-table {
+.schedule-table{
     width: 100%;
     border-collapse: collapse;
     text-align: center;
 }
 
-th, td {
+.schedule-table th, td {
     border: 1px solid #ddd;
     padding: 1rem;
 }
 
-th {
-    background-color: #f4f4f4;
+.schedule-table th {
+    background-color: #e8c2d3;
+
+    font-size: 18px;
     font-weight: bold;
+    letter-spacing: 1px;
 }
+
+.schedule-time {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+
+
 
 /* FAQ Section */
 .faq-item {
@@ -160,127 +226,73 @@ th {
     overflow: hidden;
 }
 
-/* FAQ Summary (Clickable Title) */
 .faq-item summary {
     font-size: 1.2rem;
     font-weight: bold;
     padding: 1rem;
-    background: #e0d4fc;
+    background: #e8c2d3;
     cursor: pointer;
     transition: background 0.3s ease;
     color: #363539;
 }
 
-/* Hover Effect */
 .faq-item summary:hover {
-    background: #c9b5e5;
+    background: #ca6895;
 }
 
-/* FAQ Content */
 .faq-item p {
     padding: 1rem;
     font-size: 18px;
     color: #55545c;
 }
 
-body{
-    margin: 0;
-}
 
-header{
-    background: linear-gradient(to left, #c9b5e5 20%, #fdcfe9 100%);
+
+
+
+/* Thank you Section */
+#thank-you-nav{
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    display: flex;
-    justify-content: space-between;
-    padding: 0rem 1.5rem;
-    height: 6.5rem;
-    width: 100%;
-    position: fixed;
-    z-index: 100;
+    justify-content: center;
+    margin: 6rem auto;
 }
 
-.logo{
-    display: flex;
-    gap: 15px;
-}
-
-#header-logo img{
-    cursor: pointer;
-    /* align-items: center; */
-    
-    /* width: 50%; */
-    width: 16rem;
-    height: auto;
-}
-
-.navigation-bar{
-    display: flex;
-    gap: 1.0rem;
-}
-
-.navigation-bar a{
-    display: flex;
-    align-items: center;
-    padding: 0rem 2.0rem;
-
-    /* Font Details */
-    font-size: 1.7rem;
-	color: #fff;
-    text-decoration: none;
-    font-weight: 400;
-    line-height: 20px;
-    transition: 0.3s;
-}
-
-.navigation-bar a:hover{
-    color: #fdddee; 
-
-    transition: background 0.3s ease, color 0.3s ease;  
-}
-
-#register a{
-    color: #e097be;
-    background-color: white;
-
-    /* critical for the round border */
-    padding: 0.8rem 2rem;
+#thank-you-title {
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    width: 80%;
+    max-width: 900px;
+    padding: 2.5rem;
+
 }
 
-.navigation-contents{
-    display: block;
+#thank-you-nav h2{
+    color: #a38ec1; 
+
+    letter-spacing: 5px;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 3px;
+} 
+
+.sponsor-logo-container {
+    display: flex;
+    justify-content: center; 
     align-items: center;
+    gap: 50px;  
+    flex-wrap: wrap;
 }
 
-.menu-toggle{
-    display: none;
-    cursor: pointer;
+.sponsor-logo img{
+    max-width: 400px;
+    width: 100%;
 }
 
-.menu-toggle div {
-    width: 30px;
-    height: 3px;
-    margin: 6px 0;
-    background-color: white;
-    border-radius: 2px;
-    transition: 0.3s ease-in-out;
-}
-
-#hamburger-menu{
-    display: none;
-    cursor: pointer;
-}
-
-
-@media (max-width: 768px) {
-    .hackathon-about {
-        flex-direction: column;  
-        padding: clamp(1.5rem, 3vw, 4rem) clamp(1rem, 6vw, 5rem); /* Adjust padding */
-    }
-}
-
-@media (max-width: 480px) {
-    .hackathon-about {
-        padding: 2rem 1.5rem; 
-    }
+#LSU-logo img{
+    max-width: 300px;
 }

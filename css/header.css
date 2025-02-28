@@ -1,0 +1,98 @@
+
+header{
+    background: linear-gradient(to left, #c9b5e5 20%, #fdcfe9 100%);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 1.5rem;
+    height: 6.5rem;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.logo{
+    display: flex;
+    gap: 15px;
+}
+
+#header-logo img{
+    cursor: pointer;
+    /* align-items: center; */
+    
+    /* width: 50%; */
+    width: 16rem;
+    height: auto;
+}
+
+.navigation-bar{
+    display: flex;
+    gap: 1.0rem;
+}
+
+.navigation-bar a{
+    display: flex;
+    align-items: center;
+    padding: 0rem 2.0rem;
+
+    /* Font Details */
+    font-size: 1.5rem;
+	color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    line-height: 20px;
+    transition: 0.3s;
+}
+
+.navigation-bar a:hover{
+    color: #fdddee; 
+
+    transition: background 0.3s ease, color 0.3s ease;  
+}
+
+#register a{
+    color: #e097be;
+    background-color: white;
+
+    /* critical for the round border */
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+}
+
+.navigation-contents{
+    display: block;
+    align-items: center;
+}
+
+.menu-toggle{
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle div {
+    width: 30px;
+    height: 3px;
+    margin: 6px 0;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s ease-in-out;
+}
+
+#hamburger-menu{
+    display: none;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .hackathon-about {
+        flex-direction: column;  
+        padding: clamp(1.5rem, 3vw, 4rem) clamp(1rem, 6vw, 5rem); /* Adjust padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .hackathon-about {
+        padding: 2rem 1.5rem; 
+    }
+}
