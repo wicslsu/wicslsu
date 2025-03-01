@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>WiCS Hackathon</title>
+
     <link rel = "stylesheet" href="../css/hackathon.css?" type="text/css">
     <link rel = "stylesheet" href="../css/header.css?" type="text/css">
+    <link rel="stylesheet" href="/css/footer.css" type="text/css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Rasa:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
@@ -15,38 +18,47 @@
 	<link href="https://fonts.googleapis.com/css2?family=Handjet:wght@600&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="/pictures/icons/Logo.png" sizes="500x500" type="image/png">
-    <script src = "hackathon.js"></script>
 </head>
 
 <body>
-    <!-- Header -->
     <header>
-        <div class="logo" id="header-logo">
-            <a href="/index.html"><img src="../pictures/icons/Logo.png" alt="WiCS Logo"></a>
-        </div>
+        <nav class="navbar">
+            <div class="nav-tab-container">  
+                <!-- Logo -->
+                <div class="wics-logo">
+                    <a href="../index.html" id="header-logo">
+                        <img src="../pictures/icons/Logo.png" alt="WiCS Logo">
+                    </a>
+                </div>
+                <!-- Tabs -->
+                <ul class="navigation-bar">
+                    <li class="navigation-contents">
+                        <a href="/index.html" class="navigation-link">Home</a>
+                    </li>
+                    <li class="navigation-contents">
+                        <a href="#hackathon-nav" class="navigation-link">About</a>
+                    </li>
+                    <li class="navigation-contents">
+                        <a href="#schedule-nav" class="navigation-link">Schedule</a>
+                    </li>
+                    <li class="navigation-contents">
+                        <a href="#faq-nav" class="navigation-link">FAQ</a>
+                    </li>
+                    <li class="navigation-contents">
+                        <a id="register" class="navigation-link" href="https://forms.gle/HbdvZaxzWTDRMf6V6" target="_blank">Register Here</a>
+                    </li>
+                </ul>
+            </div>      
     
-        <!-- Mobile Screen -->
-        <div class="hamburger-container">
-            <input type="checkbox" id="hamburger-menu">
-            <label for="hamburger-menu" class="menu-toggle" id="hamburger-toggle">
-                <div></div>
-                <div></div>
-                <div></div>
-            </label>
-        </div>
-        <!-- End of mobile screen -->
-    
-        <nav class="navigation-bar">
-            <a class="navigation-contents" href="/index.html">Home</a>
-            <a class="navigation-contents" href="#hackathon-nav">About</a>
-            <a class="navigation-contents" href="#schedule-nav">Schedule</a>
-            <a class="navigation-contents" href="#faq-nav">FAQ</a>
-            <a class="navigation-contents" id="register" href="https://docs.google.com/forms" target="_blank">
-                Register Here
-            </a>
+            <!-- Hamburger -->
+            <div class="hamburger-container">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </header>
-
+    
     <div class="introduction-container" id="default">
         <!-- Welcoming Message -->
         <div class="welcome-msg">
@@ -94,7 +106,6 @@
                 <td>Intermediate</td>
                 <td>Advanced</td>
             </tr>
-
         </table>
         
         <a id="register-button" href="https://docs.google.com/forms/d/e/1FAIpQLSeTSqZAv4RrQ0mUa44uZZPjFjhoJTPKjVwZ1Rhl-YDuaMD47g/viewform?usp=sharing" target="_blank">
@@ -229,5 +240,8 @@
             </div>
         </div>
     </div>
+
+    <script src = "../js/header.js"></script>
+    <script src = "../js/hackathon.js"></script>
 </body>
 </html>

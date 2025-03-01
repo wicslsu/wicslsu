@@ -1,9 +1,3 @@
-/* tabs font*/
-@media only screen and (max-width: 620px){
-    *{
-        width: 100%;
-    }
-}
 
 h1{
     font-family: 'Handjet', sans-serif;

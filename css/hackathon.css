@@ -1,8 +1,8 @@
 /* All default fonts */
 *{
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: "Rasa", serif;
     font-style: normal;
 }
@@ -34,10 +34,12 @@ h1{
 
 /* Welcome Home Tab */
 .introduction-container{
-    
-    padding-top: clamp(200px, 10vw, 250px);
-    padding-bottom: clamp(200px, 10vw, 250px);
-    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .countdown-container{
@@ -163,8 +165,10 @@ h1{
 
 
 /* Schedule Section */
-.table-container{
+.table-container {
     width: 100%;
+    overflow-x: auto;
+    margin: auto;
 }
 
 #schedule-nav, #faq-nav {
@@ -310,71 +314,106 @@ h1{
 }
 
 
-@media (max-width: 768px){
+
+@media (max-width: 600px) {
+    .table-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+    }
+
     .schedule-table, .level-table {
+        width: 100%;
+        max-width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed; /* Keeps column widths consistent */
+    }
+
+    .schedule-table th, .level-table th,
+    .schedule-table td, .level-table td {
+        font-size: 12px; /* Ensures text is readable on smaller screens */
+        padding: 6px; /* Slightly reduced padding to fit more content */
+        text-align: center;
+        white-space: normal; /* Allows text to wrap */
+        word-break: break-word; /* Prevents content from being cut off */
+    }
+
+    .schedule-table th, .level-table th {
+        background-color: #e8c2d3;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+
+    .schedule-table td, .level-table td {
+        max-width: 100%;
+        overflow: visible; /* Ensures text is fully displayed */
+    }
+
+    .schedule-table tr, .level-table tr {
+        display: table-row;
         width: 100%;
     }
 
-    .level-table td{
-        font-size: 18px;
-    }
-
-    #schedule-nav{
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
-    .schedule-table th{
-        font-size: min(2.5vw, 10px);
-        text-overflow: ellipsis;
-        word-break: keep-all;
-    }
-
-    .schedule-table td{
-        font-size: min(2.5vw, 10px);
-        text-overflow: ellipsis;
-        word-break: keep-all;
-    }
-
-    .schedule-day{
-        text-overflow: ellipsis;
-    }
-
-
-    .schedule-time{
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-size: min(2.5vw, 12px);
-    }
-
-
-
-/* 
-    .schedule-table th, .level-table th{
-        text-align: center;
+    .level-container, .schedule-nav {
+        display: flex;
         justify-content: center;
         align-items: center;
-    } 
+        width: 100%;
+        padding: 0 5px;
+    }
+}
 
-    .schedule-table tr, .level-table tr {
-        text-align: center;
 
-    }  
-    
-    .schedule-table td, .level-table td {
-        white-space: normal; 
-        text-align: center; 
-        padding: 12px;
+
+
+
+@media (max-width: 768px) {
+    .table-container {
+        display: block;
+        width: 100%;
+        overflow-x: auto; 
+        padding: 0;  
     }
 
-    .schedule-table tbody tr, .level-table tbody tr {
-        display: block;  
-        margin-bottom: 10px;
-        border: 1px solid rgb(86, 87, 92);
-        background-color: white;
-        padding: 10px;
-    } */
+    .schedule-table, .level-table {
+        width: 100%;
+        max-width: 100%;
+        border-collapse: collapse;
+        table-layout: auto;  
+    }
+
+    .schedule-table th, .level-table th,
+    .schedule-table td, .level-table td {
+        font-size: 12px;  
+        padding: 4px; 
+        text-align: center;
+        white-space: wrap; 
+        word-break: break-word; 
+    }
+
+    .schedule-table th, .level-table th {
+        background-color: #e8c2d3;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+
+    .schedule-table td, .level-table td {
+        max-width: 100%;
+        overflow: hidden; 
+    }
+
+    .schedule-table tr, .level-table tr {
+        display: table-row;
+        width: 100%;
+    }
+
+    .level-container, .schedule-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0 5px; 
+    }
 }
