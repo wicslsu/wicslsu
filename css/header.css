@@ -14,6 +14,8 @@ html, body{
     padding: 0;
 }
 
+
+
 /* Header General Format */
 header {
     background: linear-gradient(to left, #c1acde 20%, #fcd6ec 100%);
@@ -45,6 +47,8 @@ header {
     width: 100%;
 }
 
+
+
 /* Logo */
 .wics-logo {
     display: flex;
@@ -57,6 +61,8 @@ header {
     width: 16rem;
     height: auto;
 }
+
+
 
 /* Navigation tabs */
 .navigation-bar {
@@ -81,23 +87,15 @@ header {
     position: relative;
 }
 
-/* Hover effect */
+
+/* Hover effects */
 .navigation-link{
     transition: 0.3s ease;
     margin: 30px auto;
 }
 
 .navigation-link:hover {
-    color: white;
-    /* color: #e7acc6; */
-}
-
-ul li a{
-    display: block;
-    text-align: center;
-    padding: 20px 35px;
-
-    /* border-radius: 8px; */
+    color: #e7acc6;
 }
 
 .nav-tab:hover{
@@ -107,6 +105,28 @@ ul li a{
 li a:hover{
     color: white;
     /* background-color: white; */
+}
+
+/* 7_Hackathon Specific Links */
+.hackathon-link{
+    transition: 0.3s ease;
+    margin: 30px auto;
+}
+
+.hackathon-link:hover{
+    color: white;
+}
+
+ul li a{
+    display: block;
+    text-align: center;
+    padding: 20px 35px;
+}
+
+ul li ul.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .dropdown-menu-container {
@@ -151,12 +171,6 @@ ul li ul.dropdown-menu li {
     background-color: white;
 }
 
-ul li ul.dropdown-menu li a {
-    display: block;
-    padding: 10px;
-    transition: background-color 0.2s ease-in-out;
-}
-
 
 
 /* 7_Hackathon Register Button*/
@@ -174,7 +188,9 @@ ul li ul.dropdown-menu li a {
     transform: scale(1.10);
 }
 
-/* Mobile Section*/
+
+
+/* Hamburger Menu Section*/
 .hamburger-container{
     display: none;
     cursor: pointer;
@@ -195,7 +211,7 @@ ul li ul.dropdown-menu li a {
 
 
 
-
+/* Mobile Adaption */
 @media (max-width: 1000px) {
     .hamburger-container{
         display: block; /* Ensure the three bars & x are right */
@@ -226,17 +242,25 @@ ul li ul.dropdown-menu li a {
         justify-content: center;
         position: fixed;
 
-        top: -100%;
+        /* top: -100%;
         bottom: 0%;
         left: 0%;
         width: 100%;
-        height: 100vh;
+        height: 100vh; */
 
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 999;
+
+
+        transform: translateY(-100%); /* ✅ Initially move it completely off-screen */
         transition: transform 0.5s ease-in-out;
-        transform: translateY(0);
+        /* transition: transform 0.5s ease-in-out;
+        transform: translateY(0); */
         /* opacity: 0;
         visibility: hidden; */
-        z-index: 999;
     }
 
     navigation-contents{
@@ -246,6 +270,8 @@ ul li ul.dropdown-menu li a {
     .navigation-bar.active{
         /* opacity: 1;
         visibility: visible; */
-        transform: translateY(100%);
+        /* transform: translateY(100%); */
+        transform: translateY(0);
+
     }
 }
