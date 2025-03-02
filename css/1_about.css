@@ -1,0 +1,148 @@
+/* Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rasa", serif;
+    font-style: normal;
+}
+
+.pillar-title{
+    color: #a38ec1;
+    text-align: center;
+    font-family: 'NanumGothicCoding', monospace;
+    font-size: clamp(12px, 2vw, 16px);
+    line-height: 30px;
+    letter-spacing: 8px;
+    margin: 30px;
+    white-space: nowrap; 
+    padding-top: 50px;
+}
+
+
+.content-container{
+    padding-top: 200px;
+}
+
+.pillars {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.pillar-circles-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;  
+    gap: clamp(10px, 3vw, 20px);  
+    margin-bottom: 20px;
+}
+
+.pillar-circles {
+    background-color: #ffedf5;
+    width: clamp(100px, 25vw, 150px); 
+    height: clamp(100px, 25vw, 150px); 
+    border-radius: 50%;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #a38ec1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 10px;
+    overflow: hidden;
+    margin: clamp(10px, 3vw, 25px);  
+}
+
+.pillar-circles h3 {
+    margin: 0;
+    font-size: clamp(12px, 2vw, 16px); 
+    text-align: center;
+}
+
+
+/* 6_Officer_Page */
+
+.member-format-container h2 {
+    text-align: center;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    padding-top: clamp(120px, 15vh, 160px);  
+    margin-bottom: clamp(15px, 4vw, 25px); 
+}
+
+.member-format-container {
+    text-align: center;
+    padding-top: clamp(120px, 15vh, 160px);  
+} 
+
+.member-cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(10px, 3vw, 20px);  
+}
+
+ .row1, .row2, .row3 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;  
+    gap: clamp(20px, 5vw, 60px);  
+}
+
+ .row1 {
+    justify-content: center;  
+    margin-top: clamp(20px, 5vh, 40px);
+}
+
+ 
+.row2, .row3 {
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+}
+
+.row3 {
+    margin-bottom: clamp(20px, 5vh, 40px);
+}
+
+.member-name{
+    font-size: clamp(14px, 2vw, 17px); 
+    white-space: nowrap;
+}
+
+.member-card {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    text-align: center;
+
+    width: clamp(150px, 40vw, 200px); 
+    position: relative;
+}
+
+.member-position{
+    font-size: clamp(12px, 1.8vw, 15px); 
+    font-weight: 300;
+    color: #ffffff; 
+    text-align: center;
+    padding-top: 20px;
+}
+
+.member-photo {
+    width: 100%; 
+    height: clamp(150px, 40vw, 200px); 
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    padding: 10px; 
+}
+
+.member-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+}

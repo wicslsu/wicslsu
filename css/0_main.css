@@ -3,6 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Rasa", serif;
+    font-style: normal;
 }
 
 body{
@@ -10,68 +12,122 @@ body{
 }
 
 h1{
-    font-family: 'Handjet', sans-serif;
-    font-size: clamp(4rem, 8vw, 10rem);
-    font-style: normal;
-    font-weight: 600;
-    line-height: 120%;
-    letter-spacing: 4.142px;
-    margin-top: 5rem;
-    text-align: center;
-
     background: linear-gradient(90deg, #DFAAC3 24.34%, #F1C9DB 41.54%, #D3B9E8 64.8%, #997DC3 75.56%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
+
+    font-family: 'Handjet', sans-serif;
+    font-style: normal;
+    font-size: clamp(4rem, 8vw, 10rem);
+
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 4.142px;
+    margin-top: 5rem;
+    text-align: center;
 }
 
 h2{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    justify-content: justify;
-    flex-shrink: 0;
-    text-align: center;
-    font-family: var(--Inside-Text, "Averia Serif Libre");
-    font-size: 85px;
-    font-style: normal;
-    font-weight: 2000;
-    line-height: 100%;
-    letter-spacing: 5px;
-    
-    background-color: #191919;
+    background-color: #ffffff;
     color: transparent;
     text-shadow: -1px 1px 3.5px rgba(216, 182, 247, 0.8);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
+
+    font-family: var(--Inside-Text, "Averia Serif Libre");
+    font-style: normal;
+    font-size: clamp(2rem, 6vw, 5.3rem);
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    
+    justify-content: justify;
+    flex-shrink: 0;
+    text-align: center;
+    
+    font-weight: 2000;
+    line-height: 100%;
+    letter-spacing: 5px;
 }
 
-p{
+
+
+
+/* 5 */
+h3 {
+    color: #494949;
+    text-align: center;
+    font-family: 'NanumGothicCoding', monospace;
+    font-size: 23.5px;
+    font-weight: 1000;
+    line-height: 30px; /* Ensures line height matches the font size */
+    letter-spacing: 1.0px;
+    margin: 0;
+    white-space: nowrap;  /* Keeps the text on a single line */
+    max-width: 100%;
+}
+
+.member-bullet {
     color: #4a4545;
-    text-align: justify;
     font-family: 'NanumGothicCoding', monospace;
     font-size: 16px;
     letter-spacing: 2px;
     line-height: 150%;
-    margin: 20px;
+    margin-left: 10%;
+    padding: 10px;
+}
+
+.event-font{
+    display: flex;
+    text-align: center;
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px;
 }
 
 
+
+
+
+p{
+    color: #fff2f2;
+
+    font-size: clamp(0.875rem, 3vw, 1.5rem);
+    line-height: clamp(35px, 4vw, 50px);
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* we are here to build a community.. */
 #introduction-text{
 	color: #8F7C49;
-    text-align: center;
+
     font-family: 'Nanum Gothic Coding', monospace;
     font-size: 15px;
     font-style: normal;
     font-weight: 300;
     letter-spacing: 1px;
+    text-align: center;
 
     transform: translateY(50px); 
     animation: slideUp 2s ease forwards; 
 }
+
+.content-container #about-us p {
+    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(4rem, 8vw, 10rem);
+}
+
+
+
+
 
 /* Format */
 /* introduction-home Container */
@@ -84,35 +140,41 @@ p{
     overflow: hidden;
 }
 
+
 .content-container{
     display: flex;
     flex-direction: column;
 
     justify-content: center;
+    align-items: center;
 
     width: 100%;
-    height: auto;
-    padding: 5rem;
-
-    background-color: #e8c2d3;
+    min-height: 100vh;
 }
 
-
-
+/* The learn more button in home */
 .learn-more-button{
     color: white;
-    border-radius: 10px;
     background: var(--Button, linear-gradient(90deg, rgba(222, 206, 247, 0.90) 3.7%, rgba(247, 196, 220, 0.90) 99.93%));
-    box-shadow: 2px 4px 8px 0px rgba(65, 52, 52, 0.3);
+
     display: flex;
-    width: 160px;
+    border-radius: 10px;
+    width: 15rem;
     height: 50px;
     padding: 15px;
+    
     justify-content: center;
     align-items: center;
     gap: 15px;
-    /* flex-shrink: 0; */
+
+    font-size: 1.5rem;
+    margin: auto;
 }
+
+
+
+
+
 
 /* Slide Shows */
 .slideshow-container{
@@ -125,7 +187,6 @@ p{
     overflow: hidden;
     position: relative;
 }
-
 
 .slides {
     display: none; /* hides slides by default */
