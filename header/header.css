@@ -187,7 +187,6 @@ ul li ul.dropdown-menu li {
 }
 
 
-
 /* Hamburger Menu Section*/
 .hamburger-container{
     display: none;
@@ -219,7 +218,7 @@ ul li ul.dropdown-menu li {
         cursor: pointer; /* On top of everything */
         z-index: 1001; /*ensure it's on top*/
 
-        position: fixed;
+        position: sticky;
     }
 
     /* The x effect */
