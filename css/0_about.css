@@ -1,0 +1,118 @@
+/* Fonts */
+*{
+    font-family: "Rasa", serif;
+    font-style: normal;
+ 
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+    outline: none; 
+    border:none;
+    text-decoration: none;
+ 
+    /* transition: all .2s linear; */
+    text-transform: capitalize;
+ }
+
+h1{
+    background: linear-gradient(90deg, #DFAAC3 24.34%, #F1C9DB 41.54%, #D3B9E8 64.8%, #997DC3 75.56%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    font-family: 'Handjet', sans-serif;
+    font-style: normal;
+    font-size: clamp(4rem, 8vw, 10rem);
+
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 4.142px;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+h2{ 
+    color: #e8c2d3;
+ 
+    font-family: "Rasa", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: clamp(2rem, 6vw, 5.3rem);
+ 
+    justify-content: justify;
+    text-align: center;
+ 
+    font-weight: 2000;
+    line-height: 100%;
+    letter-spacing: 5px;
+ }
+
+p{
+    color: #fff2f2;
+
+    font-size: clamp(0.875rem, 3vw, 1.5rem);
+    line-height: clamp(35px, 4vw, 50px);
+    letter-spacing: 2px;
+    text-align: center;
+    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(4rem, 10vw, 10rem);
+}
+
+body{
+    background-color: #131314;
+    min-height: 100vh;
+}
+
+
+/* Containers */
+.content-container{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    min-height: 100vh;
+}  
+
+
+/* 5_Mission Page*/
+.pillars {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+
+}
+
+.pillar-circles-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;  
+    gap: clamp(10px, 3vw, 20px);  
+}
+
+.pillar-circles {
+    color: #a38ec1;
+    background-color: #ffedf5;
+    
+    width: clamp(100px, 25vw, 150px); 
+    height: clamp(100px, 25vw, 150px); 
+    border-radius: 50%;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 10px;
+    overflow: hidden;
+    margin: clamp(10px, 3vw, 25px);  
+}
+
+.pillar-circles h3 {
+    margin: 0;
+    font-size: clamp(1rem, 1.5vw, 2rem); 
+    text-align: center;
+}

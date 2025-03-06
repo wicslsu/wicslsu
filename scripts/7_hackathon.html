@@ -7,8 +7,8 @@
     <title>WiCS Hackathon</title>
 
     <link rel = "stylesheet" href="../css/hackathon.css?" type="text/css">
-    <link rel = "stylesheet" href="../css/header.css?" type="text/css">
-    <link rel="stylesheet" href="/css/footer.css" type="text/css">
+    <link rel = "stylesheet" href="../header/header.css?" type="text/css">
+    <link rel="stylesheet" href="../footer/footer.css?" type="text/css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +35,14 @@
                     <li class="navigation-contents">
                         <a href="/index.html" class="hackathon-link">Home</a>
                     </li>
+
+                    <!-- <li class="navigation-contents">
+                        <a href="" class="hackathon-link">Workshop</a>
+                    </li>
+
+                    <li class="navigation-contents">
+                        <a href="" class="hackathon-link">Gallary</a>
+                    </li> -->
                     <li class="navigation-contents">
                         <a href="#hackathon-nav" class="hackathon-link">About</a>
                     </li>
@@ -108,11 +116,11 @@
             </tr>
         </table>
         
-        <a id="register-button" href="https://docs.google.com/forms/d/e/1FAIpQLSeTSqZAv4RrQ0mUa44uZZPjFjhoJTPKjVwZ1Rhl-YDuaMD47g/viewform?usp=sharing" target="_blank">
+        <!-- <a id="register-button" href="https://docs.google.com/forms/d/e/1FAIpQLSeTSqZAv4RrQ0mUa44uZZPjFjhoJTPKjVwZ1Rhl-YDuaMD47g/viewform?usp=sharing" target="_blank">
             <button>Register Here</button>
-        </a>
-        
-        <h2 id="deadline-msg" style="color: #ca6895; text-align: center;"><u>DEADLINE TO REGISTER: FEB. 28!</u></h2>
+        </a> -->
+        <br>
+        <h2 id="deadline-msg" style="font-size: 40px; color: #ca6895; text-align: center;"><u>Registration Ended</u></h2>
     </div> 
 
     <div class="schedule-container">
@@ -130,9 +138,9 @@
                         </tr>
                         <!-- Day of week -->
                         <tr class="schedule-table">
-                            <th class = "schedule-day">Friday</th>
-                            <th class = "schedule-day">Saturday</th>
-                            <th class = "schedule-day" colspan="2">Sunday</th>
+                            <th class = "schedule-day">Fri.</th>
+                            <th class = "schedule-day">Sat.</th>
+                            <th class = "schedule-day" colspan="2">Sun.</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -227,6 +235,29 @@
         </div>
     </div>
 
+    <div class = "board-container" id="judge-nav">
+        <h2 class="judge-title">Judges</h2>		
+		<div class="judges-container">	
+			<div class="judges" data-name="j-0">
+				<img src="../pictures/judges/0_JLD.jpg" alt="Denny">
+				<h3 class="judge-position">LSU Instructor</h3>
+				<p class="judge-name">John Luke Denny</p>
+			</div>
+
+            <div class="judges" data-name="j-1">
+				<img src="../pictures/judges/1_Donze.jpg" alt="Donze">
+				<h3 class="judge-position">LSU Instructor</h3>
+				<p class="judge-name">Daniel Donze</p>
+			</div>
+
+            <div class="judges" data-name="j-2">
+				<img src="../pictures/judges/2_Fronchetti.jpg" alt="Fronchetti">
+				<h3 class="judge-position">LSU Assistant Professor</h3>
+				<p class="judge-name">Felipe Fronchetti</p>
+			</div>
+        </div>
+    </div>
+
     <div id="thank-you-nav">
         <div id="thank-you-title">
             <h2>Thank you to Our Sponsors</h2>
@@ -241,7 +272,7 @@
         </div>
     </div>
 
-    <script src = "../js/header.js"></script>
+    <script src = "../header/header.js"></script>
     <script src = "../js/hackathon.js"></script>
 </body>
 </html>

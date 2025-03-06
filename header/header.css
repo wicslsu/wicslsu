@@ -15,11 +15,10 @@ html, body{
 }
 
 
-
 /* Header General Format */
 header {
-    background: linear-gradient(to left, #c1acde 20%, #fcd6ec 100%);
-
+    /* background: linear-gradient(to left, #c1acde 20%, #fcd6ec 100%); */
+    background-color: #beaddb;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +27,8 @@ header {
     height: 115px;
     padding: 0 40px;
     box-sizing: border-box;
-    position: fixed;
+    position: sticky;
+    top:0;
     z-index: 1000;
 }
 
@@ -46,8 +46,6 @@ header {
     justify-content: space-between;
     width: 100%;
 }
-
-
 
 /* Logo */
 .wics-logo {
@@ -211,8 +209,10 @@ ul li ul.dropdown-menu li {
 
 
 
+
 /* Mobile Adaption */
 @media (max-width: 1000px) {
+    
     .hamburger-container{
         display: block; /* Ensure the three bars & x are right */
         flex-direction: column;
@@ -241,12 +241,6 @@ ul li ul.dropdown-menu li {
         text-align: center;
         justify-content: center;
         position: fixed;
-
-        /* top: -100%;
-        bottom: 0%;
-        left: 0%;
-        width: 100%;
-        height: 100vh; */
 
         top: 0;
         left: 0;

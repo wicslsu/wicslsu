@@ -1,0 +1,160 @@
+/* Fonts */
+*{
+    font-family: "Rasa", serif;
+    font-style: normal;
+ 
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+    outline: none; 
+    border:none;
+    text-decoration: none;
+ 
+    /* transition: all .2s linear; */
+    text-transform: capitalize;
+ }
+
+h1{
+    background: linear-gradient(90deg, #DFAAC3 24.34%, #F1C9DB 41.54%, #D3B9E8 64.8%, #997DC3 75.56%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    font-family: 'Handjet', sans-serif;
+    font-style: normal;
+    font-size: clamp(4rem, 8vw, 10rem);
+
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 4.142px;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+h2{ 
+    color: #e8c2d3;
+ 
+    font-family: "Rasa", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: clamp(2rem, 6vw, 5.3rem);
+ 
+    justify-content: justify;
+    text-align: center;
+ 
+    font-weight: 2000;
+    line-height: 100%;
+    letter-spacing: 5px;
+ }
+
+p{
+    color: #fff2f2;
+
+    font-size: clamp(0.875rem, 3vw, 1.5rem);
+    line-height: clamp(35px, 4vw, 50px);
+    letter-spacing: 2px;
+    text-align: center;
+    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(4rem, 10vw, 10rem);
+}
+
+body{
+    background-color: #131314;
+    min-height: 100vh;
+}
+
+
+/* Containers */
+.content-container{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    min-height: 100vh;
+    padding: 5rem 0;
+}
+
+/* General form container */
+#mc_embed_signup {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px; 
+}
+
+/* Form title */
+#mc_embed_signup h2 {
+    color: #b18ee4;
+    text-align: center;
+}
+
+/* Required field indicator */
+.indicates-required {
+    color: #ff4d4d;
+}
+
+/* Form fields */
+.mc-field-group {
+    margin-bottom: 15px;
+}
+
+/* Labels */
+.mc-field-group label {
+    display: block;
+    font-weight: bold;
+    color: #56575c;
+    margin-bottom: 5px;
+}
+
+/* Input fields */
+.mc-field-group input,
+.mc-field-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Mailchimp referral badge */
+.refferal_badge {
+    display: block;
+    width: 180px;
+    margin: 10px auto;
+}
+
+
+@media (max-width: 650px) {
+    #mc_embed_signup {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #mc-embedded-subscribe {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+.learn-more-button{
+    color: white;
+    background: var(--Button, linear-gradient(90deg, rgba(222, 206, 247, 0.90) 3.7%, rgba(247, 196, 220, 0.90) 99.93%));
+
+    display: flex;
+    border-radius: 10px;
+    width: 15rem;
+    height: 50px;
+    padding: 15px;
+    
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    font-size: 1.5rem;
+    margin: auto;
+}

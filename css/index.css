@@ -30,32 +30,20 @@ h1{
 }
 
 h2{
-    background-color: #ffffff;
-    color: transparent;
-    text-shadow: -1px 1px 3.5px rgba(216, 182, 247, 0.8);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-
-    font-family: var(--Inside-Text, "Averia Serif Libre");
+    color: #e8c2d3;
+ 
+    font-family: "Rasa", serif;
+    font-optical-sizing: auto;
     font-style: normal;
     font-size: clamp(2rem, 6vw, 5.3rem);
-
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    
+ 
     justify-content: justify;
-    flex-shrink: 0;
     text-align: center;
-    
+ 
     font-weight: 2000;
     line-height: 100%;
     letter-spacing: 5px;
 }
-
-
 
 
 /* 5 */
@@ -94,9 +82,6 @@ h3 {
 }
 
 
-
-
-
 p{
     color: #fff2f2;
 
@@ -121,10 +106,9 @@ p{
     animation: slideUp 2s ease forwards; 
 }
 
-.content-container #about-us p {
-    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(4rem, 8vw, 10rem);
+#about-home{
+    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(4rem, 10vw, 10rem);
 }
-
 
 
 

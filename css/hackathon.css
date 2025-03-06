@@ -8,7 +8,7 @@
 }
 
 body{
-    background-color: #191919;
+    background-color: #131314;
 }
 
 h1{
@@ -96,7 +96,7 @@ h1{
 
 .about-container p{
     font-size: clamp(20px, 50%, 60px); 
-    color: rgb(86, 87, 92);
+    color: #56575c;
     max-width: 800px;
     text-align: center;
 }
@@ -171,7 +171,7 @@ h1{
     margin: auto;
 }
 
-#schedule-nav, #faq-nav {
+#schedule-nav, #faq-nav{
     display: flex;
     flex-direction: column;
 
@@ -188,7 +188,7 @@ h1{
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
 }
 
-#schedule-nav h2, #faq-nav h2{
+#schedule-nav h2, #faq-nav h2, #judge-nav h2{
     color: #e8c2d3; 
 
     letter-spacing: 5px;
@@ -266,6 +266,65 @@ h1{
 
 
 
+/* Judges container*/
+.board-container{
+    max-width: 1200px;
+    margin:0 auto;
+    padding: 3rem 2rem;
+ }
+
+ .judge-title {
+    background-color: white;
+    border-radius: 10px;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+    text-align: center;
+    width: 80%;
+    padding: 2.5rem;
+
+    display: block;  
+    margin: 0 auto; 
+}
+
+
+.judges-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 3.5rem;  
+    margin-top:50px;
+}
+
+.judges {
+    padding: 15px;
+    text-align: center;
+    width: 250px; 
+}
+
+/* Judge images */
+.judges img {
+    width: 225px;
+    height: 225px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Judge Position */
+.judge-position {
+    color:#d088a9;
+    padding:.5rem 0;
+    font-size: (1.2rem, 1.5vw, 1.6rem);
+}
+
+.judge-name {
+    font-size: 1.5rem;
+    color: #ece8ef;
+}
+
+
+
+
 /* Thank you Section */
 #thank-you-nav{
     display: flex;
@@ -284,7 +343,6 @@ h1{
     width: 80%;
     max-width: 900px;
     padding: 2.5rem;
-
 }
 
 #thank-you-nav h2{
@@ -315,59 +373,78 @@ h1{
 
 
 
-@media (max-width: 600px) {
-    .table-container {
-        display: flex;
+
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .judges-container {
+        flex-direction: row;
         justify-content: center;
-        align-items: center;
-        width: 100%;
-        overflow: hidden;
+        gap: 15px;
     }
 
-    .schedule-table, .level-table {
-        width: 100%;
-        max-width: 100%;
-        border-collapse: collapse;
-        table-layout: fixed; /* Keeps column widths consistent */
+    .judges {
+        width: 200px; /* Slightly smaller on medium screens */
     }
 
-    .schedule-table th, .level-table th,
-    .schedule-table td, .level-table td {
-        font-size: 12px; /* Ensures text is readable on smaller screens */
-        padding: 6px; /* Slightly reduced padding to fit more content */
-        text-align: center;
-        white-space: normal; /* Allows text to wrap */
-        word-break: break-word; /* Prevents content from being cut off */
-    }
-
-    .schedule-table th, .level-table th {
-        background-color: #e8c2d3;
-        font-size: 14px;
-        letter-spacing: 0.5px;
-    }
-
-    .schedule-table td, .level-table td {
-        max-width: 100%;
-        overflow: visible; /* Ensures text is fully displayed */
-    }
-
-    .schedule-table tr, .level-table tr {
-        display: table-row;
-        width: 100%;
-    }
-
-    .level-container, .schedule-nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 0 5px;
+    .judges img {
+        width: 120px;
+        height: 120px;
     }
 }
 
+@media (max-width: 600px) {
+    .judges-container {
+        flex-direction: column; /* Stacks judges vertically */
+        align-items: center;
+    }
 
+    .judges {
+        width: 100%; /* Full width for better spacing */
+        max-width: 250px;
+    }
 
+    .judges img {
+        width: 100px; /* Smaller images */
+        height: 100px;
+    }
+}
 
+/*  
+ 
+ .board-container .judges-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:2rem;
+ }
+ 
+ .board-container .judges-container .judges{
+    background: transparent;
+    
+    text-align: center;
+    padding:3rem 2rem;
+    cursor: pointer;
+ }
+ 
+ .board-container .judges-container .judges img{
+    height: 20rem;
+    width: 20rem;
+    object-fit: cover;
+    border-radius: 50%;
+ }
+ 
+ .board-container .judges-container .judges h3{
+    color:#ece8ef;
+    padding:.5rem 0;
+    font-size: 2rem;
+    letter-spacing: 2px;
+ }
+ 
+ .board-container .judges-container .judge-name{
+    color:#ece8ef;
+    font-size: 1.5rem;
+ }
+  */
 
 @media (max-width: 768px) {
     .table-container {
@@ -415,5 +492,70 @@ h1{
         align-items: center;
         width: 100%;
         padding: 0 5px; 
+    }
+}
+
+@media (max-width: 600px) {
+    .table-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #schedule-nav h2, .schedule-table{
+        margin: 0;
+    }
+
+    #schedule-nav{
+        padding: 1rem;
+    }
+
+    .schedule-table, .level-table {
+        width: 100%;
+        max-width: 100%;
+        /* border-collapse: collapse; */
+        /* table-layout: fixed; */
+    }
+
+    .schedule-table th{
+        font-size: 50%;
+    }
+
+    .level-table th{
+        font-size: 80%;
+        background-color: white;
+        letter-spacing: 0.5px;
+    }
+
+    /* .schedule-table th, .level-table th,
+    .schedule-table td, .level-table td {
+        padding: 6px;
+        text-align: center;
+        white-space: normal;  
+        word-break: break-word; 
+    } */
+
+    .schedule-table td, .level-table td {
+        max-width: 100%;
+        overflow: visible;
+    }
+
+    .schedule-table tr, .level-table tr {
+        display: table-row;
+        width: 100%;
+    }
+
+    .schedule-table td{
+        font-size: 50%;
+    }
+
+    .level-container, .schedule-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0 5px;
     }
 }
