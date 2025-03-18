@@ -352,11 +352,12 @@ body{
 .judge-position {
     color:#d088a9;
     padding:.5rem 0;
-    font-size: (1.2rem, 1.5vw, 1.6rem);
+    font-size: clamp(1.2rem, 1.5vw, 1.6rem);
 }
 
 .judge-name {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
+    font-size: clamp(1rem, 1vw, 1.5rem);
     color: #ece8ef;
 }
 
@@ -431,59 +432,6 @@ body{
     }
 }
 
-@media (max-width: 600px) {
-    .judges-container {
-        flex-direction: column; /* Stacks judges vertically */
-        align-items: center;
-    }
-
-    .judges {
-        width: 100%; /* Full width for better spacing */
-        max-width: 250px;
-    }
-
-    .judges img {
-        width: 100px; /* Smaller images */
-        height: 100px;
-    }
-}
-
-/*  
- 
- .board-container .judges-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap:2rem;
- }
- 
- .board-container .judges-container .judges{
-    background: transparent;
-    
-    text-align: center;
-    padding:3rem 2rem;
-    cursor: pointer;
- }
- 
- .board-container .judges-container .judges img{
-    height: 20rem;
-    width: 20rem;
-    object-fit: cover;
-    border-radius: 50%;
- }
- 
- .board-container .judges-container .judges h3{
-    color:#ece8ef;
-    padding:.5rem 0;
-    font-size: 2rem;
-    letter-spacing: 2px;
- }
- 
- .board-container .judges-container .judge-name{
-    color:#ece8ef;
-    font-size: 1.5rem;
- }
-  */
-
 @media (max-width: 768px) {
     .table-container {
         display: block;
@@ -547,7 +495,7 @@ body{
     }
 
     #schedule-nav{
-        padding: 1rem;
+        padding: 4rem 1rem;
     }
 
     .schedule-table, .level-table {
@@ -595,5 +543,20 @@ body{
         align-items: center;
         width: 100%;
         padding: 0 5px;
+    }
+
+    .judges-container {
+        flex-direction: column; /* Stacks judges vertically */
+        align-items: center;
+    }
+
+    .judges {
+        width: 100%; /* Full width for better spacing */
+        max-width: 250px;
+    }
+
+    .judges img {
+        width: 100px; /* Smaller images */
+        height: 100px;
     }
 }
