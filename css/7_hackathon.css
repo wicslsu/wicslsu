@@ -28,6 +28,44 @@ h1{
     color: transparent;
 }
 
+h2{ 
+    color: #e8c2d3;
+ 
+    font-family: "Rasa", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: clamp(2rem, 6vw, 5.3rem);
+ 
+    justify-content: justify;
+    text-align: center;
+ 
+    font-weight: 2000;
+    line-height: 100%;
+    letter-spacing: 5px;
+ }
+
+h3{
+    color: #e8c2d3; 
+
+    letter-spacing: 5px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+p{
+    color: #fff2f2;
+
+    font-size: clamp(0.875rem, 3vw, 1.5rem);
+    line-height: clamp(35px, 4vw, 50px);
+    letter-spacing: 2px;
+    text-align: center;
+    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(4rem, 10vw, 10rem);
+}
+
+body{
+    background-color: #131314;
+    min-height: 100vh;
+}
 
 
 

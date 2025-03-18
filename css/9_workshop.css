@@ -1,0 +1,229 @@
+/* All default fonts */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rasa", serif;
+    font-style: normal;
+}
+
+h1{
+    font-family: 'Handjet', sans-serif;
+    font-size: clamp(4rem, 8vw, 10rem);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 4.142px;
+    margin-top: 5rem;
+    text-align: center;
+
+    background: linear-gradient(90deg, #DFAAC3 24.34%, #F1C9DB 41.54%, #D3B9E8 64.8%, #997DC3 75.56%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+h2{ 
+    color: #e8c2d3;
+ 
+    font-family: "Rasa", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: clamp(2rem, 6vw, 5.3rem);
+ 
+    justify-content: justify;
+    text-align: center;
+ 
+    font-weight: 2000;
+    line-height: 100%;
+    letter-spacing: 5px;
+
+    padding: 5rem 1rem 0 0;
+ }
+
+h3{
+    color: #beaddb;
+    font-size: clamp(16px, 2vw, 22px);
+    font-weight: bolder;
+    letter-spacing: 5px;
+    /* font-size: 1.8rem; */
+}
+
+p{
+    color: #56575c;
+    font-size: clamp(10px, 1.5vw, 15px);
+    /* font-size: clamp(0.875rem, 3vw, 1.5rem);
+    line-height: clamp(35px, 4vw, 50px); */
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+
+body{
+    background-color: #131314;
+    min-height: 100vh;
+}
+
+.workshop-details{
+    font-weight: bold;
+}
+
+/* Separating Upcoming and Past Workshop */
+.workshop-container{
+    padding: 0 40px;
+    text-align: center;
+}
+
+.description{  
+    margin: 0 20px;
+    flex-grow: 1;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 50px;
+    align-items: center;
+}
+
+.card{
+    /* Adjust the width for mobile */
+    max-width: 700px;
+    width: clamp(350px, 60vw, 700px);
+    max-height: 450px;
+    height: clamp(350px, 60vw, 450px);
+
+    background-color: rgb(255, 247, 244);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-content, 
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    text-align: center; 
+}
+
+
+.card-content{
+    padding: 10px;
+    
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.image-content{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.card-image{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    z-index: 2;
+}
+
+.card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    border-radius: 10px 10px 0 0;
+}
+
+
+.card-image .card-img{
+    aspect-ratio: 2 / 1;
+    max-height: 225px;
+    width: 100%;   
+    object-fit: contain;
+}
+
+
+.button{ 
+    color: #c7b4e1;
+    background-color: black;
+    border: none;
+    font-size: clamp(10px, 1vw, 15px);
+    border-radius: 5px;
+    padding: clamp(4px, 0.5vw, 9px) clamp(14px, 1.5vw, 20px);
+}
+
+.button:hover{
+    transform: scale(1.10);
+    cursor: pointer;
+}
+
+
+
+
+
+.title-modal{
+    font-size: 20px;
+    padding: 20px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #997DC3;
+}
+
+.modal-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    background-color: #a38ec1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-button:hover {
+    background-color: #dfc3ed;
+}
+

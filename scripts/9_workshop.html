@@ -5,7 +5,7 @@
 
     <title>WiCS Hackathon</title>
 
-    <link rel = "stylesheet" href="../css/hackathon.css?" type="text/css">
+    <link rel = "stylesheet" href="../css/9_workshop.css" type="text/css">
     <link rel = "stylesheet" href="../header/header.css?" type="text/css">
     <link rel="stylesheet" href="../footer/footer.css?" type="text/css">
 
@@ -16,64 +16,199 @@
 	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Handjet:wght@600&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
     <link rel="icon" href="/pictures/icons/Logo.png" sizes="500x500" type="image/png">
 </head>
 
 <body>
     <header>
-        <nav class="navbar">
-            <div class="nav-tab-container">  
-                <!-- Logo -->
-                <div class="wics-logo">
-                    <a href="../index.html" id="header-logo">
-                        <img src="../pictures/icons/Logo.png" alt="WiCS Logo">
-                    </a>
-                </div>
-                <!-- Tabs -->
-                <ul class="navigation-bar">
-                    <li class="navigation-contents">
-                        <a href="/index.html" class="hackathon-link">Home</a>
-                    </li>
-
-                    <!-- <li class="navigation-contents">
-                        <a href="" class="hackathon-link">Workshop</a>
-                    </li>
-
-                    <li class="navigation-contents">
-                        <a href="" class="hackathon-link">Gallary</a>
-                    </li> -->
-                    <li class="navigation-contents">
-                        <a href="#hackathon-nav" class="hackathon-link">About</a>
-                    </li>
-                    <li class="navigation-contents">
-                        <a href="#schedule-nav" class="hackathon-link">Schedule</a>
-                    </li>
-                    <li class="navigation-contents">
-                        <a href="#faq-nav" class="hackathon-link">FAQ</a>
-                    </li>
-                    <li class="navigation-contents">
-                        <a id="register" class="hackathon-link" href="https://forms.gle/HbdvZaxzWTDRMf6V6" target="_blank">Register Here</a>
-                    </li>
-                </ul>
-            </div>      
-    
-            <!-- Hamburger -->
-            <div class="hamburger-container">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
-    </header>
+		<nav class="navbar">
+			<div class="nav-tab-container">
+				<div class="wics-logo">
+					<a href="../index.html" id="header-logo">
+						<img src="../pictures/icons/Logo.png" alt="WiCS Logo">
+					</a>
+				</div>
+				<ul class="navigation-bar">
+					<li class="navigation-contents">
+						<div class="dropdown-menu-container">
+						<a href="/scripts/0_about.html" class="nav-tab">About</a>
+							<ul class="dropdown-menu">
+								<li><a href="/scripts/5_mission.html" class="navigation-link">Our Mission</a></li> 
+								<li><a href="/scripts/6_officers.html" class="navigation-link">Officers</a></li>
+							</ul>
+						</div>
+					</li>
+	
+					<li class="navigation-contents">
+						<div class="dropdown-menu-container">
+						<a href="/scripts/1_events.html" class="nav-tab">Events</a>
+							<ul class="dropdown-menu">
+								<li><a href="/scripts/7_hackathon.html" class="navigation-link">Hackathon</a></li>
+								<li><a href="/scripts/9_workshop.html" class="navigation-link">Workshops</a></li>
+								<!-- <li><a href="/scripts/8_past_events.html" class="navigation-link">Past Events</a></li>  -->
+							</ul>
+						</div>
+					</li>
+					<li class="navigation-contents">
+						<a href="/scripts/2_members.html">Members</a>
+					</li>
+					<li class="navigation-contents">
+						<a href="/scripts/3_sponsor.html">Sponsorship</a>
+					</li>
+					<!-- <li class="navigation-contents">
+						<a href="/scripts/4_contact.html">Contact Us</a>
+					</li> -->
+				</ul>
+				<div class="hamburger-container">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+			</div>
+		</nav>
+	</header>
 
     <div class="workshop-container">
-        <h2>Upcoming Workshop</h2>
+        <h2>Upcoming Workshops</h2>
+        <div class="slide-content">
+            <div class="card-wrapper">
+                <div class="card" data-slides="" data-linkedin="https://www.linkedin.com/feed/update/urn:li:activity:7305210912674566144" data-instagram="https://www.instagram.com/p/DHBym3MRfkT/">
+                    <div class = "image-content">
+                        <div class="card-image">
+                            <img src = "/pictures/posters/4_Front_Back_End.png" alt="YM_Workshop" class="card-img">
+                        </div>
+                        <div class = "card-bg"></div>
 
+                        <div class="card-content">
+                            <h3>Front-End/Back-End Workshop</h3>
+                            <p class = "workshop-details">March 19, 2025 6:00 PM - 7:30 PM | PFT 1259</p>
+                            <p class="description">This workshop will help you prepare for the upcoming Hackathon by diving into React and Firebase.</p>
+                            <button class="button">Click for More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-slides="" data-linkedin="https://www.linkedin.com/feed/update/urn:li:activity:7305934647345979392" data-instagram="https://www.instagram.com/p/DHJe_y8xlvx/">
+                    <div class = "image-content">
+                        <div class="card-image">
+                            <img src = "/pictures/posters/5_Communicate.png" alt="Hope_Workshop" class="card-img">
+                        </div>
+                        <div class = "card-bg"></div>
+
+                        <div class="card-content">
+                            <h3>Communication Workshop</h3>
+                            <p class = "workshop-details">March 25, 2025 6:30 PM - 7:30 PM | PFT 1259</p>
+                            <p class="description">This session will focus on active communication and interview techniques to help you improve public speaking and professional interactions.</p>
+                            <button class="button">Click for More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2>Previous Workshops</h2>
+        <div class="slide-content">
+            <div class="card-wrapper">
+                <div class="card" data-slides="" data-linkedin="https://www.linkedin.com/feed/update/urn:li:activity:7295441555534884865" data-instagram="https://www.instagram.com/p/DFvLS1Vx1Ht/">
+                    <div class = "image-content">
+                        <div class="card-image">
+                            <img src = "/pictures/posters/0_Cyber_decoded.png" alt="Arushi_Workshop" class="card-img">
+                        </div>
+                        <div class = "card-bg"></div>
+
+                        <div class="card-content">
+                            <h3>Cybersecurity Workshop</h3>
+                            <p class = "workshop-details">Februrary 19, 2025 6:30 PM - 7:30 PM | PFT 1200</p>
+                            <p class="description">This workshop covers career paths, intentional resume building, resources, opportunities, certifications, and more to help you stand out in the cyber field!</p>
+                            <button class="button">Click for More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-slides="https://docs.google.com/presentation/d/1wHBpbdzYClOA4ZGPOLC_z2m43koQppIYpRV237GazGY/edit?usp=sharing" data-linkedin="https://www.linkedin.com/feed/update/urn:li:activity:7298340641153916928" data-instagram="https://www.instagram.com/p/DGEE2_-RtJC/">
+                    <div class = "image-content">
+                        <div class="card-image">
+                            <img src = "/pictures/posters/1_Figma.png" alt="Jenah_Workshop" class="card-img">
+                        </div>
+                        <div class = "card-bg"></div>
+
+                        <div class="card-content">
+                            <h3>Figma Workshop</h3>
+                            <p class = "workshop-details">February 26, 2025 6:30 PM - 7:30 PM | PFT 1259</p>
+                            <p class="description">This workshop covers how to model good UI design, demonstrate user journey maps, and construct user-friendly designs.</p>
+                            <button class="button">Click for More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-slides="" data-linkedin="https://www.linkedin.com/feed/update/urn:li:activity:7303112088414031872" data-instagram="https://www.instagram.com/p/DG5r6vGxco9/">
+                    <div class = "image-content">
+                        <div class="card-image">
+                            <img src = "/pictures/posters/2_Agile_Scrum_Workshop.png" alt="Grishma_Workshop" class="card-img">
+                        </div>
+                        <div class = "card-bg"></div>
+
+                        <div class="card-content">
+                            <h3>Agile/Scrum Workshop</h3>
+                            <p class = "workshop-details">March 11, 2025 6:00 PM - 7:00 PM | PFT 1200</p>
+                            <p class="description">This workshop covers cover how Agile methodologies and Scrum frameworks enhance efficiency, collaboration, and project management</p>
+                            <button class="button">Click for More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-slides="https://docs.google.com/presentation/d/1SYUjBrSZmoKtKpwdZy6du8EblZV98yjLxX14-Fl09as/edit?usp=sharing" data-linkedin="https://www.linkedin.com/feed/update/urn:li:activity:7303882180227739648" data-instagram="https://www.instagram.com/p/DG5vQuNRCvv/">
+                    <div class = "image-content">
+                        <div class="card-image">
+                            <img src = "/pictures/posters/3_Defensive_Networking_Workshop.png" alt="Arushi_Workshop" class="card-img">
+                        </div>
+                        <div class = "card-bg"></div>
+
+                        <div class="card-content">
+                            <h3>Defensive Networking Workshop</h3>
+                            <p class = "workshop-details">March 12, 2025 6:30 PM - 7:30 PM | PFT 1259</p>
+                            <p class="description">This workshop explores networking models, attacks, defenses, and protocols while diving into real-world applications, such as encryption and digital signatures.</p>
+                            <button class="button">Click for More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="card" data-slides="" data-linkedin="" data-instagram="">
+                    <div class = "image-content">
+                        <div class="card-image">
+                            <img src = "/pictures/posters/" alt="_Workshop" class="card-img">
+                        </div>
+                        <div class = "card-bg"></div>
+
+                        <div class="card-content">
+                            <h3> Workshop</h3>
+                            <p class = "workshop-details">March , 2025 :0 PM - :0 PM | PFT 1259</p>
+                            <p class="description"></p>
+                            <button class="button">Click for More</button>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
     </div>
+
+
+    <div id="popup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 class="title-modal">Resource</h3>
+            <button id="slides-button" class="modal-button">Connect to Slides</button>
+            <button id="linkedin-button" class="modal-button">LinkedIn Post</button>
+            <button id="instagram-button" class="modal-button">Instagram Post</button>
+        </div>
+    </div>
+
 
 
 
     <script src = "../header/header.js"></script>
     <script src = "../js/hackathon.js"></script>
+    <script src = "../js/workshop.js"></script>
 </body>
 </html>
