@@ -410,6 +410,7 @@ body{
     align-items: center;
     gap: 50px;  
     flex-wrap: wrap;
+    margin-top: 50px;
 }
 
 .sponsor-logo img{
@@ -423,7 +424,11 @@ body{
     max-width: 300px;
 }
 
-#walkons-logo, #IP-logo img{
+#walkons-logo img{
+    max-width: 350px;   
+}
+
+#IP-logo img{
     max-width: 400px;
 }
 
