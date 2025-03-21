@@ -51,7 +51,6 @@ p{
     line-height: clamp(35px, 4vw, 50px);
     letter-spacing: 2px;
     text-align: center;
-    /* padding: clamp(1.5rem, 4vw, 2.5rem) clamp(4rem, 10vw, 10rem); */
 }
 
 body{
@@ -357,7 +356,7 @@ body{
 }
   
 .judge-category{
-    color: #d088a9 !important;
+    color: #d088a9;
     font-size: clamp(2rem, 3vw, 4rem);
     text-align: center;
     margin-top: 50px;
