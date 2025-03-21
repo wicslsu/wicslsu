@@ -22,15 +22,61 @@
 
 <body>
     <header>
+		<nav class="navbar">
+			<div class="nav-tab-container">
+				<div class="wics-logo">
+					<a href="../index.html" id="header-logo">
+						<img src="../pictures/icons/Logo.png" alt="WiCS Logo">
+					</a>
+				</div>
+				<ul class="navigation-bar">
+					<li class="navigation-contents">
+						<div class="dropdown-menu-container">
+						<a href="/scripts/0_about.html" class="nav-tab">About</a>
+							<ul class="dropdown-menu">
+								<li><a href="/scripts/5_mission.html" class="navigation-link">Our Mission</a></li> 
+								<li><a href="/scripts/6_officers.html" class="navigation-link">Officers</a></li>
+							</ul>
+						</div>
+					</li>
+	
+					<li class="navigation-contents">
+						<div class="dropdown-menu-container">
+						<a href="/scripts/1_events.html" class="nav-tab">Events</a>
+							<ul class="dropdown-menu">
+								<li><a href="/scripts/7_hackathon.html" class="navigation-link">Hackathon</a></li>
+								<li><a href="/scripts/9_workshop.html" class="navigation-link">Workshops</a></li>
+								<!-- <li><a href="/scripts/8_past_events.html" class="navigation-link">Past Events</a></li>  -->
+							</ul>
+						</div>
+					</li>
+					<li class="navigation-contents">
+						<a href="/scripts/2_members.html">Members</a>
+					</li>
+					<li class="navigation-contents">
+						<a href="/scripts/3_sponsor.html">Sponsorship</a>
+					</li>
+					<!-- <li class="navigation-contents">
+						<a href="/scripts/4_contact.html">Contact Us</a>
+					</li> -->
+				</ul>
+				<div class="hamburger-container">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+			</div>
+		</nav>
+	</header>
+    <!-- <header>
         <nav class="navbar">
             <div class="nav-tab-container">  
-                <!-- Logo -->
+
                 <div class="wics-logo">
                     <a href="../index.html" id="header-logo">
                         <img src="../pictures/icons/Logo.png" alt="WiCS Logo">
                     </a>
                 </div>
-                <!-- Tabs -->
                 <ul class="navigation-bar">
                     <li class="navigation-contents">
                         <a href="/index.html" class="hackathon-link">Home</a>
@@ -39,10 +85,6 @@
                    <li class="navigation-contents">
                         <a href="/scripts/9_workshop.html" class="hackathon-link">Workshop</a>
                     </li>
-                    <!-- 
-                    <li class="navigation-contents">
-                        <a href="" class="hackathon-link">Gallary</a>
-                    </li> -->
                     <li class="navigation-contents">
                         <a href="#hackathon-nav" class="hackathon-link">About</a>
                     </li>
@@ -52,20 +94,16 @@
                     <li class="navigation-contents">
                         <a href="#faq-nav" class="hackathon-link">FAQ</a>
                     </li>
-                    <!-- <li class="navigation-contents">
-                        <a id="register" class="hackathon-link" href="https://forms.gle/HbdvZaxzWTDRMf6V6" target="_blank">Register Here</a>
-                    </li> -->
                 </ul>
             </div>      
     
-            <!-- Hamburger -->
             <div class="hamburger-container">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
         </nav>
-    </header>
+    </header> -->
     
     <div class="introduction-container" id="default">
         <!-- Welcoming Message -->
@@ -126,7 +164,7 @@
     <div class="schedule-container">
         <div id="schedule-nav">
             <h2>Schedule</h2>
-            <p>*Schedule is subject to change*</p>
+            <p class="schedule-msg">*Schedule is subject to change*</p>
             <div class="table-container">
                 <table class="schedule-table">
                     <thead>
@@ -172,7 +210,7 @@
                             <!-- Sat -->
                                 <td>Coding</td>
                             <!-- Sun -->
-                                <td colspan="2">Grinding</td>
+                                <td colspan="2">Coding</td>
                         </tr>
 
                         <!-- 12:00 PM -->
@@ -244,7 +282,7 @@
                         <tr>
                             <td class = "schedule-time">7:00 PM</td>
                             <td>Git Setup</td>
-                            <td>Grind</td>
+                            <td>Coding</td>
                         </tr>    
                     </tbody>
                 </table>
@@ -264,7 +302,7 @@
             <details class="faq-item">
                 <summary class = "collapse">When and where?</summary>
                 <p>It takes place on March 21st, 2025 6:00 PM CST ~ March 23, 2025 6:00 PM CST at
-                <a href="https://maps.app.goo.gl/tgWGakovSdPv7qdd9" target="_blank">LSU PFT</a>.</p> 
+                <a href="https://maps.app.goo.gl/tgWGakovSdPv7qdd9" target="_blank">LSU PFT 1100</a>.</p> 
             </details>
             <details class="faq-item">
                 <summary class = "collapse">What is the theme?</summary>
@@ -272,9 +310,10 @@
             </details>
             <details class="faq-item">
                 <summary class = "collapse">What do I bring?</summary>
-                <p>To survive, you only need your laptop and charger (and your keys!). However, if you want to be COMPETITIVE, 
-                bring a sleeping bag and a pillow. 
-                Warning: We have seen plenty walking zombies at PFT on Sunday morning.</p> 
+                <p>To survive, you only need your laptop, charger, and water bottle (and your keys!). We do strongly encourage bringing
+                    deodorant/perfume and jacket. In addition, if you want to be COMPETITIVE, bring a sleeping bag and a pillow. 
+                </p>
+                <p>Warning: We have seen plenty walking zombies at PFT on Sunday morning.</p> 
             </details>
             <details class="faq-item">
                 <summary class = "collapse">I have no coding experience. Can I still come?</summary>
@@ -286,28 +325,57 @@
             </details>
             <details class="faq-item">
                 <summary class = "collapse">I have a specific question...</summary>
-                <p>You can contact WiCS via wicslsu@gmail.com or contact any officers!</p>
+                <p>You can contact WiCS via wicslsu@gmail.com or contact any officers on Discord Server!</p>
             </details>
         </div>
     </div>
 
     <div class = "board-container" id="judge-nav">
-        <h2 class="judge-title">Judges</h2>		
+        <h2 class="judge-title">Judges</h2>	
+        <h3 class="judge-category">Advanced</h3>	
 		<div class="judges-container">	
 			<div class="judges" data-name="j-0">
-				<img src="../pictures/judges/0_JLD.jpg" alt="Denny">
+				<img src="../pictures/judges/A1_John_Luke_Denny.jpg" alt="Denny">
 				<h3 class="judge-position">LSU Instructor</h3>
 				<p class="judge-name">John Luke Denny</p>
 			</div>
 
             <div class="judges" data-name="j-1">
-				<img src="../pictures/judges/1_Donze.jpg" alt="Donze">
+				<img src="../pictures/judges/A2_Daniel_Donze.jpg" alt="Donze">
 				<h3 class="judge-position">LSU Instructor</h3>
 				<p class="judge-name">Daniel Donze</p>
 			</div>
 
             <div class="judges" data-name="j-2">
-				<img src="../pictures/judges/2_Fronchetti.jpg" alt="Fronchetti">
+				<img src="../pictures/judges/A3_Andrew_Webb.jpg" alt="Webb">
+				<h3 class="judge-position">LSU Assistant Professor</h3>
+				<p class="judge-name">Andrew Webb</p>
+			</div>
+        </div>
+
+        <h3 class="judge-category">Intermediate</h3>
+        <div class="judges-container">	
+            <div class="judges" data-name="j-3">
+				<img src="../pictures/judges/I1_Raphaela_Mettig.jpg" alt="Mettig">
+				<h3 class="judge-position">LSU Cybersecurity Research Specialist</h3>
+				<p class="judge-name">Raphaela Mettig</p>
+			</div>
+            <div class="judges" data-name="j-4">
+				<img src="../pictures/judges/Entergy Logo.png" alt="Peters">
+				<h3 class="judge-position">Entergy</h3>
+				<p class="judge-name">Christian Peters</p>
+			</div>
+        </div>
+        
+        <h3 class="judge-category">Beginner</h3>
+        <div class="judges-container">	
+            <div class="judges" data-name="j-5">
+				<img src="../pictures/judges/B1_Aakash_Bansal.jpg" alt="Bansal">
+				<h3 class="judge-position">LSU Assistant Professor</h3>
+				<p class="judge-name">Aakash Bansal</p>
+			</div>
+            <div class="judges" data-name="j-6">
+				<img src="../pictures/judges/B2_Felipe_Fronchetti.jpg" alt="Fronchetti">
 				<h3 class="judge-position">LSU Assistant Professor</h3>
 				<p class="judge-name">Felipe Fronchetti</p>
 			</div>
@@ -319,14 +387,23 @@
             <h2>Thank you to Our Sponsors</h2>
         </div>
         <div class="sponsor-logo-container">
-            <div class="sponsor-logo">
-                <img src="../pictures/sponsors/Entergy Logo.png">
+            <div class="sponsor-logo" id="entergy-logo">
+                <img src="../pictures/sponsors/0_Entergy.png" alt="Entergy">
+            </div>
+            <div class="sponsor-logo" id="IP-logo">
+                <img src="../pictures/sponsors/1_international_paper.png" alt="IP">
+            </div>
+            <div class = "sponsor-logo" id = "LSU-CS-logo">
+                <img src="../pictures/sponsors/2_LSU_CS.jpeg" alt="LSU CS">
             </div>
             <div class = "sponsor-logo" id = "LSU-logo">
-                <img src="../pictures/sponsors/LSU_logo.png">
+                <img src="../pictures/sponsors/3_LSU_logo.png" alt="LSU">
             </div>
-            <div class = "sponsor-logo" id = "walk-ons-logo">
-                <img src="../pictures/sponsors/walk_on_logo.png">
+            <div class="sponsor-logo" id="canes-logo">
+                <img src="../pictures/sponsors/4_Canes.png" alt="Cane's">
+            </div>
+            <div class="sponsor-logo" id="walkons-logo">
+                <img src="../pictures/sponsors/5_walk_on_logo.png" alt="Walk On's">
             </div>
         </div>
     </div>

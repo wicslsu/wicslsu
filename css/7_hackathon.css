@@ -59,7 +59,7 @@ p{
     line-height: clamp(35px, 4vw, 50px);
     letter-spacing: 2px;
     text-align: center;
-    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(4rem, 10vw, 10rem);
+    /* padding: clamp(1.5rem, 4vw, 2.5rem) clamp(4rem, 10vw, 10rem); */
 }
 
 body{
@@ -266,6 +266,9 @@ body{
     font-size: 16px;
 }
 
+.schedule-msg{
+    color: #e8c2d3;
+}
 
 
 
@@ -350,7 +353,7 @@ body{
 
 /* Judge Position */
 .judge-position {
-    color:#d088a9;
+    color:#ca6895;
     padding:.5rem 0;
     font-size: clamp(1.2rem, 1.5vw, 1.6rem);
 }
@@ -360,7 +363,15 @@ body{
     font-size: clamp(1rem, 1vw, 1.5rem);
     color: #ece8ef;
 }
+  
 
+.judge-category{
+    color: #d088a9;
+    font-size: clamp(2rem, 3vw, 4rem);
+    text-align: center;
+    margin-top: 50px;
+    padding: clamp(.1rem, 4vw, 2rem) clamp(4rem, 10vw, 10rem);
+}
 
 
 
@@ -406,8 +417,14 @@ body{
     width: 100%;
 }
 
-#LSU-logo img{
+
+/* Logo sizes */
+#LSU-logo, #canes-logo, #LSU-CS-log img{
     max-width: 300px;
+}
+
+#walkons-logo, #IP-logo img{
+    max-width: 400px;
 }
 
 
