@@ -44,14 +44,6 @@ h2{
     letter-spacing: 5px;
  }
 
-/* h3{
-    color: #e8c2d3; 
-
-    letter-spacing: 5px;
-    font-size: 1.8rem;
-    font-weight: bold;
-} */
-
 p{
     color: #fff2f2;
 
@@ -358,14 +350,14 @@ body{
     font-size: clamp(1.2rem, 1.5vw, 1.6rem);
 }
 
-.judge-name {
+.judge-name{
     /* font-size: 1.5rem; */
     font-size: clamp(1rem, 1vw, 1.5rem);
     color: #ece8ef;
 }
   
 .judge-category{
-    color: #d088a9;
+    color: #d088a9 !important;
     font-size: clamp(2rem, 3vw, 4rem);
     text-align: center;
     margin-top: 50px;
