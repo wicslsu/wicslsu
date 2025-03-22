@@ -59,8 +59,6 @@ function startCountdown(targetDate, endCallback) {
 
 // Start first countdown
 var x = startCountdown(firstCountDownDate, function () {
-    document.getElementById("end-message").innerText = "Start Coding!!!";
-    
     // Show second countdown
     document.querySelector(".countdown-container").style.display = "flex"; // in case it's hidden
     document.getElementById("countdown-msg").innerText = "Countdown to Project Submission:";
