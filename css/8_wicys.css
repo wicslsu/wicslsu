@@ -1,14 +1,15 @@
+/* Fonts */
 *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: "Rasa", serif;
     font-style: normal;
- 
-    margin:0; 
-    padding:0;
-    box-sizing: border-box;
-    outline: none; 
-    border:none;
-    text-decoration: none;
- }
+}
+
+body{
+    background-color: #191919;
+}
 
 h1{
     background: linear-gradient(90deg, #DFAAC3 24.34%, #F1C9DB 41.54%, #D3B9E8 64.8%, #997DC3 75.56%);
@@ -24,11 +25,10 @@ h1{
     font-weight: 600;
     line-height: 120%;
     letter-spacing: 4.142px;
-    margin-top: 5rem;
     text-align: center;
 }
 
-h2{ 
+h2{
     color: #e8c2d3;
  
     font-family: "Rasa", serif;
@@ -42,15 +42,24 @@ h2{
     font-weight: 2000;
     line-height: 100%;
     letter-spacing: 5px;
- }
-
-h3{
-    color: #e8c2d3; 
-
-    letter-spacing: 5px;
-    font-size: 1.8rem;
-    font-weight: bold;
 }
+
+
+/* 5 */
+h3 {
+    color: #DFAAC3;
+    text-align: center;
+    font-family: 'NanumGothicCoding', monospace;
+    font-size: 23.5px;
+    font-weight: 1000;
+    line-height: 30px; /* Ensures line height matches the font size */
+    letter-spacing: 1.0px;
+    margin: 0;
+    white-space: nowrap;  /* Keeps the text on a single line */
+    max-width: 100%;
+    padding: 20px 0;
+}
+
 
 p{
     color: #fff2f2;
@@ -59,15 +68,9 @@ p{
     line-height: clamp(35px, 4vw, 50px);
     letter-spacing: 2px;
     text-align: center;
-    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(4rem, 10vw, 10rem);
 }
 
-body{
-    background-color: #131314;
-    min-height: 100vh;
-}
 
-/* Containers */
 .content-container{
     display: flex;
     flex-direction: column;
@@ -77,14 +80,11 @@ body{
 
     width: 100%;
     min-height: 100vh;
-    margin: 70px 0;
-} 
-
-a{
-    color: #d088a9;
+    margin: 50px 0;
 }
 
 img{
     width: 60%;
     height: 60%;
+    padding: 5px 0;
 }

@@ -1,12 +1,13 @@
 footer{
-    background: linear-gradient(to right, #B39BD6 0%, #E8B8CE 100%);
+    /* background: linear-gradient(to right, #B39BD6 0%, #E8B8CE 100%); */
+    background-color: #beaddb;
     justify-content: center;
     align-items: center;
 
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 10px 35px;
+    /* padding: 10px 35px; */
 
     bottom: 0;
 }
@@ -21,42 +22,92 @@ footer{
 /* Follow Us Text */
 .follow-text {
     color: #FFF;
-    text-align: center;
-    font-family: 'Nanum Gothic Coding', monospace;
     font-size: 20px;
-    font-style: normal;
+    text-align: center;
     font-weight: 500;
-    line-height: 100%; /* 30px */
-    letter-spacing: 18px;
-    margin-top: 25px; 
-	margin-bottom: 15px;
+
+    letter-spacing: 20px;
+    margin: 50px 0 20px 0;
 }
 
 .social-icons-container{
 	display: flex;
+    flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	gap: 10px;	
+
+	gap: 20px;	
 }
 
-.social-icon {
-    flex-shrink: 0;
-    background-color: #FFF; /* White background for icons */
-    border-radius: 50%; /* Make the icons circular */
+.social-icon { 
     display: flex;
-    justify-content: center;
-    overflow: hidden;
+    background-color: #FFF;  
+    border-radius: 50%;
+   
 }
 
+.icon-container {
+    background-color: white;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.icon-container .icon-img {
+    position: relative;
+    width: 70%;
+    height: 70%;
+    background: radial-gradient(circle at top left, #B39BD6, #E8B8CE);
+   
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+  
+#instagram{
+    -webkit-mask-image: url('../pictures/icons/instagram.png');
+    mask-image: url('../pictures/icons/instagram.png');
+}
+
+#linkedin{
+    -webkit-mask-image: url('../pictures/icons/linkedin.png');
+    mask-image: url('../pictures/icons/linkedin.png');
+}
+
+#youtube{
+    -webkit-mask-image: url('../pictures/icons/Youtube.png');
+    mask-image: url('../pictures/icons/Youtube.png');
+}
+
+
+.icon-img img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+  }
+  
 /* @Wics Text */
 .wics-mark {
     color: #FFF;
     text-align: center;
-    font-family: 'Nanum Gothic Coding', monospace;
     font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%; /* 15px */
+    line-height: 100%;
     letter-spacing: 1.5px;
-	margin: 20px;
+    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(4rem, 10vw, 10rem);
+}
+
+@media (max-width: 650px){
+    .follow-text {
+        font-size: 16px;
+        margin: 30px 0 20px 0;
+    }
+
 }

@@ -65,7 +65,6 @@ var x = startCountdown(firstCountDownDate, function () {
 
     // Start second countdown
     x = startCountdown(secondCountDownDate, function () {
-        document.getElementById("end-message").innerText = "Good luck on project presentation!";
         document.querySelector(".countdown-container").style.display = "none";
     });
 });

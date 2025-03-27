@@ -7,7 +7,6 @@
     box-sizing: border-box;
     outline: none; 
     border:none;
-    text-decoration: none;
  
     /* transition: all .2s linear; */
     text-transform: capitalize;
@@ -45,20 +44,22 @@ h2{
     font-weight: 2000;
     line-height: 100%;
     letter-spacing: 5px;
+    margin-top: 5rem;
  }
 
 h3{
-    color: #e8c2d3; 
+    color: #d088a9; 
 
     letter-spacing: 5px;
-    font-size: 1.8rem;
+    font-size: clamp(1rem, 3vw, 2rem);
     font-weight: bold;
+    margin-top: 2rem;
 }
 
 p{
     color: #fff2f2;
 
-    font-size: clamp(0.875rem, 3vw, 1.5rem);
+    font-size: clamp(0.875rem, 3vw, 1.2rem);
     line-height: clamp(35px, 4vw, 50px);
     letter-spacing: 2px;
     text-align: center;
@@ -80,11 +81,44 @@ body{
 
     width: 100%;
     min-height: 100vh;
+    margin-top: 50px;
 }    
+
+.content-container a{
+    color: #d088a9;
+    text-decoration: underline;
+}
+
+.sub-container{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px 40px;
+}
+
+.bullet-points{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .member-bullet {
     color: #ece8ef;
-    font-size: clamp(0.875rem, 3vw, 1.5rem);
+    font-size: clamp(0.9rem, 3vw, 1rem);
     letter-spacing: 2px;
+    line-height: 250%;
+}
+
+.membership-info{
+    width: 60%;
+    height: 60%;
     padding: 10px;
+}
+
+@media (max-width: 1000px){
+    .membership-info{
+        width: 80%;
+        height: 80%;
+        padding: 10px;
+    }
 }
