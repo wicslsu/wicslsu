@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-		<title>WiCS LSU</title>
-		<link rel="stylesheet" href="/header/header.css">
-		<link rel="stylesheet" href="/footer/footer.css">
-		<link rel="stylesheet" href="/css/0_main.css">
-	
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Rasa:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Handjet:wght@600&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&display=swap" rel="stylesheet">
-		<link rel="icon" href="/pictures/icons/Logo.png" sizes="500x500" type="image/png">
-	</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WiCS Hackathon</title>
+
+    <link rel = "stylesheet" href="../css/9_workshop.css" type="text/css">
+    <link rel = "stylesheet" href="../header/header.css?" type="text/css">
+    <link rel="stylesheet" href="../footer/footer.css?" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Rasa:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Handjet:wght@600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+    <link rel="icon" href="/pictures/icons/Logo.png" sizes="500x500" type="image/png">
+</head>
 
 <body>
 	<header>
@@ -68,9 +69,28 @@
 			</div>
 		</nav>
 	</header>
-	
-	
-	<footer>
+
+  <div class="workshop-container">
+    <h2>Upcoming Events</h2>
+
+    <div class="slide-content">
+      <div class="card-wrapper" id="upcoming-cards">
+        <h3 class="empty-state" style="margin-top:50px; display:none;">Coming soon…</h3>
+      </div>
+    </div>
+  </div>
+
+
+    <div id="popup-modal" class="modal">
+        <div class="modal-content">
+        <span class="close-modal" aria-label="Close">&times;</span>
+        <h3 class="title-modal">Event Links</h3>
+        <button id="rsvp-button" class="modal-button">RSVP / Details</button>
+        <button id="instagram-button" class="modal-button">Instagram Post</button>
+        </div>
+    </div>
+
+    <footer>
 		<nav class="footer-content">
 			<h3 class="follow-text">FOLLOW US</h3>
 
@@ -91,6 +111,8 @@
 			<p class="wics-mark">© 2025 Women in Computer Science LSU</p>
 		</nav>
 	</footer>
-	<script src = "../header/header.js"></script>
+
+    <script src="../header/header.js"></script>
+    <script src="../js/upcoming-events.js"></script>
 </body>
 </html>
