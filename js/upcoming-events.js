@@ -20,19 +20,32 @@ const EVENTS = [
     links: {
       instagram: "https://www.instagram.com/p/DN7OF1hAGQe/"
     }
+  },
+  {
+    title: "Chaos Engineering Workshop",
+    start: "2025-09-11T18:00:00",
+    end:   "2025-09-11T19:00:00",
+    location: "PFT 1259",
+    img: "/pictures/posters/25-26/2_chaos_Engineering.jpg",
+    desc: "Want to learn how tech giants break their systems on purpose to make them stronger? Now’s your chance!",
+    links: {
+      instagram: "https://www.instagram.com/p/DOWP3KJgD5b/"
+    }
   }
 ];
 
 
-// --- Utilities ---
-function toDate(d) { return new Date(d); }
+/* ---------- Helpers ---------- */
+const toDate = (s) => new Date(s);
+const oneHourMs = 60 * 60 * 1000;
+
+const eventEnd = (ev) => ev.end ? toDate(ev.end) : new Date(toDate(ev.start).getTime() + oneHourMs);
 
 function formatRange(startStr, endStr) {
   const start = toDate(startStr);
   const end = endStr ? toDate(endStr) : null;
 
   const sameDay = end && start.toDateString() === end.toDateString();
-
   const optsDate = { weekday: "short", month: "short", day: "numeric", year: "numeric" };
   const optsTime = { hour: "numeric", minute: "2-digit" };
 
@@ -47,36 +60,27 @@ function formatRange(startStr, endStr) {
 }
 
 function icsTime(dt) {
-  const pad = n => String(n).padStart(2, "0");
-  const y = dt.getFullYear();
-  const m = pad(dt.getMonth() + 1);
-  const d = pad(dt.getDate());
-  const hh = pad(dt.getHours());
-  const mm = pad(dt.getMinutes());
-  const ss = pad(dt.getSeconds());
-  // "Floating" local time (no Z / timezone). Works fine for personal calendars.
-  return `${y}${m}${d}T${hh}${mm}${ss}`;
+  const pad = (n) => String(n).padStart(2, "0");
+  return `${dt.getFullYear()}${pad(dt.getMonth()+1)}${pad(dt.getDate())}T${pad(dt.getHours())}${pad(dt.getMinutes())}${pad(dt.getSeconds())}`;
 }
 
 function downloadICS(ev) {
   const dtStart = toDate(ev.start);
-  const dtEnd = ev.end ? toDate(ev.end) : new Date(dtStart.getTime() + 60*60*1000); // default 1h
-
+  const dtEnd = eventEnd(ev);
   const ics =
 `BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//WiCS LSU//Upcoming Events//EN
+PRODID:-//WiCS LSU//Events//EN
 BEGIN:VEVENT
 UID:${Date.now()}@wicslsu
 DTSTAMP:${icsTime(new Date())}
 DTSTART:${icsTime(dtStart)}
 DTEND:${icsTime(dtEnd)}
 SUMMARY:${ev.title.replace(/\n/g, " ")}
-LOCATION:${(ev.location || "").replace(/\n/g, " ")}
-DESCRIPTION:${(ev.desc || "").replace(/\n/g, " ")}
+LOCATION:${(ev.location||"").replace(/\n/g, " ")}
+DESCRIPTION:${(ev.desc||"").replace(/\n/g, " ")}
 END:VEVENT
 END:VCALENDAR`;
-
   const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
@@ -88,108 +92,74 @@ END:VCALENDAR`;
   URL.revokeObjectURL(url);
 }
 
-// --- Render cards ---
-const wrapper = document.getElementById("upcoming-cards");
-const emptyState = wrapper.querySelector(".empty-state");
 
-const upcoming = EVENTS
-  .filter(e => toDate(e.end || e.start) >= new Date())
-  .sort((a, b) => toDate(a.start) - toDate(b.start));
+const rootUpcoming = document.getElementById("upcoming-cards");
+const rootPast = document.getElementById("past-cards");
+const emptyUpcoming = rootUpcoming?.querySelector(".empty-state");
+const emptyPast = rootPast?.querySelector(".empty-past");
 
-if (upcoming.length === 0) {
-  emptyState.style.display = "block";
-} else {
-  emptyState.style.display = "none";
-  upcoming.forEach((ev, idx) => {
-    const card = document.createElement("div");
-    card.className = "card";
-    card.dataset.index = idx;
+function buildCard(ev, idx) {
+  const card = document.createElement("div");
+  card.className = "card";
+  card.dataset.idx = idx; 
 
-    // card DOM (reuses your workshop card structure/classes)
-    card.innerHTML = `
-      <div class="image-content">
-        <div class="card-image">
-          <img src="${ev.img}" alt="${ev.title}" class="card-img" crossorigin="anonymous">
-        </div>
-        <div class="card-bg"></div>
-        <div class="card-content">
-          <h3>${ev.title}</h3>
-          <p class="workshop-details">${formatRange(ev.start, ev.end)} | ${ev.location || "TBD"}</p>
-          <p class="description">${ev.desc || ""}</p>
-          <button class="button details-btn">More</button>
-        </div>
+  card.innerHTML = `
+    <div class="image-content">
+      <div class="card-image">
+        <img src="${ev.img}" alt="${ev.title}" class="card-img" crossorigin="anonymous">
       </div>
-    `;
-
-    // Optional: auto background from image dominant color
-    const img = card.querySelector(".card-img");
-    img.addEventListener("load", () => {
-      if (window.ColorThief) {
-        try {
-          const ct = new ColorThief();
-          const color = ct.getColor(img); // [r,g,b]
-          const bg = card.querySelector(".card-bg");
-          bg.style.background = `linear-gradient(135deg, rgba(${color[0]},${color[1]},${color[2]},0.20), rgba(0,0,0,0))`;
-        } catch {}
-      }
-    });
-
-    wrapper.appendChild(card);
+      <div class="card-bg"></div>
+      <div class="card-content">
+        <h3>${ev.title}</h3>
+        <p class="workshop-details">${formatRange(ev.start, ev.end)} | ${ev.location || "TBD"}</p>
+        <p class="description">${ev.desc || ""}</p>
+      </div>
+    </div>
+  `;
+  
+  const img = card.querySelector(".card-img");
+  img.addEventListener("load", () => {
+    if (window.ColorThief) {
+      try {
+        const ct = new ColorThief();
+        const color = ct.getColor(img); // [r,g,b]
+        const bg = card.querySelector(".card-bg");
+        bg.style.background = `linear-gradient(135deg, rgba(${color[0]},${color[1]},${color[2]},0.20), rgba(0,0,0,0))`;
+      } catch {}
+    }
   });
+
+  return card;
 }
 
-// --- Modal wiring ---
-const modal = document.getElementById("popup-modal");
-const closeBtn = modal.querySelector(".close-modal");
-const calendarBtn = document.getElementById("calendar-button");
-const rsvpBtn = document.getElementById("rsvp-button");
-const instaBtn = document.getElementById("instagram-button");
 
-let currentEvent = null;
+function clearCards(node) {
+  node.querySelectorAll(".card").forEach(el => el.remove());
+}
 
-wrapper.addEventListener("click", (e) => {
-  const btn = e.target.closest(".details-btn");
-  if (!btn) return;
+function renderAll() {
+  if (!rootUpcoming || !rootPast) return;
 
-  const card = e.target.closest(".card");
-  const idx = Number(card?.dataset.index ?? -1);
-  if (idx < 0) return;
+  clearCards(rootUpcoming);
+  clearCards(rootPast);
 
-  currentEvent = upcoming[idx];
-  // Show/hide buttons based on links present
-  rsvpBtn.style.display = currentEvent?.links?.rsvp ? "inline-block" : "none";
-  instaBtn.style.display = currentEvent?.links?.instagram ? "inline-block" : "none";
+  const now = new Date();
+  const withIdx = EVENTS.map((e, i) => ({ ...e, _idx: i }));
 
-  modal.style.display = "block";
-  document.body.style.overflow = "hidden";
-});
+  const upcoming = withIdx
+    .filter(e => eventEnd(e) >= now)
+    .sort((a, b) => toDate(a.start) - toDate(b.start));
 
-closeBtn.addEventListener("click", () => {
-  modal.style.display = "none";
-  document.body.style.overflow = "";
-});
+  const past = withIdx
+    .filter(e => eventEnd(e) < now)
+    .sort((a, b) => toDate(b.start) - toDate(a.start)); // newest past first
 
-window.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.style.display = "none";
-    document.body.style.overflow = "";
-  }
-});
-window.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    modal.style.display = "none";
-    document.body.style.overflow = "";
-  }
-});
+  if (emptyUpcoming) emptyUpcoming.style.display = upcoming.length ? "none" : "block";
+  if (emptyPast) emptyPast.style.display = past.length ? "none" : "block";
 
-calendarBtn.addEventListener("click", () => {
-  if (currentEvent) downloadICS(currentEvent);
-});
-
-rsvpBtn.addEventListener("click", () => {
-  if (currentEvent?.links?.rsvp) window.open(currentEvent.links.rsvp, "_blank");
-});
-
-instaBtn.addEventListener("click", () => {
-  if (currentEvent?.links?.instagram) window.open(currentEvent.links.instagram, "_blank");
-});
+  upcoming.forEach(ev => rootUpcoming.appendChild(buildCard(ev, ev._idx)));
+  past.forEach(ev => rootPast.appendChild(buildCard(ev, ev._idx)));
+}
+ 
+renderAll();
+setInterval(renderAll, 60_000);
