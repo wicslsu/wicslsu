@@ -39,7 +39,7 @@ html{
    overflow-x: hidden;
 }
 
-/* Officer cards */
+/* Officer/Ambassador cards */
 .container{
    max-width: 1200px;
    margin:0 auto;
@@ -51,13 +51,15 @@ html{
    padding: 5rem 0;
 }
 
-.container .officer-container{
+.container .officer-container,
+.container .ambassador-container{
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
    gap:2rem;
 }
 
-.container .officer-container .officer{
+.container .officer-container .officer,
+.container .ambassador-container .ambassador{
    background: transparent;
    
    text-align: center;
@@ -65,18 +67,21 @@ html{
    cursor: pointer;
 }
 
-.container .officer-container .officer img{
+.container .officer-container .officer img,
+.container .ambassador-container .ambassador img{
    height: 25rem;
    width: 25rem;
    object-fit: cover;
    border-radius: 50%;
 }
 
-.container .officer-container .officer:hover img{
+.container .officer-container .officer:hover img,
+.container .ambassador-container .ambassador:hover img{
    transform: scale(.95);
 }
 
-.container .officer-container .officer h3{
+.container .officer-container .officer h3,
+.container .ambassador-container .ambassador h3{
    color:#ece8ef;
 
    padding:.5rem 0;
@@ -84,17 +89,22 @@ html{
    letter-spacing: 1px;
 }
 
-.container .officer-container .officer-name{
+.container .officer-container .officer-name,
+.container .ambassador-container .ambassador-name{
    color:#ece8ef;
    font-size: 2rem;
 }
 
 .container .officer-container .officer:hover h3,
-.container .officer-container .officer:hover .officer-name {
+.container .officer-container .officer:hover .officer-name, 
+.container .ambassador-container .ambassador:hover h3,
+.container .ambassador-container .ambassador:hover .ambassador-name {
     color: #bd6d93
 }
 
-.officer-preview{
+/* Officer/Ambassador Preview Box */
+.officer-preview,
+.ambassador-preview{
    background: rgba(0,0,0,.7);
 
    position: fixed;
@@ -105,9 +115,11 @@ html{
 
    align-items: center;
    justify-content: center;
+   z-index: 9999;
 }
 
-.officer-preview .preview{
+.officer-preview .preview,
+.ambassador-preview .preview{
    background: #fff;
 
    position: relative;
@@ -119,12 +131,14 @@ html{
    text-align: center;
 }
 
-.officer-preview .preview.active{
-   display: inline-block;
+.officer-preview .preview.active,
+.ambassador-preview .preview.active{
+   display: block;
 }
 
 /* The "x" */
-.officer-preview .preview .fa-times{
+.officer-preview .preview .fa-times,
+.ambassador-preview .preview .fa-times{
    color:#a38ec1;
 
    position: absolute;
@@ -135,12 +149,14 @@ html{
    font-size: 3rem;
 }
 
-.officer-preview .preview .fa-times:hover{
+.officer-preview .preview .fa-times:hover,
+.ambassador-preview .preview .fa-times:hover{
    transform: scale(1.3);
 }
 
 /* Officer Position */
-.officer-preview .preview h3{
+.officer-preview .preview h3,
+.ambassador-preview .preview .ambassador-position{
    color:#56575c;
 
    /* letter-spacing: 2px; */
@@ -150,7 +166,8 @@ html{
 }
 
 /* Officer Name */
-.officer-preview .preview .officer-name{
+.officer-preview .preview .officer-name,
+.ambassador-preview .preview .officer-name{
    color:#b18ee4;
    letter-spacing: 2px;   
    padding: 1.5rem 0;
@@ -159,23 +176,27 @@ html{
 }
 
 /* Major, minor, graduation */
-.officer-preview .preview .highlight{
+.officer-preview .preview .highlight,
+.ambassador-preview .preview .highlight{
    color: #b18ee4;
 }
 
-.officer-preview .preview .officer-detail{
+.officer-preview .preview .officer-detail,
+.ambassador-preview .preview .officer-detail{
    color: #56575c;
 }
 
 /* The preview box itself */
-.officer-preview .preview{
+.officer-preview .preview,
+.ambassador-preview .preview {
    padding: 3rem;
    font-size: 1.8rem;
    border-radius: 5px;
 }
 
 /* Buttons */
-.officer-preview .preview .buttons{
+.officer-preview .preview .buttons,
+.ambassador-preview .preview .buttons{
    display: flex;
    flex-wrap: wrap;
 
@@ -185,7 +206,8 @@ html{
    justify-content: center;
 }
 
-.officer-preview .preview .buttons a{
+.officer-preview .preview .buttons a,
+.ambassador-preview .preview .buttons a{
    color:#444;
    
    flex:1 1 16rem;
@@ -197,20 +219,24 @@ html{
 }
 
 /* Button specifics */
-.officer-preview .preview .buttons a.officer-linkedin{
+.officer-preview .preview .buttons a.officer-linkedin,
+.ambassador-preview .preview .buttons a.officer-linkedin{
    background: #a4bdef;
    color:#fff;
 }
 
-.officer-preview .preview .buttons a.officer-email{
+.officer-preview .preview .buttons a.officer-email,
+.ambassador-preview .preview .buttons a.officer-email{
    border:.1rem solid #444;
 }
 
-.officer-preview .preview .buttons a.officer-linkedin:hover{
+.officer-preview .preview .buttons a.officer-linkedin:hover,
+.ambassador-preview .preview .buttons a.officer-linkedin:hover{
    background: #111;
 }
 
-.officer-preview .preview .buttons a.officer-email:hover{
+.officer-preview .preview .buttons a.officer-email:hover,
+.ambassador-preview .preview .buttons a.officer-email:hover{
    background: #444;
    color:#fff;
 }
