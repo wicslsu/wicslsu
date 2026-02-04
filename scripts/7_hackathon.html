@@ -69,7 +69,7 @@
 			</div>
 		</nav>
 	</header>
-    <!-- <header>
+    <!--<header>
         <nav class="navbar">
             <div class="nav-tab-container">  
 
@@ -109,10 +109,10 @@
     <div class="introduction-container" id="default">
         <!-- Welcoming Message -->
         <div class="welcome-msg">
-            <h1>&lt;WiCS Geaux Cash '25&gt;</h1>
+            <h1>&lt;WiCS Hackathon 26'&gt;</h1>
         </div>
         <!-- Countdown -->
-        <!-- <h2 id="countdown-msg">Countdown to Hackathon:</h2> 
+        <h2 id="countdown-msg">Countdown to Hackathon:</h2> 
         <div class = "countdown-container">
             <div class="countdown-content">
                 <div id="days" class="countdown-number">0</div>
@@ -130,8 +130,9 @@
                 <div id="seconds" class="countdown-number">0</div>
                 <div class="countdown-label">Seconds</div>
             </div>
+            <script src="../js/hackathon.js"></script>
         </div>
-        <h2 id="end-message"></h2> -->
+        <h2 id="end-message"></h2> 
     </div>
 
     <div class = "about-container" id="hackathon-nav">
@@ -155,12 +156,12 @@
             </tr>
         </table>
         
-        <!-- <a id="register-button" href="https://docs.google.com/forms/d/e/1FAIpQLSeTSqZAv4RrQ0mUa44uZZPjFjhoJTPKjVwZ1Rhl-YDuaMD47g/viewform?usp=sharing" target="_blank">
+        <a id="register-button" href="https://docs.google.com/forms/d/e/1FAIpQLScYyGN9Jh7rMXurH-KRa3uo9p0wMJHi08VWjrP9Bolh6arhfQ/viewform?usp=header" target="_blank">
             <button>Register Here</button>
-        </a> -->
+        </a> 
         <br>
-        <h2 id="deadline-msg" style="font-size: 40px; color: #ca6895; text-align: center;"><u>Registration Ended</u></h2>
-    </div> 
+        <h2 id="deadline-msg" style="font-size: 40px; color: #ca6895; text-align: center;"><u>Registration Deadline: March 6th</u></h2>
+        <h3 id="deadline-msg2" style="font-size: 20px; text-align: center;">Register before February 20th to guarantee a 2026 Hackathon shirt!</h3>
 
     <div class="schedule-container">
         <div id="schedule-nav">
@@ -172,14 +173,14 @@
                         <!-- Dates -->
                         <tr class="schedule-table">
                             <th rowspan="2">Date/Time</th>
+                            <th>3/20</th>
                             <th>3/21</th>
-                            <th>3/22</th>
-                            <th colspan="2">3/23</th>
+                            <th colspan="2">3/22</th>
                         </tr>
                         <!-- Day of week -->
                         <tr class="schedule-table">
-                            <th class = "schedule-day">Fri.</th>
-                            <th class = "schedule-day">Sat.</th>
+                            <th class = "schedule-day" >Fri.</th>
+                            <th class = "schedule-day" >Sat.</th>
                             <th class = "schedule-day" colspan="2">Sun.</th>
                         </tr>
                     </thead>
@@ -188,7 +189,7 @@
                         <tr>
                             <td class = "schedule-time">8:00 AM</td>
                             <!-- Fri -->
-                                <td rowspan="12"></td>
+                                <td rowspan="9"></td>
                             <!-- Sat -->
                                 <td rowspan="3">Check-in & Code</td>
                             <!-- Sun -->
@@ -216,54 +217,48 @@
 
                         <!-- 12:00 PM -->
                         <tr>
-                            <td class = "schedule-time" rowspan="2">12:00 PM</td>
+                            <td class = "schedule-time">12:00 PM</td>
                             <!-- Sat -->
-                            <td rowspan="3">Lunch</td>
+                            <td>Lunch</td>
                             <!-- Sun -->
-                                <td rowspan="2"><strong>Submission Due</strong></td>
-                                <td rowspan="2">Lunch</td>
+                            <td colspan="2">Lunch</td>
                         </tr>
-                        <!-- 12:30 PM-->
-                        <tr>
-                        </tr>
-
 
                         <!-- 1:00 PM -->
-                        </tr>  
-                            <td class = "schedule-time" rowspan="2">1:00 PM</td>
-                            <!-- Sun -->
-                            <td rowspan="5" colspan="2">Judging</td>
-                        </tr>
                         <tr>  
-                            <!-- 1:30 -->
-                            <!-- Sat -->
+                            <td class = "schedule-time">1:00 PM</td>
+                            <!--Sat-->
                             <td rowspan="2">Coding</td>
+                            <!-- Sun -->
+                            <td rowspan="4" colspan="2">Judging</td>
                         </tr>
 
                          <!-- 2:00 PM -->
-                        </tr>  
+                        <tr>  
                             <td class = "schedule-time">2:00 PM</td>
                         </tr>
 
                         <!-- 3:00 PM -->
-                        </tr>  
+                        <tr>  
                             <td class = "schedule-time">3:00 PM</td>
                             <!-- Sat -->
-                            <td>Activity led by Arushi</td>
+                            <td>Activity</td>
                         </tr>
 
                         <!-- 4:00 PM -->
-                        </tr>  
+                        <tr>  
                             <td class = "schedule-time">4:00 PM</td>
                             <!-- Sat -->
                             <td>Coding</td>
                         </tr>
 
                         <!-- 5:00 PM -->
-                        </tr>  
+                        <tr>  
                             <td class = "schedule-time">5:00 PM</td>
+                            <!--Fri-->
+                            <td><strong>Opening Ceremony</strong></td>
                             <!-- Sat -->
-                            <td>Activity Led by Jenah</td>
+                            <td>Activity</td>
                             <!-- Sunday -->
                             <td colspan="2"><strong>Closing Ceremony</strong></td>
                         </tr>
@@ -272,19 +267,28 @@
                         <tr>
                             <td class = "schedule-time">6:00 PM</td>
                             <!-- Fri -->
-                                <td><strong>Opening Ceremony</strong></td>
+                                <td>Git Setup</td>
                             <!-- Sat -->
                                 <td>Dinner</td>
                             <!-- Sun -->
-                                <td rowspan="2" colspan="2"></td>
+                                <td rowspan="3" colspan="2"></td>
                         </tr>
 
                         <!-- 7:00 PM -->
                         <tr>
                             <td class = "schedule-time">7:00 PM</td>
-                            <td>Git Setup</td>
-                            <td>Coding</td>
+                            <!-- Fri -->
+                                <td>Find Rooms/Photo</td>
+                            <!-- Sat -->
+                            <td rowspan="2">Coding/Submissions Due</td>
                         </tr>    
+
+                        <!-- 8:00 PM -->
+                        <tr>
+                            <td class = "schedule-time">8:00 PM</td>
+                            <!-- Fri -->
+                                <td>Dinner</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -302,7 +306,7 @@
             </details>
             <details class="faq-item">
                 <summary class = "collapse">When and where?</summary>
-                <p>It takes place on March 21st, 2025 6:00 PM CST ~ March 23, 2025 6:00 PM CST at
+                <p>It takes place on March 20th, 2026 5:00 PM CST ~ March 22nd, 2026 6:00 PM CST at
                 <a href="https://maps.app.goo.gl/tgWGakovSdPv7qdd9" target="_blank">LSU PFT 1100</a>.</p> 
             </details>
             <details class="faq-item">
@@ -332,8 +336,8 @@
     </div>
 
     <div class = "board-container" id="judge-nav">
-        <h2 class="judge-title">Judges</h2>	
-        <h3 class="judge-category">Advanced</h3>	
+      <h2 class="judge-title">Judges</h2>	
+        <!-- <h3 class="judge-category">Advanced</h3>	
 		<div class="judges-container">	
 			<div class="judges" data-name="j-0">
 				<img src="../pictures/judges/A1_John_Luke_Denny.jpg" alt="Denny">
@@ -380,14 +384,14 @@
 				<h3 class="judge-position">LSU Assistant Professor</h3>
 				<p class="judge-name">Felipe Fronchetti</p>
 			</div>
-        </div>
+        </div> -->
     </div>
 
     <div id="thank-you-nav">
         <div id="thank-you-title">
             <h2>Thank you to Our Sponsors</h2>
         </div>
-        <div class="sponsor-logo-container">
+        <!--<div class="sponsor-logo-container">
             <div class="sponsor-logo" id="entergy-logo">
                 <img src="../pictures/sponsors/0_Entergy.png" alt="Entergy">
             </div>
@@ -405,7 +409,7 @@
             </div>
             <div class="sponsor-logo" id="walkons-logo">
                 <img src="../pictures/sponsors/5_walk_on_logo.png" alt="Walk On's">
-            </div>
+            </div>-->
         </div>
     </div>
 

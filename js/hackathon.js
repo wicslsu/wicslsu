@@ -1,8 +1,9 @@
 // Countdown timer
 // set Date
-var firstCountDownDate = new Date("March 21, 2025 18:00:00").getTime();
-var secondCountDownDate = new Date("March 23, 2025 12:00:00").getTime();
+var firstCountDownDate = new Date("March 20, 2026 17:00:00").getTime();
 
+
+var timer;
 
 // Function to calculate days
 function getDays(distance) {
@@ -24,47 +25,38 @@ function getSeconds(distance) {
     return Math.floor((distance % (1000 * 60)) / 1000);
 }
 
-// var x = setInterval(function () {
-//     var now = new Date().getTime();
-//     var distance = countDownDate - now;
 
-//     if (distance >= 0) {
-//         document.getElementById("days").innerText = getDays(distance);
-//         document.getElementById("hours").innerText = getHours(distance);
-//         document.getElementById("minutes").innerText = getMinutes(distance);
-//         document.getElementById("seconds").innerText = getSeconds(distance);
-//     } else {
-//         clearInterval(x);
-//         document.getElementById("end-message").innerText = "Start Coding!!!";
-//         document.querySelector(".countdown-container").style.display = "none";
-//     }
-// }, 1000);
+function updateCountdown(distance) {
+    document.getElementById("days").innerText = getDays(distance);
+    document.getElementById("hours").innerText = getHours(distance);
+    document.getElementById("minutes").innerText = getMinutes(distance);
+    document.getElementById("seconds").innerText = getSeconds(distance);
+}
 
 function startCountdown(targetDate, endCallback) {
-    return setInterval(function () {
+    clearInterval(timer);
+
+    var now = new Date().getTime();
+    var distance = targetDate - now;
+    if (distance < 0) updateCountdown(distance);
+
+    timer = setInterval(function () {
         var now = new Date().getTime();
         var distance = targetDate - now;
-
         if (distance >= 0) {
-            document.getElementById("days").innerText = getDays(distance);
-            document.getElementById("hours").innerText = getHours(distance);
-            document.getElementById("minutes").innerText = getMinutes(distance);
-            document.getElementById("seconds").innerText = getSeconds(distance);
-        } else {
-            clearInterval(x);
+            updateCountdown(distance);
+        }else {
+            clearInterval(timer);
             endCallback();
-        }
-    }, 1000);
+    }
+}, 1000);
 }
 
 // Start first countdown
-var x = startCountdown(firstCountDownDate, function () {
-    // Show second countdown
-    document.querySelector(".countdown-container").style.display = "flex"; // in case it's hidden
-    document.getElementById("countdown-msg").innerText = "Countdown to Project Submission:";
+startCountdown(firstCountDownDate, function () {
 
-    // Start second countdown
-    x = startCountdown(secondCountDownDate, function () {
-        document.querySelector(".countdown-container").style.display = "none";
-    });
+    document.querySelector(".countdown-container").style.display = "none"; // in case it's hidden
+    document.getElementById("countdown-msg").innerText = "Hackathon has started!";
 });
+
+

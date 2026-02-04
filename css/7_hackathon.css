@@ -189,6 +189,13 @@ body{
     text-decoration: underline;
 }
 
+#deadline-msg2{
+    font-size: clamp(20px, 50%, 60px); 
+    color: #56575c;
+    max-width: 800px;
+    text-align: center;
+}
+
 
 
 
@@ -228,10 +235,11 @@ body{
 
 .schedule-table{
     width: 100%;
-    max-width: 800px;
+    max-width: 100%;
     margin: 20px auto;
     border-collapse: collapse;
     text-align: center;
+    table-layout: fixed;
 }
 
 .schedule-table th, td {
@@ -267,11 +275,12 @@ body{
 /* FAQ Section */
 .faq-item {
     width: 100%;
+    max-width: 100%;
     margin-bottom: 1rem;
     background: white;
     border-radius: 8px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    overflow: auto;
 }
 
 .faq-item summary {
@@ -312,7 +321,7 @@ body{
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 
     text-align: center;
-    width: 80%;
+    width: 100%;
     padding: 2.5rem;
 
     display: block;  
