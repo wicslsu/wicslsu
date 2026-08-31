@@ -31,6 +31,14 @@ const EVENTS = [
     links: {
       instagram: "https://www.instagram.com/p/DOWP3KJgD5b/"
     }
+  },
+  {
+    title: "Beginning of Semester Social",
+    start: "2027-09-02T18:30:00",
+    end: "2027-09-02T19:30:00",
+    location: "PFT 1263",
+    img: "/pictures/posters/26-27/BOS_2026.png",
+    desc: "Come join us for our Beginning of Semester Social where you can meet new people, learn more about WiCS and have a fun time!",
   }
 ];
 
