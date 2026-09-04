@@ -47,6 +47,14 @@ const EVENTS = [
     location: "PFT 1200",
     img: "/pictures/posters/26-27/PDN_2026_-_1.png",
     desc: "WiCS LSU x SSL: Professional Development Night 💼🔧 Come join us for some mock interviews, resume reviews, and elevator pitch coaching!",
+  },
+  {
+    title: "FAST Enterprise Workshop",
+    start: "2025-09-17T17:30:00",
+    end:   "2025-09-17T19:00:00",
+    location: "PFT 1259",
+    img: "/pictures/posters/26-27/FAST_Workshop_2026_-_1.png",
+    desc: "Please join us for the FAST Enterprise interview prep workshop where you will learn the skills and tactics of interviewing, as well as enjooy some pizza while you're at it!",
   }
 ];
 
