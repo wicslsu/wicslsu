@@ -54,7 +54,7 @@ const EVENTS = [
     end:   "2026-09-17T19:00:00",
     location: "PFT 1259",
     img: "/pictures/posters/26-27/FAST_Workshop_2026_-_1.png",
-    desc: "Please join us for the FAST Enterprise interview prep workshop where you will learn the skills and tactics of interviewing, as well as enjooy some pizza while you're at it!",
+    desc: "Please join us for the FAST Enterprise interview prep workshop where you will learn the skills and tactics of interviewing, as well as enjoy some pizza while you're at it!",
   }
 ];
 
