@@ -39,6 +39,14 @@ const EVENTS = [
     location: "PFT 1263",
     img: "/pictures/posters/26-27/BOS_2026.png",
     desc: "Come join us for our Beginning of Semester Social where you can meet new people, learn more about WiCS and have a fun time!",
+  },
+  {
+    title: "Professional Development Night",
+    start: "2026-09-15T18:00:00",
+    end:   "2026-09-15T20:00:00",
+    location: "PFT 1200",
+    img: "/pictures/posters/26-27/PDN_2026_-_1.png",
+    desc: "WiCS LSU x SSL: Professional Development Night 💼🔧 Come join us for some mock interviews, resume reviews, and elevator pitch coaching!",
   }
 ];
 
