@@ -55,6 +55,22 @@ const EVENTS = [
     location: "PFT 1259",
     img: "/pictures/posters/26-27/FAST_Workshop_2026_-_1.png",
     desc: "Please join us for the FAST Enterprise interview prep workshop where you will learn the skills and tactics of interviewing, as well as enjoy some pizza while you're at it!",
+  },
+  {
+    title: "WiCS is tabling at Camellia Hall",
+    start: "2026-10-05T09:00:00",
+    end:   "2026-10-05T12:00:00",
+    location: "Camellia Hall",
+    img: "/pictures/posters/26-27/Tabling_at_Camellia_Hall_2026_-_3.png",
+    desc: "Calling all Camellia hall residents! Feel free to stop by our table downstairs in the lobby to learn more about WiCS!",
+  },
+  {
+    title: "Members Only: Taco and Board Games Night",
+    start: "2026-10-07T18:00:00",
+    end: "2026=10-07T19:00:00",
+    location: "PFT 1202",
+    img: "pictures/posters/26-27/Members-Only_Taco_Night_2026_-_3.png",
+    desc: "WiCS members, prepare for a fun night of games and tasty food with fellow members!",
   }
 ];
 
