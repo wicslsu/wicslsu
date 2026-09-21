@@ -1,38 +1,5 @@
 const EVENTS = [
   {
-    title: "WiCS Mixer",
-    start: "2025-09-03T18:30:00",  
-    end:   "2025-09-03T19:30:00",
-    location: "Frank Walk Room",
-    img: "/pictures/posters/25-26/0_Wixer.jpeg",
-    desc: "Come meet new friends, grab some food and learn about other computer science-based clubs here at LSU!! ",
-    links: {
-      instagram: "https://www.instagram.com/p/DNoFuHkA6v-/"
-    }
-  },
-  {
-    title: "Professional Development Night",
-    start: "2025-09-08T18:00:00",
-    end:   "2025-09-08T20:00:00",
-    location: "PFT 1200",
-    img: "/pictures/posters/25-26/1_PDN.jpeg",
-    desc: "WiCS LSU x SSL: Professional Development Night 💼🔧 Sponsored by Entergy!",
-    links: {
-      instagram: "https://www.instagram.com/p/DN7OF1hAGQe/"
-    }
-  },
-  {
-    title: "Chaos Engineering Workshop",
-    start: "2025-09-11T18:00:00",
-    end:   "2025-09-11T19:00:00",
-    location: "PFT 1259",
-    img: "/pictures/posters/25-26/2_chaos_Engineering.jpg",
-    desc: "Want to learn how tech giants break their systems on purpose to make them stronger? Now’s your chance!",
-    links: {
-      instagram: "https://www.instagram.com/p/DOWP3KJgD5b/"
-    }
-  },
-  {
     title: "Beginning of Semester Social",
     start: "2026-09-02T18:30:00",
     end: "2026-09-02T19:30:00",
