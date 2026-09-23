@@ -36,8 +36,23 @@ const EVENTS = [
     start: "2026-10-07T18:00:00",
     end: "2026=10-07T19:00:00",
     location: "PFT 1202",
-    img: "pictures/posters/26-27/Members-Only_Taco_Night_2026_-_3.png",
+    img: "/pictures/posters/26-27/Members-Only_Taco_Night_2026_-_3.png",
     desc: "WiCS members, prepare for a fun night of games and tasty food with fellow members!",
+  },
+  {
+    title: "WiCys Introduction to Cybersecurity",
+    start: "2026-09-23T18:00:00",
+    end: "2026-09-23T19:00:00",
+    location: "PFT 1202",
+    img: "/pictures/posters/26-27/1.png",
+    desc: "Please join WiCys for an introduction into the world of Cyber and where YOU can fit in!",
+  },
+  {
+    title: "WiCS Panera Fundraiser",
+    start: "2026-10-13",
+    end: "2026-10-14",
+    img: "/pictures/posters/26-27/Panera_Fundraiser_2026_-_3.png",
+    desc: "Please help suppoort WiCS by participating in our Panera fundraiser!!",
   }
 ];
 
