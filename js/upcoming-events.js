@@ -53,7 +53,7 @@ const EVENTS = [
     end: "2026-10-14",
     img: "/pictures/posters/26-27/Panera_Fundraiser_2026_-_3.png",
     desc: "Please help suppoort WiCS by participating in our Panera fundraiser!!",
-  }
+  },
 ];
 
 
