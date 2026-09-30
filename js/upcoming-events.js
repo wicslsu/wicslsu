@@ -54,6 +54,13 @@ const EVENTS = [
     img: "/pictures/posters/26-27/Panera_Fundraiser_2026_-_3.png",
     desc: "Please help suppoort WiCS by participating in our Panera fundraiser!!",
   },
+  {
+    title: "ISACA AI Governance Workshop",
+    start: "2026-09-30T18:00:00",
+    end: "2026-09-30T19:00:00",
+    img: "/pictures/posters/26-27/ISACA_Workshop_2026_-_3.png",
+    desc: "Join us to learn how comapnies test, audit, and build ethical guidelines around AL/ML models!",
+  },
 ];
 
 
