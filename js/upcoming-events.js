@@ -58,6 +58,7 @@ const EVENTS = [
     title: "ISACA AI Governance Workshop",
     start: "2026-09-30T18:00:00",
     end: "2026-09-30T19:00:00",
+    location: "PFT 1202",
     img: "/pictures/posters/26-27/ISACA_Workshop_2026_-_3.png",
     desc: "Join us to learn how comapnies test, audit, and build ethical guidelines around AL/ML models!",
   },
