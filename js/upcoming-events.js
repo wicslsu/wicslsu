@@ -62,6 +62,22 @@ const EVENTS = [
     img: "/pictures/posters/26-27/ISACA_Workshop_2026_-_3.png",
     desc: "Join us to learn how comapnies test, audit, and build ethical guidelines around AL/ML models!",
   },
+  {
+    title: "Fall Festival",
+    start: "2026-10-16T11:00:00",
+    end: "2026-10-16T14:00:00",
+    location: "LSU Parade Grounds",
+    img: "/pictures/posters/26-27/Fall_Festival_2026_-_3.png",
+    desc: "Come visit our table at the LSU Parade grounds to learn more about WiCS!",
+  },
+  {
+    title: "Members Only Taco and Board Games Night",
+    start: "2026-10-07T18:00:00",
+    end: "2026-10-07T19:00:00",
+    location: "PFT 1202",
+    img: "/pictures/posters/26-27/Members-Only_Taco_Night_2026_-_3.png",
+    desc: "MEMBERS! Come join us for a fun evening of tacos and games!",
+  },
 ];
 
 
