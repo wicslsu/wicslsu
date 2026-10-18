@@ -78,6 +78,14 @@ const EVENTS = [
     img: "/pictures/posters/26-27/Members-Only_Taco_Night_2026_-_3.png",
     desc: "MEMBERS! Come join us for a fun evening of tacos and games!",
   },
+  {
+    title: "Pie-A-Professor",
+    start: "2026-10-27T11:00:00",
+    end: "2026=10-07T13:00:00",
+    location: "Outside PFT near Panera",
+    img: "/pictures/posters/26-27/Pie-a-Professor_2026_-_1.png",
+    desc: "Come help us raise money by 'Pieing' a Professor!",
+  }
 ];
 
 
