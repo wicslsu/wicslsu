@@ -85,6 +85,14 @@ const EVENTS = [
     location: "Outside PFT near Panera",
     img: "/pictures/posters/26-27/Pie-a-Professor_2026_-_1.png",
     desc: "Come help us raise money by 'Pieing' a Professor!",
+  },
+  {
+    title: "Andy's Fundraiser",
+    start: "2026-10-27T17:00:00",
+    end: "2026=10-07T21:00:00",
+    location: "606 West Lee Drive",
+    img: "/pictures/posters/26-27/Fundraiser_-_3.png",
+    desc: "Enjoy some tasty icecream while supporting WiCS at Andy's!",
   }
 ];
 
