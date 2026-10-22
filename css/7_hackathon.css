@@ -8,7 +8,7 @@
 }
 
 body{
-    background-color: #131314;
+    background-color: #07075b;
 }
 
 h1{
@@ -21,7 +21,7 @@ h1{
     margin-top: 5rem;
     text-align: center;
 
-    background: linear-gradient(90deg, #DFAAC3 24.34%, #F1C9DB 41.54%, #D3B9E8 64.8%, #997DC3 75.56%);
+    background: linear-gradient(90deg, #ccc7ec 24.34%, #9b9bed 41.54%, #6a6adf 64.8%, #4343d5 75.56%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -29,7 +29,7 @@ h1{
 }
 
 h2{ 
-    color: #e8c2d3;
+    color: #ccc7ec;
  
     font-family: "Rasa", serif;
     font-optical-sizing: auto;
@@ -88,7 +88,7 @@ body{
 
 #countdown-msg{
     font-size: clamp(24px, 40%, 120px);
-    color: #e7c4d5;
+    color: #9e97ce;
     text-align: center;
     padding-top: 3rem;
     letter-spacing: 5px;
@@ -96,12 +96,12 @@ body{
 
 .countdown-number{
     font-size: clamp(2rem, 4vw, 8rem);
-    color: #DFAAC3;
+    color: #7f7b96;
 }
 
 .countdown-label{
     font-size: clamp(12px, 100%, 30px);
-    color: #ecd2ff;
+    color: #ccc7ec;
 }
 
 
@@ -116,7 +116,7 @@ body{
     justify-content: center;
     width: 100%;
 
-    background-color: #e8c2d3;
+    background-color: #ccc7ec;
     /* padding: clamp(4rem, 4vw, 6rem) clamp(1.5rem, 10vw, 10rem); */
     padding: clamp(35px, 6%, 100px) clamp(25px, 10%, 160px);
     line-height: 40px;
@@ -125,7 +125,7 @@ body{
 
 .about-container p{
     font-size: clamp(20px, 50%, 60px); 
-    color: #56575c;
+    color: #4343d5;
     max-width: 800px;
     text-align: center;
 }
@@ -170,7 +170,7 @@ body{
 
 #register-button button{
     font-size: clamp(1.5rem, 2.5vh, 4rem);
-    color:#d280a5;
+    color:#aa69cd;
     background-color: white;
     border: none;
     padding: 1rem 7rem;
@@ -184,7 +184,7 @@ body{
 
 #deadline-msg{
     font-size: clamp(24px, 40%, 120px);
-    color: #ca6895;
+    color: #aa69cd;
     text-align: center;
     text-decoration: underline;
 }
@@ -228,7 +228,7 @@ body{
 }
 
 #schedule-nav h2, #faq-nav h2, #judge-nav h2{
-    color: #e8c2d3; 
+    color: #aa69cd; 
 
     letter-spacing: 5px;
     font-size: 3rem;
@@ -253,8 +253,7 @@ body{
 }
 
 .schedule-table th {
-    background-color: #e8c2d3;
-
+    background-color: #aa69cd;
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -270,7 +269,7 @@ body{
 }
 
 .schedule-msg{
-    color: #e8c2d3;
+    color: #aa69cd;
 }
 
 
@@ -291,14 +290,14 @@ body{
     font-size: 1.2rem;
     font-weight: bold;
     padding: 1rem;
-    background: #e8c2d3;
+    background: #aa69cd;
     cursor: pointer;
     transition: background 0.3s ease;
     color: #363539;
 }
 
 .faq-item summary:hover {
-    background: #ca6895;
+    background: #a868ca;
 }
 
 .faq-item p {
