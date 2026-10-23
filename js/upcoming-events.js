@@ -94,6 +94,14 @@ const EVENTS = [
     img: "/pictures/posters/26-27/Fundraiser_-_3.png",
     desc: "Enjoy some tasty icecream while supporting WiCS at Andy's!",
   },
+   {
+    title: "Halloween Social",
+    start: "2026-10-28T18:00:00",
+    end: "2026-10-28T20:00:00",
+    location: "PFT 1200",
+    img: "/pictures/posters/26-27/Hallowwn_social.png",
+    desc: "Come join us for a spooky potluck, movie night, and fun time!",
+  },
 ];
 
 
