@@ -290,10 +290,10 @@ body{
     font-size: 1.2rem;
     font-weight: bold;
     padding: 1rem;
-    background: #7069cd;
+    background: #686aca;
     cursor: pointer;
     transition: background 0.3s ease;
-    color: #363539;
+    color: #dcdbe3;
 }
 
 .faq-item summary:hover {
@@ -303,7 +303,7 @@ body{
 .faq-item p {
     padding: 1rem;
     font-size: 18px;
-    color: #55545c;
+    color: #dcdbe3;
 }
 
 
