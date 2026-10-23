@@ -290,14 +290,14 @@ body{
     font-size: 1.2rem;
     font-weight: bold;
     padding: 1rem;
-    background: #aa69cd;
+    background: #7069cd;
     cursor: pointer;
     transition: background 0.3s ease;
     color: #363539;
 }
 
 .faq-item summary:hover {
-    background: #a868ca;
+    background: #686aca;
 }
 
 .faq-item p {
