@@ -415,6 +415,14 @@ body{
     margin-top: 50px;
 }
 
+.sponsor-msg-container{
+    color:#ece8ef;
+    text-align: center;
+    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(4rem, 10vw, 10rem);
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: 400;
+}
+
 .sponsor-logo img{
     max-width: 400px;
     width: 100%;
