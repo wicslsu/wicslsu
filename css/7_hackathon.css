@@ -126,7 +126,7 @@ body{
     justify-content: center;
     width: 100%;
 
-    background-color: #ccc7ec;
+    background-color: #07075b;
     /* padding: clamp(4rem, 4vw, 6rem) clamp(1.5rem, 10vw, 10rem); */
     padding: clamp(35px, 6%, 100px) clamp(25px, 10%, 160px);
     line-height: 40px;
@@ -142,7 +142,7 @@ body{
 
 .about-container p{
     font-size: clamp(18px, 50%, 60px); 
-    color: #4343d5;
+    color: #fff2f2;
     max-width: 800px;
     text-align: center;
 }
