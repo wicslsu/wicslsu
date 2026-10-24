@@ -118,6 +118,7 @@ body{
 
     width: 80%;
     max-width: 900px;
+    padding: 2.5rem;
 }
 .about-container {
     display: flex; 
