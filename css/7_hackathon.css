@@ -116,7 +116,6 @@ body{
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 
     width: 80%;
-    max-width: 900px;
     padding: 2.5rem;
 }
 .about-container {
@@ -143,7 +142,6 @@ body{
 .about-container p{
     font-size: clamp(18px, 50%, 60px); 
     color: #fff2f2;
-    max-width: 800px;
     text-align: center;
 }
 
@@ -245,7 +243,7 @@ body{
 }
 
 #schedule-nav h2, #faq-nav h2, #judge-nav h2{
-    color: #aa69cd; 
+    color: #4c69ec; 
 
     letter-spacing: 5px;
     font-size: 3rem;
@@ -415,7 +413,7 @@ body{
 }
 
 #thank-you-nav h2{
-    color: #a38ec1; 
+    color: #4c69ec; 
 
     letter-spacing: 5px;
     font-size: 3rem;
