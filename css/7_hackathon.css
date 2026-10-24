@@ -111,10 +111,14 @@ body{
 /* About Section*/
 
 .about-title {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
-    font-size: clamp(2.5rem, 5vw, 4rem);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    width: 80%;
+    max-width: 900px;
+    padding: 2.5rem;
 }
 .about-container {
     display: flex; 
