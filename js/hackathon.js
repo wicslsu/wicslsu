@@ -1,6 +1,6 @@
 // Countdown timer
 // set Date
-var firstCountDownDate = new Date("March 20, 2026 17:00:00").getTime();
+var firstCountDownDate = new Date("March 19, 2027 17:00:00").getTime();
 
 
 var timer;
