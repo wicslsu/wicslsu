@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>WiCS Hackathon Information</title>
+    <title>Geaux Hack 2027 | LSU WiCS</title>
 
     <link rel = "stylesheet" href="../css/7_hackathon.css?v=2" type="text/css">
+    <link rel="stylesheet" href="../css/geauxhack-remix.css" type="text/css">
     <link rel = "stylesheet" href="../header/header.css?" type="text/css">
     <link rel="stylesheet" href="../footer/footer.css?" type="text/css">
 
@@ -111,7 +112,12 @@
     <div class="introduction-container" id="default">
         <!-- Welcoming Message -->
         <div class="welcome-msg">
-            <h1>&lt;WiCS Hackathon 27'&gt;</h1>
+            <p class="gh-eyebrow">LSU WOMEN IN COMPUTER SCIENCE PRESENTS</p>
+            <h1>&lt;Geaux Hack <span>2027</span>&gt;</h1>
+            <p class="gh-tagline">Build something bold. Find your people. Make it happen.</p>
+            <div class="gh-actions"><button class="gh-button gh-button-primary" type="button" data-open-interest>I'm interested <span aria-hidden="true">↗</span></button><a class="gh-button gh-button-secondary" href="#hackathon-nav">Explore the hackathon ↓</a></div>
+            <p class="gh-interest-note">Interest only — this is not official registration.</p>
+            <div class="gh-float gh-float-a" aria-hidden="true">&lt;create /&gt;</div><div class="gh-float gh-float-b" aria-hidden="true">{ ideas: infinite }</div>
         </div>
         <!-- Countdown -->
         <h2 id="countdown-msg">Countdown to Hackathon!:</h2> 
@@ -137,6 +143,7 @@
         <h2 id="end-message"></h2> 
     </div>
 
+    <div class="gh-ticker" aria-hidden="true"><div>CREATE ✦ COLLABORATE ✦ INNOVATE ✦ GEAUX HACK ✦ CREATE ✦ COLLABORATE ✦ INNOVATE ✦ GEAUX HACK ✦</div></div>
     <div class = "about-container" id="hackathon-nav">
         <p class="gen-msg" id="about-msg"> 
             WiCS is proud to bring back our <strong>annual Spring Hackathon</strong> this semester!<br> 
@@ -324,7 +331,7 @@
     </div-->
 
     <div class = "board-container" id="judge-nav">
-      <h2 class="judge-title">Judges coming soon...</h2>	
+      <h2 class="judge-title">2027 judging panel — to be announced</h2>	
         <!-- <h3 class="judge-category">Advanced</h3>	
 		<div class="judges-container">	
 			<div class="judges" data-name="j-0">
@@ -475,6 +482,28 @@
         </div>
     </div>
 
+
+    <div class="gh-modal" id="gh-interest-modal" hidden>
+      <div class="gh-modal-backdrop" data-close-interest></div>
+      <section class="gh-dialog" role="dialog" aria-modal="true" aria-labelledby="gh-modal-title" aria-describedby="gh-modal-desc" tabindex="-1">
+        <button class="gh-modal-close" type="button" data-close-interest aria-label="Close interest form">×</button>
+        <p class="gh-eyebrow">GET FIRST UPDATES</p>
+        <h2 id="gh-modal-title">Interested in Geaux Hack?</h2>
+        <p id="gh-modal-desc">Leave your information to hear about event updates. This is <strong>not</strong> official registration.</p>
+        <form id="gh-interest-form">
+          <label for="gh-name">Full name <span>*</span></label><input id="gh-name" name="name" maxlength="120" autocomplete="name" required>
+          <label for="gh-email">Email address <span>*</span></label><input id="gh-email" name="email" type="email" maxlength="254" autocomplete="email" required>
+          <label for="gh-school">School / organization <span class="gh-optional">optional</span></label><input id="gh-school" name="school" maxlength="160" autocomplete="organization">
+          <label for="gh-experience">Hackathon experience <span class="gh-optional">optional</span></label><select id="gh-experience" name="experience"><option value="">Select an option</option><option value="first-time">First hackathon</option><option value="some">I've done one or two</option><option value="experienced">I've attended several</option></select>
+          <label class="gh-consent"><input type="checkbox" name="consent" required> <span>I agree to receive Geaux Hack event updates at this email address. <strong>*</strong></span></label>
+          <div class="gh-honeypot" aria-hidden="true"><label for="gh-website">Website</label><input id="gh-website" name="website" tabindex="-1" autocomplete="off"></div>
+          <p class="gh-form-status" id="gh-form-status" role="status" aria-live="polite"></p>
+          <button class="gh-button gh-button-primary gh-submit" type="submit">Count me in →</button>
+          <p class="gh-privacy">Your details will be used for hackathon communications only. Contact <a href="mailto:wicslsu@gmail.com">wicslsu@gmail.com</a> to request removal.</p>
+        </form>
+      </section>
+    </div>
+
     <footer>
 		<nav class="footer-content">
 			<h3 class="follow-text">FOLLOW US</h3>
@@ -497,6 +526,7 @@
 		</nav>
 	</footer>
     
+    <script src="../js/geauxhack-interest.js" defer></script>
     <script src = "../header/header.js"></script>
     <!-- <script src = "../js/hackathon.js"></script> -->
 </body>
