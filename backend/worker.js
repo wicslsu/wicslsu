@@ -11,6 +11,9 @@ export default {async fetch(request,env){
  let body;try{body=await request.json()}catch{return json({error:'Invalid JSON'},400,cors)}
  const name=String(body.name||'').trim(),email=String(body.email||'').trim().toLowerCase(),school=String(body.school||'').trim(),experience=String(body.experience||''),website=String(body.website||'');
  if(website)return json({ok:true},200,cors); // honeypot
- if(!name||name.length>120||!email||email.length>254||!/^\S+@\S+\.\S+$/.test(email)||school.length>160||!['','first-time','some','experienced'].includes(experience)||body.consent!==true)return json({error:'Invalid fields'},400,cors);
- try{await env.DB.prepare('INSERT INTO interest_submissions (name,email,school,experience,consent) VALUES (?,?,?,?,1) ON CONFLICT(email) DO UPDATE SET name=excluded.name,school=excluded.school,experience=excluded.experience,consent=1').bind(name,email,school,experience).run();return json({ok:true},200,cors)}catch{return json({error:'Unable to save response'},500,cors)}
+ if(!name||name.length>120||!email||email.length>254||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||school.length>160||!['','first-time','some','experienced'].includes(experience)||body.consent!==true)return json({error:'Invalid fields'},400,cors);
+ try
+ {await env.DB.prepare(
+    'INSERT INTO interest_submissions (name,email,school,experience,consent) VALUES (?,?,?,?,1) ON CONFLICT(email) DO UPDATE SET name=excluded.name,school=excluded.school,experience=excluded.experience,consent=1').bind(name,email,school,experience).run();
+    return json({ok:true},200,cors)}catch{return json({error:'Unable to save response'},500,cors)}
  }};
