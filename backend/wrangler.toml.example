@@ -6,3 +6,16 @@ compatibility_date = "2026-10-01"
 binding = "DB"
 database_name = "geauxhack-interest"
 database_id = "REPLACE_WITH_D1_DATABASE_ID"
+
+[vars]
+ALLOWED_ORIGIN = "https://www.wicslsu.com"
+
+# Limit submissions to 5 requests per 60 seconds per IP.
+[[unsafe.bindings]]
+name = "SUBMISSION_LIMITER"
+type = "ratelimit"
+namespace_id = "1001"
+
+[unsafe.bindings.simple]
+limit = 5
+period = 60
