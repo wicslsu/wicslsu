@@ -11,6 +11,24 @@ export default {async fetch(request,env){
  let body;try{body=await request.json()}catch{return json({error:'Invalid JSON'},400,cors)}
  const name=String(body.name||'').trim(),email=String(body.email||'').trim().toLowerCase(),school=String(body.school||'').trim(),experience=String(body.experience||''),website=String(body.website||'');
  if(website)return json({ok:true},200,cors); // honeypot
+ // Rate limit submissions by visitor IP address.
+ const clientIP = request.headers.get('CF-Connecting-IP');
+
+   if (!clientIP) {
+  return json({error: 'Unable to verify client'}, 400, cors);
+   }
+
+ const { success } = await env.SUBMISSION_LIMITER.limit({
+  key: clientIP
+ });
+
+ if (!success) {
+  return json(
+    {error: 'Too many submissions. Please try again later.'},
+    429,
+    {...cors, 'Retry-After': '60'}
+  );
+ }
  if(!name||name.length>120||!email||email.length>254||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||school.length>160||!['','first-time','some','experienced'].includes(experience)||body.consent!==true)return json({error:'Invalid fields'},400,cors);
  try
  {await env.DB.prepare(
