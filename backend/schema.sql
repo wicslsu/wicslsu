@@ -2,8 +2,8 @@ CREATE TABLE IF NOT EXISTS interest_submissions (
  id INTEGER PRIMARY KEY AUTOINCREMENT,
  name TEXT NOT NULL,
  email TEXT NOT NULL COLLATE NOCASE UNIQUE,
- school TEXT,
- experience TEXT,
+ school TEXT NOT NULL,
+ experience TEXT NOT NULL,
  consent INTEGER NOT NULL CHECK(consent = 1),
  created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
