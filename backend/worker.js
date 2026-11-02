@@ -29,7 +29,7 @@ export default {async fetch(request,env){
     {...cors, 'Retry-After': '60'}
   );
  }
- if(!name||name.length>120||!email||email.length>254||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||school.length>160||!['','first-time','some','experienced'].includes(experience)||body.consent!==true)return json({error:'Invalid fields'},400,cors);
+ if(!name||name.length>120||!email||email.length>254||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||!school||school.length>160||!['first-time','some','experienced'].includes(experience)||body.consent!==true)return json({error:'Invalid fields'},400,cors);
  try
  {await env.DB.prepare(
     'INSERT INTO interest_submissions (name,email,school,experience,consent) VALUES (?,?,?,?,1) ON CONFLICT(email) DO UPDATE SET name=excluded.name,school=excluded.school,experience=excluded.experience,consent=1').bind(name,email,school,experience).run();
