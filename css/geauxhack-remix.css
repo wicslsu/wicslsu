@@ -102,11 +102,11 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}
 }
 .gh-float-a{
   top:18%;
-  left:-2%;
+  left:-10%;
   transform:rotate(-9deg);
 }
 .gh-float-b{
-   right:-2%;
+   right:-10%;
    bottom:19%;
    animation-delay:-3s;
    transform:rotate(7deg);
