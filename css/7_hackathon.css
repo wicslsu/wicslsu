@@ -611,4 +611,12 @@ body{
         width: 100px; /* Smaller images */
         height: 100px;
     }
+    
+    .faq-item {
+        display: fixed;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
 }
