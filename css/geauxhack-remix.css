@@ -102,11 +102,11 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}
 }
 .gh-float-a{
   top:18%;
-  left:-50%;
+  left:-30%;
   transform:rotate(-9deg);
 }
 .gh-float-b{
-   right:-50%;
+   right:-30%;
    bottom:19%;
    animation-delay:-3s;
    transform:rotate(7deg);
@@ -331,4 +331,157 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}
  .gh-history-year,.gh-history-event:nth-child(even) .gh-history-year{top:15px;left:-3px;right:auto;width:57px;min-height:34px;font-size:.78rem}
  .gh-history-card img{height:200px}
  .gh-history-details{padding:20px}
+}
+
+/* ========================================
+   GEAUX HACK — ANIMATED TRACK CARDS
+   ======================================== */
+
+.gh-tracks {
+    padding: 45px 20px;
+    text-align: center;
+}
+
+.gh-tracks-heading {
+    margin-bottom: 35px;
+}
+
+.gh-tracks-kicker {
+    color: #b34f92;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.gh-tracks-heading h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #63357d;
+    margin: 12px 0;
+}
+
+.gh-tracks-heading > p:last-child {
+    color: #62536b;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Responsive card layout */
+
+.gh-tracks-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.gh-track-card {
+    grid-column: span 2;
+    background: linear-gradient(145deg, #fff5fc, #f1e5ff);
+    border: 2px solid #e5c9f2;
+    border-radius: 22px;
+    padding: 35px 24px;
+    box-shadow: 0 8px 24px rgba(100, 53, 125, 0.10);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Center the final two cards */
+
+.gh-track-card:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+.gh-track-card:nth-child(5) {
+    grid-column: 4 / span 2;
+}
+
+/* Hover animation */
+
+.gh-track-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(100, 53, 125, 0.20);
+    border-color: #c779c9;
+}
+
+.gh-track-icon {
+    display: block;
+    font-size: 3rem;
+    margin-bottom: 18px;
+    transition: transform 0.3s ease;
+}
+
+.gh-track-card:hover .gh-track-icon {
+    transform: scale(1.15) rotate(-5deg);
+}
+
+.gh-track-card h3 {
+    color: #63357d;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.gh-track-card p {
+    color: #62536b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Tablet */
+
+@media (max-width: 850px) {
+    .gh-tracks-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gh-track-card,
+    .gh-track-card:nth-child(4),
+    .gh-track-card:nth-child(5) {
+        grid-column: auto;
+    }
+
+    .gh-track-card:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 550px) {
+    .gh-tracks {
+        padding: 35px 12px;
+    }
+
+    .gh-tracks-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .gh-track-card,
+    .gh-track-card:last-child {
+        grid-column: auto;
+    }
+
+    .gh-track-card {
+        padding: 28px 20px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    .gh-track-card,
+    .gh-track-icon {
+        transition: none;
+    }
+
+    .gh-track-card:hover,
+    .gh-track-card:hover .gh-track-icon {
+        transform: none;
+    }
 }
