@@ -460,7 +460,8 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}
 
     .gh-track-card,
     .gh-track-card:nth-child(4),
-    .gh-track-card:nth-child(5) {
+    .gh-track-card:nth-child(5),
+    .gh-track-card:nth-child(6) {
         grid-column: auto;
     }
 
