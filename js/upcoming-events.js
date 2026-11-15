@@ -119,6 +119,22 @@ const EVENTS = [
     img: "/pictures/posters/26-27/LDH_Workshop_2026_-_3.png",
     desc: "Want to learn more about cybersecurity and how it affects the Health department? Come join us at 6pm for a super fun workshop with the Louisiana Department of Health!",
   },
+  {
+    title: "WECode Conference",
+    start: "2027-02-18",
+    end: "2027-02-21",
+    location: "Harvard, Boston, MA",
+    img: "/pictures/posters/26-27/WeCode_Interest_Graphic_2026_-_3.png",
+    desc: "Please fill out this interest form if you are interested in joining us on our journey to Boston, MA for WECode!",
+  },
+  {
+    title: "WiCS GeauxHack 2027",
+    start: "2027-03-19",
+    end: "2027-03-21",
+    location: "PFT, LSU",
+    img: "/pictures/posters/26-27/Hackathon_Interest_2026_-_3.png",
+    desc: "Please fill out this interest form if you are interested in participating in our 2027 GeaxHack!!",
+  },
 ];
 
 
