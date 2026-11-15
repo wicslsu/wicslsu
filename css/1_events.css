@@ -59,7 +59,9 @@ p{
 }
 
 body{
-    background-color: #131314;
+    background:radial-gradient(ellipse at 16% 20%,#653a91 0%,transparent 46%),
+              radial-gradient(ellipse at 86% 75%,#9d477e 0%,transparent 42%),
+              linear-gradient(135deg,#181126,#31214e 62%,#181126);
     min-height: 100vh;
 }
 
