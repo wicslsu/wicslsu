@@ -40,7 +40,34 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}
         line-height:1.08!important;letter-spacing:-.06em!important;
         margin:14px 0!important;color:#fff!important;
         text-shadow:0 12px 35px #0005
-    }
+}
+
+/* Match event date to the Geaux Hack heading */
+/* Match the event date to the main Geaux Hack heading */
+#event-date {
+    font-family: 'Handjet', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 2px;
+
+    background: linear-gradient(90deg, #ccc7ec 24.34%, #9b9bed 41.54%, #6a6adf 64.8%, #4343d5 75.56%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin: 16px 0 24px;
+}
+
+#event-date span {
+    -webkit-text-fill-color: transparent;
+}
+
+#event-date span {
+    color: inherit;
+    -webkit-text-fill-color: transparent;
+}
 
 .welcome-msg h3 span{
     color:var(--gh-pink)
@@ -168,7 +195,9 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}
     position:relative;
 }
 .about-container:nth-of-type(even){
-    background-image:radial-gradient(circle at 90% 10%,#e9d3f115,transparent 30%);
+    background:radial-gradient(ellipse at 16% 20%,#653a91 0%,transparent 46%),
+    radial-gradient(ellipse at 86% 75%,#9d477e 0%,transparent 42%),
+    linear-gradient(135deg,#181126,#31214e 62%,#181126)!important;
 }
 .level-table{
     box-shadow:0 15px 40px #0002;
@@ -376,7 +405,7 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}
 }
 
 .gh-tracks-heading > p:last-child {
-    color: #62536b;
+    color: #967fa3;
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;
@@ -408,16 +437,12 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}
 
 /* Center the final three cards */
 
-.gh-track-card:nth-child(4) {
-    grid-column: 2 / span 2;
-}
+/* Keep all six track cards aligned in a 3-column desktop grid */
 
-.gh-track-card:nth-child(5) {
-    grid-column: 4 / span 2;
-}
-
+.gh-track-card:nth-child(4),
+.gh-track-card:nth-child(5),
 .gh-track-card:nth-child(6) {
-    grid-column: 6 / span 2;
+    grid-column: span 2;
 }
 
 /* Hover animation */
@@ -503,5 +528,230 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}
     .gh-track-card:hover,
     .gh-track-card:hover .gh-track-icon {
         transform: none;
+    }
+}
+
+/* Geaux Hack judging panel heading */
+
+/* Compact navy box around Judging Panel heading */
+#judge-nav .judge-title {
+    font-family: 'Handjet', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    text-align: center;
+
+    background: #161026;
+    border: 1px solid #383052;
+    border-radius: 0;
+    padding: 12px 24px;
+
+    width: fit-content;
+    max-width: 90%;
+    box-sizing: border-box;
+    margin: 0 auto 35px;
+}
+
+/* Apply the blue gradient to the text only */
+/* Apply the blue gradient to the text only */
+#judge-nav .judge-title {
+    color: #ccc7ec;
+    -webkit-text-fill-color: initial;
+}
+
+#judge-nav .judge-title span {
+    font-family: 'Handjet', sans-serif;
+    background: linear-gradient(
+        90deg,
+        #ccc7ec 24.34%,
+        #9b9bed 41.54%,
+        #6a6adf 64.8%,
+        #4343d5 75.56%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* Sponsors heading — match Judging Panel */
+#sponsors-title h2 {
+    font-family: 'Handjet', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    text-align: center;
+
+    background: #161026;
+    border: 1px solid #383052;
+    border-radius: 0;
+    padding: 12px 24px;
+
+    width: fit-content;
+    max-width: 90%;
+    box-sizing: border-box;
+    margin: 0 auto 35px;
+
+    color: #ccc7ec;
+    -webkit-text-fill-color: initial;
+}
+
+/* Blue gradient on text only */
+#sponsors-title h2 span {
+    font-family: 'Handjet', sans-serif;
+    background: linear-gradient(
+        90deg,
+        #ccc7ec 24.34%,
+        #9b9bed 41.54%,
+        #6a6adf 64.8%,
+        #4343d5 75.56%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* Remove the original background around the Sponsors heading */
+#sponsors-title {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+/* Sponsors year headings */
+#sponsors-2025 h2,
+#sponsors-2026 h2 {
+    font-family: 'Handjet', sans-serif;
+    font-weight: 600;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    line-height: 1.2;
+    letter-spacing: 2px;
+    text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    0 0 12px rgba(106, 106, 223, 0.45);
+}
+
+/* Geaux Hack full-page background */
+html,
+body {
+    background: linear-gradient(
+        135deg,
+        #181126,
+        #31214e 62%,
+        #181126
+    ) !important;
+
+    background-attachment: fixed !important;
+}
+
+/* Let the page gradient show through Event Information */
+#hackathon-nav {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* ===== GEAUX HACK FAQ REDESIGN ===== */
+
+/* FAQ section container */
+.faw-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+#faq-nav {
+    width: 100%;
+    min-width: 0;
+}
+
+/* FAQ heading */
+#faq-nav h2 {
+    font-family: 'Handjet', sans-serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #ccc7ec;
+    margin-bottom: 32px;
+}
+
+/* FAQ cards */
+#faq-nav .faq-item {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 14px;
+
+    background: #161026;
+    border: 1px solid #514073;
+    border-radius: 0;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* FAQ questions */
+#faq-nav .faq-item summary {
+    display: list-item;
+    padding: 18px 24px;
+    background: #241936;
+    color: #e8ddff;
+
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.5;
+    cursor: pointer;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    transition: background 0.3s ease;
+}
+
+#faq-nav .faq-item summary:hover,
+#faq-nav .faq-item[open] summary {
+    background: #392755;
+}
+
+/* FAQ answers */
+#faq-nav .faq-item p {
+    padding: 16px 24px;
+    margin: 0;
+    color: #e8ddff;
+    font-size: 1rem;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .faw-container {
+        width: 100%;
+        margin: 40px auto;
+        padding: 0 16px;
+    }
+
+    #faq-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #faq-nav .faq-item {
+        width: 100%;
+        min-width: 0;
+    }
+
+    #faq-nav .faq-item summary {
+        padding: 14px 16px;
+        font-size: 1rem;
+    }
+
+    #faq-nav .faq-item p {
+        padding: 14px 16px;
+        font-size: 0.95rem;
     }
 }
