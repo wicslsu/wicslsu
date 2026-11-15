@@ -406,7 +406,7 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}
         border-color 0.3s ease;
 }
 
-/* Center the final two cards */
+/* Center the final three cards */
 
 .gh-track-card:nth-child(4) {
     grid-column: 2 / span 2;
@@ -414,6 +414,10 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}
 
 .gh-track-card:nth-child(5) {
     grid-column: 4 / span 2;
+}
+
+.gh-track-card:nth-child(6) {
+    grid-column: 6 / span 2;
 }
 
 /* Hover animation */
