@@ -102,6 +102,39 @@ const EVENTS = [
     img: "/pictures/posters/26-27/Hallowwn_social.png",
     desc: "Come join us for a spooky potluck, movie night, and fun time!",
   },
+  { 
+    title: "End of the Year Social",
+    start: "2026-11-11T18:00:00",
+    end: "2026-10-28T20:00:00",
+    location: "PFT 1202",
+    img: "/pictures/posters/26-27/End_of_Year_Social_2026_-_3.png",
+    desc: "Come celebrate a wonderful semester and honor our senior graduates!",
+  },
+
+  {
+    title: "Louisiana Department of Health Cybersecurity Workshop",
+    start: "2026-11-17T18:00:00",
+    end: "2026-11-17T19:00:00",
+    location: "PFT 1340",
+    img: "/pictures/posters/26-27/LDH_Workshop_2026_-_3.png",
+    desc: "Want to learn more about cybersecurity and how it affects the Health department? Come join us at 6pm for a super fun workshop with the Louisiana Department of Health!",
+  },
+  {
+    title: "WECode Conference",
+    start: "2027-02-18",
+    end: "2027-02-21",
+    location: "Harvard, Boston, MA",
+    img: "/pictures/posters/26-27/WeCode_Interest_Graphic_2026_-_3.png",
+    desc: "Please fill out this interest form if you are interested in joining us on our journey to Boston, MA for WECode!",
+  },
+  {
+    title: "WiCS GeauxHack 2027",
+    start: "2027-03-19",
+    end: "2027-03-21",
+    location: "PFT, LSU",
+    img: "/pictures/posters/26-27/Hackathon_Interest_2026_-_3.png",
+    desc: "Please fill out this interest form if you are interested in participating in our 2027 GeaxHack!!",
+  },
 ];
 
 
