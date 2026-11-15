@@ -41,9 +41,24 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}
         margin:14px 0!important;color:#fff!important;
         text-shadow:0 12px 35px #0005
     }
-.welcome-msg h1 span{
+
+    .welcome-msg h2 span{
     color:var(--gh-pink)
 }
+
+.welcome-msg{
+    position:relative;z-index:1;text-align:center
+}
+.welcome-msg h2{
+    font-size:clamp(3rem,8vw,7.2rem)!important;
+        line-height:1.08!important;letter-spacing:-.03em!important;
+        margin:14px 0!important;color:#fff!important;
+        text-shadow:0 12px 35px #0005
+    }
+.welcome-msg h2 span{
+    color:var(--gh-pink)
+}
+
 .gh-eyebrow{
     color:#e7b9f8!important;
     letter-spacing:.22em;font:700 .78rem/1.5 'Fragment Mono',
